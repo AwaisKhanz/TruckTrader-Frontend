@@ -7,6 +7,7 @@ import Filter from "./../pages/Filter";
 import Contact from "./../pages/Contact";
 import Advertise from "./../pages/Advertise";
 import AboutUs from "./../pages/AboutUs";
+import NotFound from "./../pages/NotFound";
 
 export default function AppRoutes() {
   return (
@@ -16,6 +17,7 @@ export default function AppRoutes() {
       <Route path="/about-us" element={<AboutUs />} />
       <Route path="/advertise" element={<Advertise />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
