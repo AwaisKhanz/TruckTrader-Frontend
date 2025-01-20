@@ -1,7 +1,6 @@
-import { Routes, Route } from "react-router-dom";
-// import ProtectedRoute from "./routes/ProtectedRoute";
 // import { useAuth } from "./context/AuthContext";
 import { ToastContainer } from "react-toastify";
+import AppRoutes from "./routes/index";
 // import Loading from "./components/Common/Loading";
 
 const App = () => {
@@ -14,12 +13,7 @@ const App = () => {
   return (
     <>
       <ToastContainer />
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/reset-password/:token" element={<ResetPassword />} />
-      </Routes>
+      <AppRoutes />
     </>
   );
 };

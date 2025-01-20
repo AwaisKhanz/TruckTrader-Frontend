@@ -5,14 +5,15 @@ import App from "./App";
 import "./index.css";
 import theme from "./theme/theme";
 import { BrowserRouter as Router } from "react-router-dom";
-import AuthProvider from "./context/AuthContext";
+// import AuthProvider from "./context/AuthContext";
+import "./i18n";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Router>
     <ThemeProvider theme={theme}>
-      <AuthProvider>
-        <App />
-      </AuthProvider>
+      {/* <AuthProvider> */}
+      <App />
+      {/* </AuthProvider> */}
     </ThemeProvider>
   </Router>
 );
