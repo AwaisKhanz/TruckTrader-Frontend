@@ -1,5 +1,87 @@
 {
   "Homepage": {
     "test": "nl test"
+  },
+  "navbar": {
+    "logo": "TRUCKTRADER",
+    "logoAlt": "Truck Trader Logo",
+    "home": "Huis",
+    "about": "Over",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "advertise": "Adverteren",
+    "login": "Inloggen / Registreren"
+  },
+  "heroSection": {
+    "heading": "Vind nu uw perfecte vrachtwagen!",
+    "subtitle": {
+      "part1": "De ",
+      "highlight1": "ideale keuze",
+      "part2": " voor elke reis, taak en avontuur, met ongeëvenaarde betrouwbaarheid, uitzonderlijke prestaties en ultiem comfort, afgestemd op ",
+      "highlight2": "uw behoeften",
+      "part3": "."
+    },
+    "searchPlaceholder": "Zoek in Trucktrader....",
+    "searchButton": "Zoeken"
+  },
+  "highlightSection": {
+    "left": {
+      "title": "Hoe we werken?",
+      "description": "Lorem ipsum dolor sit amet consectetur. Diam a elementum aliquet sit orci elementum senectus. Aliquam viverra proin nunc nulla morbi etias sapien",
+      "readMore": "Lees meer"
+    },
+    "right": {
+      "title": "Meer dan 300+ speciale collectie vrachtwagens",
+      "description": "Lorem ipsum dolor sit amet consectetur. Diam a elementum aliquet sit orci elementum senectus. Aliquam viverra proin nun",
+      "button": "Bekijk alle vrachtwagens"
+    }
+  },
+  "category": {
+    "title": "Vind uw vrachtwagen op",
+    "highlight": "Categorie",
+    "semiTrucks": "Vrachtwagens",
+    "boxTrucks": "Bakwagens",
+    "trailers": "Aanhangwagens",
+    "vanAndCar": "Bus & Auto",
+    "parts": "Onderdelen",
+    "posts": "789+ Berichten"
+  },
+  "latestListings": {
+    "title": "Laatste aanbieding",
+    "showAll": "Alles tonen"
+  },
+  "services": {
+    "title": "Onze Diensten",
+    "main": "Wij Bieden",
+    "highlight": "Topkwaliteit",
+    "mainEnd": " Services For Truck Dealers",
+    "subtitle": "Verbinden van vrachtwagenhandelaren met ongeëvenaarde expertise en betrouwbare oplossingen. Uw vertrouwde partner voor naadloze handel en uitstekende ondersteuning.",
+    "allBrands": "Alle Merken",
+    "freeSupport": "Gratis Ondersteuning",
+    "dealership": "Dealerschap",
+    "affordable": "Betaalbaar",
+    "allBrandsDescription": "Verken de volledige lijst van wereldwijde autofabrikanten - van iconische giganten tot opkomende innovators.",
+    "freeSupportDescription": "Geniet van 24/7 betrouwbare hulp - ons gratis ondersteuningsteam staat altijd voor je klaar met al je vragen of problemen!",
+    "dealershipDescription": "Vind vertrouwde dealers bij jou in de buurt - en maak verbinding met de beste deals en services voor je droomauto.",
+    "affordableDescription": "Kwaliteit en waarde gecombineerd - ontdek betaalbare opties zonder in te leveren op kwaliteit."
+  },
+  "footer": {
+    "description": "De sites Trucktrader.nl, Trucktrader.be, Trucktrader.lu en Trucktrader.world (alle talen) zijn zeer gebruiksvriendelijk, zodat de verkoper vrijwel geen moeite hoeft te doen om de volledige voorraad te tonen.",
+    "copyright": "Copyright © 2024 Trucktrader Benelux B.V.",
+    "terms": "Voorwaarden",
+    "cookies": "Cookies",
+    "menuTitle": "Menu",
+    "menu": {
+      "home": "Home",
+      "about": "Over",
+      "content": "Inhoud",
+      "advertise": "Adverteren"
+    },
+    "quickLinksTitle": "Snelle links",
+    "quickLinks": {
+      "book": "Boek",
+      "privacyPolicy": "Privacybeleid",
+      "contactUs": "Contact"
+    }
   }
 }

@@ -1,5 +1,87 @@
 {
   "Homepage": {
     "test": "en test"
+  },
+  "navbar": {
+    "logo": "TRUCKTRADER",
+    "logoAlt": "Truck Trader Logo",
+    "home": "Home",
+    "about": "About",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "advertise": "Advertise",
+    "login": "Log In / Sign Up"
+  },
+  "heroSection": {
+    "heading": "Find Your Perfect Truck Right Now!",
+    "subtitle": {
+      "part1": "The ",
+      "highlight1": "ideal choice",
+      "part2": " for every journey, task, and adventure, offering unmatched reliability, exceptional performance, and ultimate comfort tailored ",
+      "highlight2": "to your needs",
+      "part3": "."
+    },
+    "searchPlaceholder": "Search in Trucktrader....",
+    "searchButton": "Search"
+  },
+  "highlightSection": {
+    "left": {
+      "title": "How we Works?",
+      "description": "Lorem ipsum dolor sit amet consectetur. Diam a elementum aliquet sit orci elementum senectus. Aliquam viverra proin nunc nulla morbi etias sapien",
+      "readMore": "Read More"
+    },
+    "right": {
+      "title": "More than 300+ special collection trucks",
+      "description": "Lorem ipsum dolor sit amet consectetur. Diam a elementum aliquet sit orci elementum senectus. Aliquam viverra proin nun",
+      "button": "See All Trucks"
+    }
+  },
+  "category": {
+    "title": "Find your Truck By",
+    "highlight": "Category",
+    "semiTrucks": "Semi Trucks",
+    "boxTrucks": "Box Trucks",
+    "trailers": "Trailers",
+    "vanAndCar": "Van & Car",
+    "parts": "Parts",
+    "posts": "789+ Posts"
+  },
+  "latestListings": {
+    "title": "Latest listing",
+    "showAll": "Show All"
+  },
+  "services": {
+    "title": "Our Services",
+    "main": "We Provide",
+    "highlight": "Top-notch",
+    "mainEnd": " Services For Truck Dealers",
+    "subtitle": "Connecting truck dealers with unmatched expertise and reliable solutions. Your trusted partner for seamless trading and exceptional support.",
+    "allBrands": "All Brands",
+    "freeSupport": "Free Support",
+    "dealership": "Dealership",
+    "affordable": "Affordable",
+    "allBrandsDescription": "Explore the complete list of global car manufacturers - from iconic giants to emerging innovators.",
+    "freeSupportDescription": "Enjoy 24/7 reliable assistance - our free support team is always here to help with any questions or issues you may have!",
+    "dealershipDescription": "Find trusted dealerships near you - connecting you to the best deals and services for your dream car.",
+    "affordableDescription": "Quality and value combined - discover affordable options without compromising on excellence."
+  },
+  "footer": {
+    "description": "The sites Trucktrader.nl, Trucktrader.be, Trucktrader.lu, and Trucktrader.world (all languages) are very user-friendly so that the selling party has to make virtually no effort to display its complete stock.",
+    "copyright": "Copyright © 2024 Trucktrader Benelux B.V.",
+    "terms": "Terms and conditions",
+    "cookies": "Cookies",
+    "menuTitle": "Menu",
+    "menu": {
+      "home": "Home",
+      "about": "About",
+      "content": "Content",
+      "advertise": "Advertise"
+    },
+    "quickLinksTitle": "Quick Links",
+    "quickLinks": {
+      "book": "Book",
+      "privacyPolicy": "Privacy Policy",
+      "contactUs": "Contact Us"
+    }
   }
 }
