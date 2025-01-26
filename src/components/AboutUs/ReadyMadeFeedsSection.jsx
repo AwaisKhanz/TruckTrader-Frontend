@@ -101,6 +101,7 @@ export default function ReadyMadeFeedsSection() {
               key={index}
             >
               <img
+                loading="lazy"
                 src={image.src}
                 alt={image.alt}
                 style={{

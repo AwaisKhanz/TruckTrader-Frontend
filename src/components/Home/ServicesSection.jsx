@@ -146,6 +146,7 @@ export default function ServicesSection() {
                       }}
                     >
                       <img
+                        loading="lazy"
                         src={service.icon}
                         alt={service.title}
                         style={{ width: "30px", height: "30px" }}

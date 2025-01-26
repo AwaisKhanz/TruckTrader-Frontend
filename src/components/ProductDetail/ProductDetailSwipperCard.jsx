@@ -110,6 +110,7 @@ export default function ProductDetailSwipperCard() {
             {sampleImages.map((image) => (
               <SwiperSlide key={image.id}>
                 <img
+                  loading="lazy"
                   src={image.src}
                   alt={image.alt}
                   style={{
@@ -142,6 +143,7 @@ export default function ProductDetailSwipperCard() {
                 style={{ cursor: "pointer" }}
               >
                 <img
+                  loading="lazy"
                   src={image.src}
                   alt={image.alt}
                   style={{
@@ -209,7 +211,7 @@ export default function ProductDetailSwipperCard() {
             sx={{ mb: { xs: "30px", md: "36px" } }}
           >
             <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-              <img src={CalenderIcon} alt={"calendar"} />
+              <img loading="lazy" src={CalenderIcon} alt={"calendar"} />
               <Typography
                 sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
               >
@@ -217,7 +219,7 @@ export default function ProductDetailSwipperCard() {
               </Typography>
             </Grid>
             <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-              <img src={TransmissionIcon} alt={"calendar"} />
+              <img loading="lazy" src={TransmissionIcon} alt={"calendar"} />
               <Typography
                 sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
               >
@@ -225,7 +227,7 @@ export default function ProductDetailSwipperCard() {
               </Typography>
             </Grid>
             <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-              <img src={GasIcon} alt={"calendar"} />
+              <img loading="lazy" src={GasIcon} alt={"calendar"} />
               <Typography
                 sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
               >
@@ -233,7 +235,7 @@ export default function ProductDetailSwipperCard() {
               </Typography>
             </Grid>
             <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-              <img src={TonIcon} alt={"calendar"} />
+              <img loading="lazy" src={TonIcon} alt={"calendar"} />
               <Typography
                 sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
               >
@@ -241,7 +243,7 @@ export default function ProductDetailSwipperCard() {
               </Typography>
             </Grid>
             <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-              <img src={WheelIcon} alt={"calendar"} />
+              <img loading="lazy" src={WheelIcon} alt={"calendar"} />
               <Typography
                 sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
               >
@@ -249,7 +251,7 @@ export default function ProductDetailSwipperCard() {
               </Typography>
             </Grid>
             <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-              <img src={SuspensionIcon} alt={"calendar"} />
+              <img loading="lazy" src={SuspensionIcon} alt={"calendar"} />
               <Typography
                 sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
               >
@@ -257,7 +259,7 @@ export default function ProductDetailSwipperCard() {
               </Typography>
             </Grid>
             <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-              <img src={SuspensionIcon} alt={"calendar"} />
+              <img loading="lazy" src={SuspensionIcon} alt={"calendar"} />
               <Typography
                 sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
               >
@@ -265,7 +267,7 @@ export default function ProductDetailSwipperCard() {
               </Typography>
             </Grid>
             <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-              <img src={SuspensionIcon} alt={"calendar"} />
+              <img loading="lazy" src={SuspensionIcon} alt={"calendar"} />
               <Typography
                 sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
               >
@@ -273,7 +275,7 @@ export default function ProductDetailSwipperCard() {
               </Typography>
             </Grid>
             <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-              <img src={SuspensionIcon} alt={"calendar"} />
+              <img loading="lazy" src={SuspensionIcon} alt={"calendar"} />
               <Typography
                 sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
               >

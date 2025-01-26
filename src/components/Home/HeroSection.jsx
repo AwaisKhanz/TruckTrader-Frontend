@@ -3,9 +3,11 @@ import { Box, Typography, Button, InputBase } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import backgroundImage from "../../assets/Home/HeroSection/Hero.png";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 export default function HeroSection() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   return (
     <Box
       sx={{
@@ -97,7 +99,12 @@ export default function HeroSection() {
               },
             }}
           />
-          <Button variant="contained">
+          <Button
+            variant="contained"
+            onClick={() => {
+              navigate("/filter");
+            }}
+          >
             <SearchIcon
               sx={{ marginRight: "4px", fontSize: { xs: "16px", md: "24px" } }}
             />

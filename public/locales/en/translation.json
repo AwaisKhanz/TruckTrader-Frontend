@@ -226,5 +226,66 @@
       "imageAlt3": "Truck Image 3",
       "imageAlt4": "Truck Image 4"
     }
+  },
+  "filters": {
+    "title": "Filters",
+    "transmission": "Transmission",
+    "transmissionOptions": {
+      "any": "Any",
+      "automatic": "Automatic",
+      "manual": "Manual",
+      "semi automatic": "Semi Automatic",
+      "other": "Other"
+    },
+    "fuel": "Fuel",
+    "fuelOptions": {
+      "any": "Any",
+      "petrol": "Petrol",
+      "diesel": "Diesel",
+      "hybrid": "Hybrid",
+      "other": "Other"
+    },
+    "bodyType": "Body Type",
+    "bodyTypeOptions": {
+      "any": "Any",
+      "box truck": "Box Truck",
+      "tanker": "Tanker",
+      "other": "Other"
+    },
+    "condition": "Condition",
+    "conditionOptions": {
+      "any": "Any",
+      "used": "Used",
+      "new": "New"
+    },
+    "priceRange": "Price Range",
+    "priceLabels": {
+      "min": "$5,000",
+      "max": "$100,000"
+    },
+    "model": "Model",
+    "modelLabels": {
+      "min": "2019",
+      "max": "2025"
+    },
+    "selectFeatures": "Select Features",
+    "features": {
+      "Air Conditioning": "Air Conditioning",
+      "Climate Control": "Climate Control",
+      "Cruise Control": "Cruise Control",
+      "Intrader": "Intrader",
+      "PTO": "PTO",
+      "Retarder": "Retarder",
+      "Tow Bar": "Tow Bar",
+      "Warranty": "Warranty"
+    },
+    "reset": "Reset Filters",
+    "apply": "Apply Filters"
+  },
+  "filterHeader": {
+    "truckList": "Truck List",
+    "resultsFound": "Results Found",
+    "searchPlaceholder": "Search in Tracktrader...",
+    "searchButton": "Search"
   }
 }

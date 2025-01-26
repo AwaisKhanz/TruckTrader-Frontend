@@ -100,6 +100,7 @@ export default function TruckCategorySection() {
                 >
                   {/* Background Image */}
                   <img
+                    loading="lazy"
                     src={category.image}
                     alt={t(category.title)}
                     style={{

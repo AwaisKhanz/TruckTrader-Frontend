@@ -35,6 +35,7 @@ export default function ListingCard({ data }) {
           }}
         >
           <img
+            loading="lazy"
             src={data.image}
             alt={data.title}
             style={{
@@ -75,37 +76,37 @@ export default function ListingCard({ data }) {
         {/* Features Section */}
         <Grid container spacing={1}>
           <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-            <img src={CalenderIcon} alt={"calendar"} />
+            <img loading="lazy" src={CalenderIcon} alt={"calendar"} />
             <Typography sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}>
               {data.year}
             </Typography>
           </Grid>
           <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-            <img src={TransmissionIcon} alt={"calendar"} />
+            <img loading="lazy" src={TransmissionIcon} alt={"calendar"} />
             <Typography sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}>
               {data.transmission}
             </Typography>
           </Grid>
           <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-            <img src={GasIcon} alt={"calendar"} />
+            <img loading="lazy" src={GasIcon} alt={"calendar"} />
             <Typography sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}>
               {data.fuel}
             </Typography>
           </Grid>
           <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-            <img src={TonIcon} alt={"calendar"} />
+            <img loading="lazy" src={TonIcon} alt={"calendar"} />
             <Typography sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}>
               {data.type}
             </Typography>
           </Grid>
           <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-            <img src={WheelIcon} alt={"calendar"} />
+            <img loading="lazy" src={WheelIcon} alt={"calendar"} />
             <Typography sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}>
               {data.weight}
             </Typography>
           </Grid>
           <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-            <img src={SuspensionIcon} alt={"calendar"} />
+            <img loading="lazy" src={SuspensionIcon} alt={"calendar"} />
             <Typography sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}>
               {data.mileage}
             </Typography>

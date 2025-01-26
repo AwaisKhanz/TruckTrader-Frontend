@@ -190,5 +190,66 @@
       "imageAlt3": "Truck afbeelding 3",
       "imageAlt4": "Truck afbeelding 4"
     }
+  },
+  "filters": {
+    "title": "Filters",
+    "transmission": "Transmissie",
+    "transmissionOptions": {
+      "any": "Elke",
+      "automatic": "Automatisch",
+      "manual": "Handmatig",
+      "semi automatic": "Halfautomatisch",
+      "other": "Andere"
+    },
+    "fuel": "Brandstof",
+    "fuelOptions": {
+      "any": "Elke",
+      "petrol": "Benzine",
+      "diesel": "Diesel",
+      "hybrid": "Hybride",
+      "other": "Andere"
+    },
+    "bodyType": "Carrosserietype",
+    "bodyTypeOptions": {
+      "any": "Elke",
+      "box truck": "Vrachtwagen",
+      "tanker": "Tankwagen",
+      "other": "Andere"
+    },
+    "condition": "Conditie",
+    "conditionOptions": {
+      "any": "Elke",
+      "used": "Gebruikt",
+      "new": "Nieuw"
+    },
+    "priceRange": "Prijsbereik",
+    "priceLabels": {
+      "min": "€5.000",
+      "max": "€100.000"
+    },
+    "model": "Model",
+    "modelLabels": {
+      "min": "2019",
+      "max": "2025"
+    },
+    "selectFeatures": "Selecteer functies",
+    "features": {
+      "Air Conditioning": "Airconditioning",
+      "Climate control": "Klimaatregeling",
+      "Cruise Control": "Cruisecontrol",
+      "Intrader": "Intrader",
+      "PTO": "PTO",
+      "Retarder": "Retarder",
+      "Tow Bar": "Trekhaak",
+      "Warranty": "Garantie"
+    },
+    "reset": "Filters Resetten",
+    "apply": "Filters Toepassen"
+  },
+  "filterHeader": {
+    "truckList": "Vrachtwagenlijst",
+    "resultsFound": "Resultaten gevonden",
+    "searchPlaceholder": "Zoeken in Tracktrader...",
+    "searchButton": "Zoeken"
   }
 }

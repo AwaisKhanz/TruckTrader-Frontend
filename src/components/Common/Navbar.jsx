@@ -31,7 +31,9 @@ import Logo from "./logo";
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
-  const [currentLang, setCurrentLang] = useState(languages[0]);
+  const [currentLang, setCurrentLang] = useState(
+    () => languages.find((lan) => lan.code === i18n.language) || languages[0]
+  );
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const location = useLocation();
 
@@ -86,7 +88,13 @@ export default function Navbar() {
         mx: "auto",
       }}
     >
-      <Toolbar sx={{ justifyContent: "space-between", alignItems: "center" }}>
+      <Toolbar
+        sx={{
+          justifyContent: "space-between",
+          alignItems: "center",
+          p: "0 !important",
+        }}
+      >
         {/* Logo */}
         <Logo color="red" />
 
@@ -127,6 +135,7 @@ export default function Navbar() {
             <Button
               startIcon={
                 <img
+                  loading="lazy"
                   src={currentLang.flag}
                   alt={currentLang.name}
                   style={{ width: 20, height: 20 }}
@@ -172,6 +181,7 @@ export default function Navbar() {
                   }}
                 >
                   <img
+                    loading="lazy"
                     src={lang.flag}
                     alt={lang.name}
                     style={{ width: 20, height: 20 }}
@@ -299,6 +309,7 @@ export default function Navbar() {
               <Button
                 startIcon={
                   <img
+                    loading="lazy"
                     src={currentLang.flag}
                     alt={currentLang.name}
                     style={{ width: 20, height: 20 }}
@@ -345,6 +356,7 @@ export default function Navbar() {
                     }}
                   >
                     <img
+                      loading="lazy"
                       src={lang.flag}
                       alt={lang.name}
                       style={{ width: 20, height: 20 }}
