@@ -9,7 +9,7 @@ export default function HeroSection() {
   return (
     <Box
       sx={{
-        maxWidth: { xs: "95%", md: "90%" },
+        maxWidth: "90%",
         mx: "auto",
         height: "548px",
         width: "100%",
@@ -32,7 +32,7 @@ export default function HeroSection() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "flex-start",
-          padding: "0 10%",
+          padding: { xs: "0 25px", md: "0 10%" },
           gap: "24px",
         }}
       >
@@ -90,20 +90,17 @@ export default function HeroSection() {
             sx={{
               flex: 1,
               fontSize: "16px",
-              px: "20px",
+              px: { xs: "12px", md: "20px" },
               color: "#6A6A6A",
               "::placeholder": {
                 color: "#808080 !important",
               },
             }}
           />
-          <Button
-            variant="contained"
-            sx={{
-              padding: "14px 16px",
-            }}
-          >
-            <SearchIcon sx={{ marginRight: "4px", fontSize: "32px" }} />
+          <Button variant="contained">
+            <SearchIcon
+              sx={{ marginRight: "4px", fontSize: { xs: "16px", md: "24px" } }}
+            />
             {t("heroSection.searchButton")}
           </Button>
         </Box>

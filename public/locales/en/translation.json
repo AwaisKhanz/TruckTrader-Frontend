@@ -65,6 +65,7 @@
     "dealershipDescription": "Find trusted dealerships near you - connecting you to the best deals and services for your dream car.",
     "affordableDescription": "Quality and value combined - discover affordable options without compromising on excellence."
   },
+
   "footer": {
     "description": "The sites Trucktrader.nl, Trucktrader.be, Trucktrader.lu, and Trucktrader.world (all languages) are very user-friendly so that the selling party has to make virtually no effort to display its complete stock.",
     "copyright": "Copyright © 2024 Trucktrader Benelux B.V.",
@@ -82,6 +83,148 @@
       "book": "Book",
       "privacyPolicy": "Privacy Policy",
       "contactUs": "Contact Us"
+    }
+  },
+
+  "aboutHeader": {
+    "title": "About TruckTrader",
+    "description": "The sites Trucktrader.nl, Trucktrader.be, Trucktrader.lu, and Trucktrader.world (all languages) are very user-friendly so that the selling party has to make virtually no effort to display its complete stock. Of course, we also have to inform the user/buyer who can quickly view the advertisements he wants via our advanced search engine; in short, a platform where buyer and seller meet to close THE DEAL!"
+  },
+  "addedValue": {
+    "title": "The Added Value Of",
+    "highlight": "TruckTrader",
+    "userFriendly": {
+      "title": "User-friendly, for both the selling and purchasing parties",
+      "description": "Designed to Make Buying and Selling Simple, Seamless, and Enjoyable for Everyone"
+    },
+    "greatReach": {
+      "title": "A platform with great reach and exposure",
+      "description": "A Powerful Platform to Broaden Your Audience and Maximize Visibility for Your Listings"
+    },
+    "cheapPlacement": {
+      "title": "Quick and cheap placement of car stock",
+      "description": "Quick and Cost-Effective Placement for Car Listings, Banners, and Advertorials"
+    },
+    "highQuality": {
+      "title": "High quality advertisements at very competitive prices",
+      "description": "Delivering High-Quality Advertisements at Exceptionally Competitive Prices"
+    }
+  },
+  "readyMadeFeedsSection": {
+    "title": "There are currently connections with ready-made feeds at:",
+    "subtitle": "Seamlessly integrate with our ready-made feeds, connecting you to multiple platforms instantly.",
+    "platforms": {
+      "hexon": "Hexon",
+      "wheelerDelta": "Wheeler Delta",
+      "twinVision": "TWIN Vision",
+      "123machine": "123machine",
+      "autoscout24": "Autoscout24",
+      "vweAutomotive": "VWE Automotive",
+      "customerConnect": "Customer Connect",
+      "autoscout": "Autoscout",
+      "trucks": "Trucks"
+    }
+  },
+  "howDoWeGetStarted": {
+    "title": "How Do We Get Started",
+    "subtitle": "Enhance your brand visibility with complimentary logo placement included in all your advertisements",
+    "step1": {
+      "title": "We place all your advertisements completely automatically and they are visible in real time",
+      "description": "We automate all your advertisements, ensuring they go live seamlessly and are visible in real time."
+    },
+    "step2": {
+      "title": "With every advertisement a direct link to your webshop/website",
+      "description": "Every ad connects directly to your webshop, driving instant traffic and engagements."
+    },
+    "step3": {
+      "title": "All your advertisements are automatically up to date",
+      "description": "Keep your ads fresh and relevant—automatically updated in real time."
+    },
+    "step4": {
+      "title": "Free placement of your logo with the advertisements",
+      "description": "Enhance your brand visibility with complimentary logo placement included in all your advertisements."
+    }
+  },
+  "xmlFeedSection": {
+    "title": "If no XML feed is available:",
+    "customFeeds": {
+      "title": "Custom In-House XML Feeds on Request",
+      "description": "If not yet available, Trucktrader will create the XML feed for you in-house (based on a quotation)."
+    },
+    "webFeeds": {
+      "title": "XML Feeds by Your Web Administrator",
+      "description": "You can have an XML feed developed by the administrator of your own website."
+    }
+  },
+  "productDetailHeader": {
+    "likes": "{{count}}",
+    "views": "{{count}}",
+    "searchPlaceholder": "Search Keywords",
+    "searchButton": "Search"
+  },
+  "productDetail": {
+    "description": {
+      "title": "Descriptions",
+      "content": "Compact and efficient, the 2019 Volvo Mini Truck offers a 3,500 kg payload, fuel-efficient diesel engine, and advanced safety features. Its ergonomic cab ensures comfort, making it ideal for urban deliveries."
+    },
+    "advertiser": {
+      "title": "Advertiser",
+      "advertiser": "Advertiser:",
+      "website": "Website:",
+      "email": "Email:",
+      "address": "Address:",
+      "postCode": "Post Code:",
+      "place": "Place:",
+      "salesEmployee": "Sales employee"
+    },
+    "generalInfo": {
+      "title": "General Information",
+      "brand": "Brand:",
+      "model": "Model:",
+      "type": "Type:",
+      "year": "Year of Manufacture:",
+      "odometer": "Odometer Reading:",
+      "category": "Category:"
+    },
+    "technicalInfo": {
+      "title": "Technical Information",
+      "assets": "Assets:",
+      "fuelType": "Fuel Type:",
+      "drivetrain": "Drivetrain:",
+      "transmission": "Transmission:",
+      "axleConfiguration": "Axle Configuration:",
+      "dimensions": "Dimensions (LxWxH):"
+    },
+    "emissions": {
+      "title": "Emissions Standards",
+      "emissionClass": "Emission Class:"
+    },
+    "history": {
+      "title": "History and Condition",
+      "productionDate": "Production date:",
+      "dateOfFirstRegistration": "Date of first registration:",
+      "generalCondition": "General Condition:"
+    },
+    "swipper": {
+      "title": "Volvo Mini Truck 2019",
+      "location": "De, Berlin",
+      "description": "Compact and efficient, the 2019 Volvo Mini Truck offers a 3,500 kg payload, fuel-efficient diesel engine, and advanced safety features.",
+      "dateLabel": "Date:",
+      "date": "2023/08/12",
+      "transmissionLabel": "Transmission:",
+      "transmission": "Automatic",
+      "fuelTypeLabel": "Fuel Type:",
+      "fuelType": "Diesel",
+      "categoryLabel": "Category:",
+      "category": "Semi Truck",
+      "priceLabel": "Price:",
+      "price": "$89,499",
+      "viewPhoneNumber": "View phone number",
+      "messageSeller": "Message to seller",
+      "imageAlt1": "Truck Image 1",
+      "imageAlt2": "Truck Image 2",
+      "imageAlt3": "Truck Image 3",
+      "imageAlt4": "Truck Image 4"
     }
   }
 }

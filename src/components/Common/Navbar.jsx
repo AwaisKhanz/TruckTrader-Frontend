@@ -27,6 +27,7 @@ import logoWhite from "../../assets/logo_white.png";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { languages } from "../../constants/Languages";
+import Logo from "./logo";
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
@@ -81,19 +82,13 @@ export default function Navbar() {
       sx={{
         py: "23px",
         background: "#F6F6F6",
-        maxWidth: { xs: "95%", md: "90%" },
+        maxWidth: "90%",
         mx: "auto",
       }}
     >
       <Toolbar sx={{ justifyContent: "space-between", alignItems: "center" }}>
         {/* Logo */}
-        <Box>
-          <img
-            src={logoBlack}
-            alt={t("navbar.logoAlt")}
-            className=" w-full h-full object-fill"
-          />
-        </Box>
+        <Logo color="red" />
 
         {/* Links for Large Screens */}
         <Box
@@ -225,13 +220,8 @@ export default function Navbar() {
           role="presentation"
           onKeyDown={toggleDrawer(false)}
         >
-          <Box>
-            <img
-              src={logoWhite}
-              alt={t("navbar.logoAlt")}
-              className=" w-[139px] h-[13px]"
-            />
-          </Box>
+          <Logo color="white" />
+
           <Divider sx={{ background: "#323232", my: "24px" }} />
 
           <Box sx={{ px: "16px" }}>

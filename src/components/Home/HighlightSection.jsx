@@ -9,7 +9,7 @@ export default function HighlightSection() {
   return (
     <Box
       sx={{
-        maxWidth: { xs: "95%", md: "90%" },
+        maxWidth: "90%",
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
         gap: "24px",

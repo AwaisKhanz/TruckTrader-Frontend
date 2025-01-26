@@ -113,16 +113,21 @@ export default function ServicesSection() {
             mt: { xs: "80px !important", md: "" },
           }}
         >
-          <Grid container spacing={3} justifyContent="center">
+          <Grid
+            container
+            spacing={3}
+            justifyContent="center"
+            alignItems={"stretch"}
+          >
             {services.map((service) => (
               <Grid item xs={12} sm={6} md={3} key={service.id}>
                 <Card
                   sx={{
                     textAlign: "center",
-                    padding: "20px",
+                    padding: { xs: "0px", md: "20px" },
                     borderRadius: "16px",
-                    boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
                     backgroundColor: "#FFFFFF",
+                    height: "100%",
                   }}
                 >
                   <CardContent>

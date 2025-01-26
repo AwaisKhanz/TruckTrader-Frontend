@@ -1,8 +1,11 @@
 import React from "react";
-import { Box, Typography, Link } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { useTranslation } from "react-i18next";
+import logoWhite from "../../assets/logo_white.png";
+import { Link } from "react-router-dom";
+import Logo from "./logo";
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -30,26 +33,17 @@ export default function Footer() {
           <Box
             sx={{
               flex: 1,
-              textAlign: { xs: "center", md: "left" },
+              textAlign: { xs: "left", md: "left" },
             }}
           >
-            <Typography
-              variant="h6"
-              sx={{
-                fontWeight: "bold",
-                fontSize: "24px",
-                color: "#fff",
-                mb: "16px",
-              }}
-            >
-              TRUCK<span style={{ color: "#D32F2F" }}>TRADER</span>
-            </Typography>
+            <Logo color="white" />
             <Typography
               sx={{
                 fontSize: "14px",
-                color: "#D0D0D0",
+                color: "#FFFFFF80",
                 lineHeight: "1.5",
                 mb: "24px",
+                mt: 1,
               }}
             >
               {t("footer.description")}
@@ -73,7 +67,7 @@ export default function Footer() {
                 sx={{
                   fontSize: "16px",
                   fontWeight: "bold",
-                  mb: "16px",
+                  mb: { xs: "10px", md: "16px" },
                   color: "#fff",
                 }}
               >
@@ -86,27 +80,24 @@ export default function Footer() {
                   gap: "8px",
                 }}
               >
-                <Link
-                  href="/"
-                  sx={{ color: "#D0D0D0", textDecoration: "none" }}
-                >
+                <Link to="/" className=" text-[#FFFFFF80] hover:text-white">
                   {t("footer.menu.home")}
                 </Link>
                 <Link
-                  href="/about"
-                  sx={{ color: "#D0D0D0", textDecoration: "none" }}
+                  to="/about-us"
+                  className=" text-[#FFFFFF80] hover:text-white"
                 >
                   {t("footer.menu.about")}
                 </Link>
                 <Link
-                  href="/content"
-                  sx={{ color: "#D0D0D0", textDecoration: "none" }}
+                  to="/content"
+                  className=" text-[#FFFFFF80] hover:text-white"
                 >
                   {t("footer.menu.content")}
                 </Link>
                 <Link
-                  href="/advertise"
-                  sx={{ color: "#D0D0D0", textDecoration: "none" }}
+                  to="/advertise"
+                  className=" text-[#FFFFFF80] hover:text-white"
                 >
                   {t("footer.menu.advertise")}
                 </Link>
@@ -120,7 +111,7 @@ export default function Footer() {
                 sx={{
                   fontSize: "16px",
                   fontWeight: "bold",
-                  mb: "16px",
+                  mb: { xs: "10px", md: "16px" },
                   color: "#fff",
                 }}
               >
@@ -133,21 +124,18 @@ export default function Footer() {
                   gap: "8px",
                 }}
               >
-                <Link
-                  href="/book"
-                  sx={{ color: "#D0D0D0", textDecoration: "none" }}
-                >
+                <Link to="/book" className=" text-[#FFFFFF80] hover:text-white">
                   {t("footer.quickLinks.book")}
                 </Link>
                 <Link
-                  href="/privacy-policy"
-                  sx={{ color: "#D0D0D0", textDecoration: "none" }}
+                  to="/privacy-policy"
+                  className=" text-[#FFFFFF80] hover:text-white"
                 >
                   {t("footer.quickLinks.privacyPolicy")}
                 </Link>
                 <Link
-                  href="/contact-us"
-                  sx={{ color: "#D0D0D0", textDecoration: "none" }}
+                  to="/contact-us"
+                  className=" text-[#FFFFFF80] hover:text-white"
                 >
                   {t("footer.quickLinks.contactUs")}
                 </Link>
@@ -160,21 +148,15 @@ export default function Footer() {
           <Typography
             sx={{
               fontSize: "12px",
-              color: "#D0D0D0",
+              color: "white",
             }}
           >
             © 2024 Trucktrader Benelux B.V. |{" "}
-            <Link
-              href="/terms"
-              sx={{ color: "#D32F2F", textDecoration: "none" }}
-            >
+            <Link to="/terms" className=" text-[#FFFFFF80] hover:text-white">
               {t("footer.terms")}
             </Link>{" "}
             |{" "}
-            <Link
-              href="/cookies"
-              sx={{ color: "#D32F2F", textDecoration: "none" }}
-            >
+            <Link to="/cookies" className=" text-[#FFFFFF80] hover:text-white">
               {t("footer.cookies")}
             </Link>
           </Typography>
@@ -188,10 +170,10 @@ export default function Footer() {
               gap: "16px",
             }}
           >
-            <Link href="https://www.linkedin.com" target="_blank">
+            <Link to="https://www.linkedin.com" target="_blank">
               <LinkedInIcon sx={{ color: "#fff", fontSize: "32px" }} />
             </Link>
-            <Link href="https://www.facebook.com" target="_blank">
+            <Link to="https://www.facebook.com" target="_blank">
               <FacebookIcon sx={{ color: "#fff", fontSize: "32px" }} />
             </Link>
           </Box>

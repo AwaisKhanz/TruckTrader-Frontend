@@ -68,8 +68,8 @@ export default function TruckCategorySection() {
             item
             key={category.id}
             xs={12}
-            sm={index === categories.length - 1 ? 12 : 6} // Last item spans full width
-            md={index < 3 ? 4 : 6} // First 3 items take 1/3 width, next 2 take 1/2
+            sm={index === categories.length - 1 ? 12 : 6}
+            md={index < 3 ? 4 : 6}
           >
             <Link
               to={category.link}
@@ -84,15 +84,31 @@ export default function TruckCategorySection() {
                 }}
               >
                 {/* Background Image */}
-                <img
-                  src={category.image}
-                  alt={t(category.title)}
-                  style={{
+                <Box
+                  sx={{
+                    position: "relative",
+                    overflow: "hidden",
                     width: "100%",
                     height: "100%",
-                    objectFit: "cover",
+                    "& img": {
+                      transition: "transform 0.4s ease-in-out",
+                    },
+                    "&:hover img": {
+                      transform: "scale(1.1)",
+                    },
                   }}
-                />
+                >
+                  {/* Background Image */}
+                  <img
+                    src={category.image}
+                    alt={t(category.title)}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
+                </Box>
 
                 {/* Overlay Text */}
                 <Box

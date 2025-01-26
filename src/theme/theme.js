@@ -6,15 +6,18 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           textTransform: "none",
-          borderRadius: "20px",
+          borderRadius: "16px",
           padding: "16px",
+          height: "48px",
           fontSize: "16px",
           backgroundColor: "#BD0000",
           color: "#FFFFFF",
           transition: "all 0.3s ease",
+          boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
 
           "&:hover": {
             // backgroundColor: "#B71C1C",
+            boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
           },
           "&:active": {
             // backgroundColor: "#9A0007",
@@ -24,12 +27,18 @@ const theme = createTheme({
             // backgroundColor: "#E0E0E0",
             // color: "#9E9E9E",
           },
+          "@media (max-width: 600px)": {
+            fontSize: "12px",
+            height: "36px",
+            padding: "12px",
+            borderRadius: "12px",
+          },
         },
         containedPrimary: {
           backgroundColor: "#BD0000",
-          "&:hover": {
-            backgroundColor: "#BD0000",
-          },
+          // "&:hover": {
+          //   backgroundColor: "#BD0000",
+          // },
         },
         containedSecondary: {
           backgroundColor: "white",
@@ -39,16 +48,16 @@ const theme = createTheme({
         outlined: {
           borderColor: "#BD0000",
           color: "#BD0000",
-          "&:hover": {
-            borderColor: "#BD0000",
-            backgroundColor: "rgba(211, 47, 47, 0.1)",
-          },
+          // "&:hover": {
+          //   borderColor: "#BD0000",
+          //   backgroundColor: "rgba(211, 47, 47, 0.1)",
+          // },
         },
         text: {
           color: "#BD0000",
-          "&:hover": {
-            backgroundColor: "rgba(211, 47, 47, 0.1)",
-          },
+          // "&:hover": {
+          //   backgroundColor: "rgba(211, 47, 47, 0.1)",
+          // },
         },
       },
     },

@@ -83,5 +83,112 @@
       "privacyPolicy": "Privacybeleid",
       "contactUs": "Contact"
     }
+  },
+  "aboutHeader": {
+    "title": "Over TruckTrader",
+    "description": "De websites Trucktrader.nl, Trucktrader.be, Trucktrader.lu en Trucktrader.world (alle talen) zijn zeer gebruiksvriendelijk, zodat de verkoper vrijwel geen moeite hoeft te doen om zijn volledige voorraad weer te geven. Natuurlijk moeten we ook de gebruiker/koper informeren die snel de advertenties kan bekijken die hij wil via onze geavanceerde zoekmachine; kortom, een platform waar koper en verkoper elkaar ontmoeten om DE DEAL te sluiten!"
+  },
+
+  "addedValue": {
+    "title": "De Toegevoegde Waarde Van",
+    "highlight": "TruckTrader",
+    "userFriendly": {
+      "title": "Gebruiksvriendelijk, voor zowel de verkopers als kopers",
+      "description": "Ontworpen om kopen en verkopen eenvoudig, naadloos en aangenaam te maken voor iedereen"
+    },
+    "greatReach": {
+      "title": "Een platform met groot bereik en zichtbaarheid",
+      "description": "Een krachtig platform om uw publiek te vergroten en de zichtbaarheid van uw aanbiedingen te maximaliseren"
+    },
+    "cheapPlacement": {
+      "title": "Snel en goedkoop plaatsen van autovoorraad",
+      "description": "Snelle en kosteneffectieve plaatsing van auto-aanbiedingen, banners en advertorials"
+    },
+    "highQuality": {
+      "title": "Hoogwaardige advertenties tegen zeer concurrerende prijzen",
+      "description": "Hoogwaardige advertenties leveren tegen uitzonderlijk concurrerende prijzen"
+    }
+  },
+  "xmlFeedSection": {
+    "title": "Als er geen XML-feed beschikbaar is:",
+    "customFeeds": {
+      "title": "Aangepaste interne XML-feeds op aanvraag",
+      "description": "Als het nog niet beschikbaar is, maakt Trucktrader de XML-feed voor u in-house (op basis van een offerte)."
+    },
+    "webFeeds": {
+      "title": "XML-feeds door uw webbeheerder",
+      "description": "U kunt een XML-feed laten ontwikkelen door de beheerder van uw eigen website."
+    }
+  },
+  "productDetailHeader": {
+    "likes": "{{count}}",
+    "views": "{{count}}",
+    "searchPlaceholder": "Zoekwoorden",
+    "searchButton": "Zoeken"
+  },
+  "productDetail": {
+    "description": {
+      "title": "Beschrijvingen",
+      "content": "Compact en efficiënt, de Volvo Mini Truck 2019 biedt een laadvermogen van 3.500 kg, een zuinige dieselmotor en geavanceerde veiligheidsvoorzieningen. De ergonomische cabine biedt comfort, waardoor het ideaal is voor stedelijke leveringen."
+    },
+    "advertiser": {
+      "title": "Adverteerder",
+      "advertiser": "Adverteerder:",
+      "website": "Website:",
+      "email": "E-mail:",
+      "address": "Adres:",
+      "postCode": "Postcode:",
+      "place": "Plaats:",
+      "salesEmployee": "Verkoopmedewerker"
+    },
+    "generalInfo": {
+      "title": "Algemene informatie",
+      "brand": "Merk:",
+      "model": "Model:",
+      "type": "Type:",
+      "year": "Bouwjaar:",
+      "odometer": "Kilometerstand:",
+      "category": "Categorie:"
+    },
+    "technicalInfo": {
+      "title": "Technische informatie",
+      "assets": "Vermogen:",
+      "fuelType": "Brandstoftype:",
+      "drivetrain": "Aandrijving:",
+      "transmission": "Transmissie:",
+      "axleConfiguration": "Asconfiguratie:",
+      "dimensions": "Afmetingen (LxBxH):"
+    },
+    "emissions": {
+      "title": "Emissienormen",
+      "emissionClass": "Emissieklasse:"
+    },
+    "history": {
+      "title": "Geschiedenis en Conditie",
+      "productionDate": "Productiedatum:",
+      "dateOfFirstRegistration": "Datum van eerste registratie:",
+      "generalCondition": "Algemene Conditie:"
+    },
+    "swipper": {
+      "title": "Volvo Mini Truck 2019",
+      "location": "De, Berlijn",
+      "description": "Compact en efficiënt, de Volvo Mini Truck 2019 biedt een laadvermogen van 3.500 kg, een brandstofzuinige dieselmotor en geavanceerde veiligheidsfuncties.",
+      "dateLabel": "Datum:",
+      "date": "2023/08/12",
+      "transmissionLabel": "Transmissie:",
+      "transmission": "Automatisch",
+      "fuelTypeLabel": "Brandstoftype:",
+      "fuelType": "Diesel",
+      "categoryLabel": "Categorie:",
+      "category": "Semi Truck",
+      "priceLabel": "Prijs:",
+      "price": "$89.499",
+      "viewPhoneNumber": "Bekijk telefoonnummer",
+      "messageSeller": "Bericht aan verkoper",
+      "imageAlt1": "Truck afbeelding 1",
+      "imageAlt2": "Truck afbeelding 2",
+      "imageAlt3": "Truck afbeelding 3",
+      "imageAlt4": "Truck afbeelding 4"
+    }
   }
 }

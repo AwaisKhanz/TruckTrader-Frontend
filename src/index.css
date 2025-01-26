@@ -5,4 +5,49 @@
 body {
   background-color: #f6f6f6;
   font-family: "Inter", sans-serif;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px !important;
+  padding: 12px;
+  font-size: 0 !important;
+  width: 40px;
+  height: 40px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.swiper-pagination {
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+
+/* Default Dots */
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background: #ffffff4d;
+  transition: all 0.3s ease;
+}
+
+/* Active Dot */
+.swiper-pagination-bullet-active {
+  width: 44px;
+  background: white;
+  border-radius: 20px;
 }
