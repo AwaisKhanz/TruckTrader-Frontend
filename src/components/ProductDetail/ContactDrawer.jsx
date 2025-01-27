@@ -85,30 +85,7 @@ export default function ContactDrawer({ open, onClose }) {
             placeholder="Enter Your First Name"
             fullWidth
             variant="outlined"
-            InputProps={{
-              sx: {
-                mt: "16px",
-                borderRadius: "16px",
-                padding: "4px",
-                backgroundColor: "#F6F6F6",
-                "&:focus-within": {
-                  backgroundColor: "#ECECEC",
-                },
-              },
-            }}
-            sx={{
-              "& .MuiOutlinedInput-root": {
-                "&.Mui-focused": {
-                  backgroundColor: "#ECECEC",
-                },
-                "& fieldset": {
-                  border: "none",
-                },
-                "&.Mui-focused fieldset": {
-                  borderBottom: "2px solid #BD0000", // Red bottom border on focus
-                },
-              },
-            }}
+            sx={{ mt: 2 }}
           />
         </Box>
         <Box>
@@ -117,30 +94,7 @@ export default function ContactDrawer({ open, onClose }) {
             placeholder="Enter Your Last Name"
             fullWidth
             variant="outlined"
-            InputProps={{
-              sx: {
-                mt: "16px",
-                borderRadius: "16px",
-                padding: "4px",
-                backgroundColor: "#F6F6F6",
-                "&:focus-within": {
-                  backgroundColor: "#ECECEC",
-                },
-              },
-            }}
-            sx={{
-              "& .MuiOutlinedInput-root": {
-                "&.Mui-focused": {
-                  backgroundColor: "#ECECEC",
-                },
-                "& fieldset": {
-                  border: "none",
-                },
-                "&.Mui-focused fieldset": {
-                  borderBottom: "2px solid #BD0000", // Red bottom border on focus
-                },
-              },
-            }}
+            sx={{ mt: 2 }}
           />
         </Box>
         <Box>
@@ -149,30 +103,7 @@ export default function ContactDrawer({ open, onClose }) {
             placeholder="Enter Your Email"
             fullWidth
             variant="outlined"
-            InputProps={{
-              sx: {
-                mt: "16px",
-                borderRadius: "16px",
-                padding: "4px",
-                backgroundColor: "#F6F6F6",
-                "&:focus-within": {
-                  backgroundColor: "#ECECEC",
-                },
-              },
-            }}
-            sx={{
-              "& .MuiOutlinedInput-root": {
-                "&.Mui-focused": {
-                  backgroundColor: "#ECECEC",
-                },
-                "& fieldset": {
-                  border: "none",
-                },
-                "&.Mui-focused fieldset": {
-                  borderBottom: "2px solid #BD0000", // Red bottom border on focus
-                },
-              },
-            }}
+            sx={{ mt: 2 }}
           />
         </Box>
         <Box>
@@ -181,30 +112,7 @@ export default function ContactDrawer({ open, onClose }) {
             placeholder="Enter Your Phone Number"
             fullWidth
             variant="outlined"
-            InputProps={{
-              sx: {
-                mt: "16px",
-                borderRadius: "16px",
-                padding: "4px",
-                backgroundColor: "#F6F6F6",
-                "&:focus-within": {
-                  backgroundColor: "#ECECEC",
-                },
-              },
-            }}
-            sx={{
-              "& .MuiOutlinedInput-root": {
-                "&.Mui-focused": {
-                  backgroundColor: "#ECECEC",
-                },
-                "& fieldset": {
-                  border: "none",
-                },
-                "&.Mui-focused fieldset": {
-                  borderBottom: "2px solid #BD0000", // Red bottom border on focus
-                },
-              },
-            }}
+            sx={{ mt: 2 }}
           />
         </Box>
         <Box>
@@ -215,30 +123,7 @@ export default function ContactDrawer({ open, onClose }) {
             multiline
             rows={8}
             variant="outlined"
-            InputProps={{
-              sx: {
-                mt: "16px",
-                borderRadius: "16px",
-                padding: "14px",
-                backgroundColor: "#F6F6F6",
-                "&:focus-within": {
-                  backgroundColor: "#ECECEC",
-                },
-              },
-            }}
-            sx={{
-              "& .MuiOutlinedInput-root": {
-                "&.Mui-focused": {
-                  backgroundColor: "#ECECEC",
-                },
-                "& fieldset": {
-                  border: "none",
-                },
-                "&.Mui-focused fieldset": {
-                  borderBottom: "2px solid #BD0000", // Red bottom border on focus
-                },
-              },
-            }}
+            sx={{ mt: 2 }}
           />
         </Box>
       </Box>

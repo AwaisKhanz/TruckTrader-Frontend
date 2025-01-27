@@ -287,5 +287,41 @@
     "resultsFound": "Results Found",
     "searchPlaceholder": "Search in Tracktrader...",
     "searchButton": "Search"
+  },
+  "contactHeader": {
+    "title": "Contact US",
+    "description": "Have questions about buying, selling, or advertising with us? Our team is here to assist you with any inquiries or provide detailed support. Don’t hesitate to reach out—we’re just a message or call away."
+  },
+  "contactForm": {
+    "labels": {
+      "firstName": "Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "message": "Message"
+    },
+    "placeholders": {
+      "firstName": "Enter Your First Name",
+      "lastName": "Enter Your Last Name",
+      "email": "Enter Your Email",
+      "phone": "Enter Your Phone Number",
+      "message": "Type Your Message Here"
+    },
+    "errors": {
+      "firstName": "First name is required",
+      "lastName": "Last name is required",
+      "email": {
+        "required": "Email is required",
+        "invalid": "Invalid email address"
+      },
+      "phone": {
+        "required": "Phone number is required",
+        "invalid": "Invalid phone number"
+      },
+      "message": "Message is required"
+    },
+    "submitButton": "Submit →",
+    "officeHours": "Monday till Friday 09:00 – 17:00",
+    "phone": "(+31) 20 737 28 99"
   }
 }

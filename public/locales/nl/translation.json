@@ -251,5 +251,41 @@
     "resultsFound": "Resultaten gevonden",
     "searchPlaceholder": "Zoeken in Tracktrader...",
     "searchButton": "Zoeken"
+  },
+  "contactHeader": {
+    "title": "Neem Contact Met Ons Op",
+    "description": "Heeft u vragen over kopen, verkopen of adverteren bij ons? Ons team staat klaar om u te helpen met al uw vragen of om gedetailleerde ondersteuning te bieden. Aarzel niet om contact op te nemen—wij zijn slechts een bericht of telefoontje van u verwijderd."
+  },
+  "contactForm": {
+    "labels": {
+      "firstName": "Naam",
+      "lastName": "Achternaam",
+      "email": "E-mail",
+      "phone": "Telefoonnummer",
+      "message": "Bericht"
+    },
+    "placeholders": {
+      "firstName": "Voer uw voornaam in",
+      "lastName": "Voer uw achternaam in",
+      "email": "Voer uw e-mailadres in",
+      "phone": "Voer uw telefoonnummer in",
+      "message": "Typ hier uw bericht"
+    },
+    "errors": {
+      "firstName": "Voornaam is verplicht",
+      "lastName": "Achternaam is verplicht",
+      "email": {
+        "required": "E-mail is verplicht",
+        "invalid": "Ongeldig e-mailadres"
+      },
+      "phone": {
+        "required": "Telefoonnummer is verplicht",
+        "invalid": "Ongeldig telefoonnummer"
+      },
+      "message": "Bericht is verplicht"
+    },
+    "submitButton": "Verzenden →",
+    "officeHours": "Maandag tot vrijdag 09:00 – 17:00",
+    "phone": "(+31) 20 737 28 99"
   }
 }
