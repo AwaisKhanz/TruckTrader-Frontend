@@ -118,7 +118,7 @@ export default function FilterHeader({ activeFilters = [], onRemoveFilter }) {
           }}
           startIcon={
             <SearchIcon
-              sx={{ marginRight: { xs: "-12px", md: "0px" }, mt: "-1px" }}
+              sx={{ marginRight: { xs: "-12px", md: "0px" }, mt: "0px" }}
             />
           }
         >
