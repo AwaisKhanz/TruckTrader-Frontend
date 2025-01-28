@@ -10,6 +10,7 @@
     "faq": "FAQ",
     "contact": "Contact",
     "advertise": "Advertise",
+    "directory": "Directory",
     "login": "Log In / Sign Up"
   },
   "heroSection": {
@@ -323,5 +324,146 @@
     "submitButton": "Submit →",
     "officeHours": "Monday till Friday 09:00 – 17:00",
     "phone": "(+31) 20 737 28 99"
+  },
+  "advertise": {
+    "header": {
+      "title": "Advertise Smarter with",
+      "description": "Reach thousands of truck buyers nationwide with a streamlined advertising experience. TruckTrader connects you directly with the audience you need to drive sales."
+    },
+    "carCompanies": {
+      "title": "Car Companies",
+      "description": "TruckTrader has over 400,000 unique visitors every month - that's 400,000 potential used car buyers each month! Got excited about the possibilities? Send an email to sales@trucktrader.nl and we'll get in touch with you."
+    },
+    "individuals": {
+      "title": "Individuals",
+      "description": "As a private individual, you can also advertise on TruckTrader. With over 400,000 unique visitors every month, you’ll sell your vehicle in no time! Once registered, you can immediately enter your ad!"
+    }
+  },
+  "advertiseSignUp": {
+    "title": "Sign Up",
+    "labels": {
+      "subscription": "Select Subscription",
+      "company": "Company",
+      "cocNumber": "CoC Number",
+      "Insert": "Insert",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "street": "Street",
+      "streetNumber": "Street Number",
+      "country": "Country",
+      "city": "City",
+      "phoneNumber": "Phone Number",
+      "email": "Email",
+      "zipCode": "Zip Code",
+      "bank": "Bank"
+    },
+    "placeholders": {
+      "subscription": "Select Subscription",
+      "company": "Company",
+      "cocNumber": "CoC Number",
+      "Insert": "Insert",
+      "firstName": "Enter Your First Name",
+      "lastName": "Enter Your Last Name",
+      "street": "Street",
+      "streetNumber": "Street Number",
+      "country": "Select Country",
+      "city": "City",
+      "phoneNumber": "Enter Your Phone Number",
+      "email": "Enter Your Email",
+      "zipCode": "Zip Code",
+      "bank": "Bank"
+    },
+    "errors": {
+      "subscription": "Subscription is required",
+      "company": "Company is required",
+      "cocNumber": "CoC Number is required",
+      "Insert": "Insert is required",
+      "firstName": "First name is required",
+      "lastName": "Last name is required",
+      "street": "Street is required",
+      "streetNumber": "Street Number is required",
+      "country": "Country is required",
+      "city": "City is required",
+      "phoneNumber": "Phone Number is required",
+      "email": "Email is required",
+      "zipCode": "Zip Code is required",
+      "bank": "Bank is required"
+    },
+    "buttons": {
+      "submit": "Submit",
+      "reset": "Reset"
+    },
+    "options": {
+      "basic": "Basic",
+      "premium": "Premium"
+    }
+  },
+  "directoryHeader": {
+    "title": "Put Your Business in the Spotlight!",
+    "description": "Showcase your brand to the right audience and take your business to new heights. With greater visibility and the perfect platform to connect with potential customers, you’ll stand out from the competition and make a lasting impression.",
+    "button": "Showcase My Company Here!"
+  },
+  "register": {
+    "setupTitle": "Let's Setup Your Account",
+    "setupDescription": "Choose your path and get started—register as an individual or a business to begin trading today",
+    "feature1": "Explore thousands of trucks from top sellers and brands",
+    "feature2": "Find exactly what you need—fast and easy",
+    "feature3": "We prioritize your safety for worry-free trading",
+    "setupFooter": "We’re here to help you get started the right way. Whether you’re an individual looking to buy or sell a truck for personal use, or a business aiming to manage multiple listings and grow your operations, select the option that best fits your needs and unlock the tools tailored to your goals.",
+    "welcomeTitle": "Create Your Account",
+    "labels": {
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password"
+    },
+    "placeholders": {
+      "email": "Enter Your Email",
+      "password": "Enter Your Password",
+      "confirmPassword": "Confirm Your Password"
+    },
+    "errors": {
+      "email": "Email is required",
+      "invalidEmail": "Invalid email address",
+      "password": "Password is required",
+      "shortPassword": "Password must be at least 6 characters long",
+      "confirmPassword": "Confirm Password is required"
+    },
+    "signupButton": "Sign Up",
+    "or": "Or",
+    "continueWithGoogle": "Continue With",
+    "continueWithFacebook": "Continue With"
+  },
+  "login": {
+    "setupTitle": "Let's Setup Your Account",
+    "setupDescription": "Choose your path and get started—register as an individual or a business to begin trading today",
+    "feature1": "Explore thousands of trucks from top sellers and brands",
+    "feature2": "Find exactly what you need—fast and easy",
+    "feature3": "We prioritize your safety for worry-free trading",
+    "setupFooter": "We’re here to help you get started the right way. Whether you’re an individual looking to buy or sell a truck for personal use, or a business aiming to manage multiple listings and grow your operations, select the option that best fits your needs and unlock the tools tailored to your goals.",
+    "welcomeTitle": "Welcome Back To TruckTrader",
+    "loginPrompt": "Enter Your Email And Password To Continue:",
+    "labels": {
+      "email": "Email",
+      "password": "Password",
+      "rememberMe": "Remember Me",
+      "forgotPassword": "Forgot Password?"
+    },
+    "placeholders": {
+      "email": "Enter Your Email",
+      "password": "Enter Your Password"
+    },
+    "errors": {
+      "email": "Email is required",
+      "invalidEmail": "Invalid email address",
+      "password": "Password is required",
+      "shortPassword": "Password must be at least 6 characters long"
+    },
+    "alreadyHaveAccount": "Already have an account?",
+    "loginHere": "Log in",
+    "signInButton": "Sign In",
+    "createAccount": "Create New Account",
+    "or": "Or",
+    "continueWithGoogle": "Continue With",
+    "continueWithFacebook": "Continue With"
   }
 }

@@ -10,6 +10,7 @@
     "faq": "FAQ",
     "contact": "Contact",
     "advertise": "Adverteren",
+    "directory": "Gids",
     "login": "Inloggen / Registreren"
   },
   "heroSection": {
@@ -287,5 +288,143 @@
     "submitButton": "Verzenden →",
     "officeHours": "Maandag tot vrijdag 09:00 – 17:00",
     "phone": "(+31) 20 737 28 99"
+  },
+  "advertise": {
+    "header": {
+      "title": "Adverteer Slimmer met",
+      "description": "Bereik duizenden vrachtwagenkopers in het hele land met een gestroomlijnde advertentie-ervaring. TruckTrader brengt je rechtstreeks in contact met het publiek dat je nodig hebt om verkoop te stimuleren."
+    },
+    "carCompanies": {
+      "title": "Autobedrijven",
+      "description": "TruckTrader heeft maandelijks meer dan 400.000 unieke bezoekers - dat zijn 400.000 potentiële kopers van gebruikte auto's elke maand! Enthousiast over de mogelijkheden? Stuur een e-mail naar sales@trucktrader.nl en wij nemen contact met je op."
+    },
+    "individuals": {
+      "title": "Particulieren",
+      "description": "Als particulier kun je ook adverteren op TruckTrader. Met meer dan 400.000 unieke bezoekers per maand verkoop je je voertuig in een mum van tijd! Na registratie kun je direct je advertentie plaatsen!"
+    }
+  },
+  "advertiseSignUp": {
+    "title": "Aanmelden",
+    "labels": {
+      "subscription": "Selecteer Abonnement",
+      "company": "Bedrijf",
+      "cocNumber": "CoC Nummer",
+      "firstName": "Voornaam",
+      "lastName": "Achternaam",
+      "street": "Straat",
+      "streetNumber": "Straatnummer",
+      "country": "Land",
+      "city": "Stad",
+      "phoneNumber": "Telefoonnummer",
+      "email": "E-mail",
+      "zipCode": "Postcode",
+      "bank": "Bank"
+    },
+    "placeholders": {
+      "subscription": "Selecteer Abonnement",
+      "company": "Bedrijf",
+      "cocNumber": "CoC Nummer",
+      "firstName": "Voer uw voornaam in",
+      "lastName": "Voer uw achternaam in",
+      "street": "Straat",
+      "streetNumber": "Straatnummer",
+      "country": "Selecteer Land",
+      "city": "Stad",
+      "phoneNumber": "Voer uw telefoonnummer in",
+      "email": "Voer uw e-mail in",
+      "zipCode": "Postcode",
+      "bank": "Bank"
+    },
+    "errors": {
+      "subscription": "Abonnement is verplicht",
+      "company": "Bedrijf is verplicht",
+      "cocNumber": "CoC Nummer is verplicht",
+      "firstName": "Voornaam is verplicht",
+      "lastName": "Achternaam is verplicht",
+      "street": "Straat is verplicht",
+      "streetNumber": "Straatnummer is verplicht",
+      "country": "Land is verplicht",
+      "city": "Stad is verplicht",
+      "phoneNumber": "Telefoonnummer is verplicht",
+      "email": "E-mail is verplicht",
+      "zipCode": "Postcode is verplicht",
+      "bank": "Bank is verplicht"
+    },
+    "buttons": {
+      "submit": "Indienen",
+      "reset": "Reset"
+    },
+    "options": {
+      "basic": "Basis",
+      "premium": "Premium"
+    }
+  },
+  "directoryHeader": {
+    "title": "Zet uw bedrijf in de schijnwerpers!",
+    "description": "Presenteer uw merk aan het juiste publiek en til uw bedrijf naar nieuwe hoogten. Met meer zichtbaarheid en het perfecte platform om in contact te komen met potentiële klanten, onderscheidt u zich van de concurrentie en maakt u een blijvende indruk.",
+    "button": "Presenteer mijn bedrijf hier!"
+  },
+  "register": {
+    "setupTitle": "Laten we uw account instellen",
+    "setupDescription": "Kies uw pad en begin—registreer als individu of als bedrijf om vandaag nog te beginnen met handelen",
+    "feature1": "Verken duizenden vrachtwagens van topverkopers en merken",
+    "feature2": "Vind precies wat je nodig hebt—snel en eenvoudig",
+    "feature3": "Wij geven prioriteit aan uw veiligheid voor zorgeloos handelen",
+    "setupFooter": "We zijn hier om u te helpen op de juiste manier te beginnen. Of u nu een particulier bent die een vrachtwagen wil kopen of verkopen voor persoonlijk gebruik, of een bedrijf dat meerdere aanbiedingen wil beheren en uw activiteiten wil laten groeien, selecteer de optie die het beste bij uw behoeften past en ontgrendel de tools die op uw doelen zijn afgestemd.",
+    "welcomeTitle": "Maak uw account aan",
+    "labels": {
+      "email": "E-mail",
+      "password": "Wachtwoord",
+      "confirmPassword": "Bevestig wachtwoord"
+    },
+    "placeholders": {
+      "email": "Voer uw e-mail in",
+      "password": "Voer uw wachtwoord in",
+      "confirmPassword": "Bevestig uw wachtwoord"
+    },
+    "errors": {
+      "email": "E-mail is verplicht",
+      "invalidEmail": "Ongeldig e-mailadres",
+      "password": "Wachtwoord is verplicht",
+      "shortPassword": "Wachtwoord moet minimaal 6 tekens lang zijn",
+      "confirmPassword": "Bevestiging van het wachtwoord is verplicht"
+    },
+    "signupButton": "Aanmelden",
+    "or": "Of",
+    "continueWithGoogle": "Doorgaan met",
+    "continueWithFacebook": "Doorgaan met"
+  },
+  "login": {
+    "setupTitle": "Laten we uw account instellen",
+    "setupDescription": "Kies uw pad en begin—registreer als individu of als bedrijf om vandaag nog te beginnen met handelen",
+    "feature1": "Verken duizenden vrachtwagens van topverkopers en merken",
+    "feature2": "Vind precies wat je nodig hebt—snel en eenvoudig",
+    "feature3": "Wij geven prioriteit aan uw veiligheid voor zorgeloos handelen",
+    "setupFooter": "We zijn hier om u te helpen op de juiste manier te beginnen. Of u nu een particulier bent die een vrachtwagen wilt kopen of verkopen voor persoonlijk gebruik, of een bedrijf dat meerdere aanbiedingen wilt beheren en uw activiteiten wilt laten groeien, selecteer de optie die het beste bij uw behoeften past en ontgrendel de tools die op uw doelen zijn afgestemd.",
+    "welcomeTitle": "Welkom Terug Bij TruckTrader",
+    "loginPrompt": "Voer uw e-mail en wachtwoord in om door te gaan:",
+    "labels": {
+      "email": "E-mail",
+      "password": "Wachtwoord",
+      "rememberMe": "Onthoud mij",
+      "forgotPassword": "Wachtwoord vergeten?"
+    },
+    "placeholders": {
+      "email": "Voer uw e-mail in",
+      "password": "Voer uw wachtwoord in"
+    },
+    "errors": {
+      "email": "E-mail is verplicht",
+      "invalidEmail": "Ongeldig e-mailadres",
+      "password": "Wachtwoord is verplicht",
+      "shortPassword": "Wachtwoord moet minimaal 6 tekens lang zijn"
+    },
+    "alreadyHaveAccount": "Heb je al een account?",
+    "loginHere": "Log in",
+    "signInButton": "Inloggen",
+    "createAccount": "Nieuw account aanmaken",
+    "or": "Of",
+    "continueWithGoogle": "Doorgaan met",
+    "continueWithFacebook": "Doorgaan met"
   }
 }

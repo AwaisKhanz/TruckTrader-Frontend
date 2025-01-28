@@ -14,7 +14,6 @@ export default function EmissionHistoryCondition() {
         maxWidth: "90%",
         mx: "auto",
         mt: "20px",
-        mb: { xs: "40px", md: "80px" },
       }}
     >
       {/* Emissions Standards Section */}

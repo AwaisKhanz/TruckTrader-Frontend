@@ -25,7 +25,7 @@ export default function ContactForm() {
         padding: { xs: "20px", md: "36px" },
         maxWidth: "90%",
         mx: "auto",
-        my: { xs: "26px", md: "56px" },
+        mt: "36px",
       }}
     >
       <Grid

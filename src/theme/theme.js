@@ -29,7 +29,7 @@ const theme = createTheme({
           },
           "@media (max-width: 600px)": {
             fontSize: "12px",
-            height: "36px",
+            height: "40px",
             padding: "12px",
             borderRadius: "12px",
           },
@@ -43,6 +43,8 @@ const theme = createTheme({
         containedSecondary: {
           backgroundColor: "white",
           color: "black",
+          border: "1px solid #EBEDF0",
+          boxShadow: "none",
         },
 
         outlined: {

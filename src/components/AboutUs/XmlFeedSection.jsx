@@ -33,7 +33,7 @@ export default function XmlFeedSection() {
         textAlign: "center",
         mx: "auto",
         mt: { xs: "40px", md: "160px" },
-        mb: { xs: "40px", md: "180px" },
+        mb: { xs: "40px", md: "120px" },
         maxWidth: "90%",
       }}
     >

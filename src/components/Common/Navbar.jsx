@@ -74,6 +74,11 @@ export default function Navbar() {
       icon: <AttachMoneyIcon />,
       link: "/advertise",
     },
+    {
+      text: t("navbar.directory"),
+      icon: <AttachMoneyIcon />,
+      link: "/directory",
+    },
   ];
 
   return (
@@ -192,9 +197,11 @@ export default function Navbar() {
             </Menu>
           </Box>
           {/* Login/Register Button */}
-          <Button variant="contained" color="primary">
-            {t("navbar.login")}
-          </Button>
+          <Link to="/login">
+            <Button variant="contained" color="primary">
+              {t("navbar.login")}
+            </Button>
+          </Link>
         </Box>
 
         {/* Menu Icon for Small Screens */}
@@ -290,15 +297,17 @@ export default function Navbar() {
           </Box>
 
           <Divider sx={{ background: "#323232", my: "24px" }} />
-          <Box sx={{ textAlign: "center" }}>
-            <Button
-              variant="contained"
-              color="primary"
-              fullWidth
-              sx={{ borderRadius: "20px", px: 3, mb: 2 }}
-            >
-              {t("navbar.login")}
-            </Button>
+          <Box>
+            <Link to={"/login"}>
+              <Button
+                variant="contained"
+                color="primary"
+                fullWidth
+                sx={{ borderRadius: "20px", px: 3, mb: 2 }}
+              >
+                {t("navbar.login")}
+              </Button>
+            </Link>
 
             <Box
               sx={{

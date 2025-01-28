@@ -107,6 +107,7 @@ export default function Filter() {
         maxWidth: "90%",
         mx: "auto",
         mb: { xs: "24px", md: "56px" },
+        width: "100%",
       }}
     >
       {/* Main Content */}

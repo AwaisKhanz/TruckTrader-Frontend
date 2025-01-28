@@ -11,14 +11,20 @@ export default function Footer() {
   const { t } = useTranslation();
 
   return (
-    <Box sx={{ maxWidth: "90%", mx: "auto", pb: "60px" }}>
+    <Box
+      sx={{
+        maxWidth: { xs: "100%", md: "90%" },
+        mx: "auto",
+        py: { xs: "30px", md: "60px" },
+      }}
+    >
       <Box
         sx={{
           width: "100%",
           backgroundColor: "#000",
           color: "#fff",
           p: "40px",
-          borderRadius: "20px",
+          borderRadius: { xs: "none", md: "20px" },
         }}
       >
         <Box

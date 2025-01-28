@@ -42,7 +42,7 @@ export default function ServicesSection() {
   const { t } = useTranslation();
 
   return (
-    <Box sx={{ maxWidth: "90%", mx: "auto", pb: { xs: "40px", md: "200px" } }}>
+    <Box sx={{ maxWidth: "90%", mx: "auto", pb: { xs: "0px", md: "160px" } }}>
       <Box
         sx={{
           position: "relative",
