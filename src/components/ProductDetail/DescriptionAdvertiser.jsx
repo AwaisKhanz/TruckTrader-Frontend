@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Typography, Avatar, Divider } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
-export default function DescriptionAdvertiser() {
+export default function DescriptionAdvertiser({ description, advertiser }) {
   const { t } = useTranslation();
 
   return (
@@ -16,7 +16,7 @@ export default function DescriptionAdvertiser() {
         mt: "20px",
       }}
     >
-      {/* Descriptions Section */}
+      {/* Description Section */}
       <Box
         sx={{
           backgroundColor: "#FFFFFF",
@@ -46,23 +46,7 @@ export default function DescriptionAdvertiser() {
             color: "#6A6A6A",
           }}
         >
-          Compact and efficient, the 2019 Volvo Mini Truck offers a 3,500 kg
-          payload, fuel-efficient diesel engine, and advanced safety features.
-          Its ergonomic cab ensures comfort, making it ideal for urban
-          deliveries.Compact and efficient, the 2019 Volvo Mini Truck offers a
-          3,500 kg payload, fuel-efficient diesel engine, and advanced safety
-          features. Its ergonomic cab ensures comfort, making it ideal for urban
-          deliveries.Compact and efficient, the 2019 Volvo Mini Truck offers a
-          3,500 kg payload, fuel-efficient diesel engine, and advanced safety
-          features. Its ergonomic cab ensures comfort, making it ideal for urban
-          deliveries.Compact and efficient, the 2019 Volvo Mini Truck offers a
-          3,500 kg payload, fuel-efficient diesel engine, and advanced safety
-          features. Its ergonomic cab ensures comfort, making it ideal for urban
-          deliveries.Compact and efficient, the 2019 Volvo Mini Truck offers a
-          3,500 kg payload, fuel-efficient diesel engine, and advanced safety
-          features. Its ergonomic cab ensures comfort, making it ideal for urban
-          deliveries.Compact and efficient, the 2019 Volvo Mini Truck offers a
-          3,500 kg payload, fuel-efficient diesel engine, and
+          {description || "No description available."}
         </Typography>
       </Box>
 
@@ -92,27 +76,51 @@ export default function DescriptionAdvertiser() {
         <Box sx={{ display: "flex", flexDirection: "column", gap: "8px" }}>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography>{t("productDetail.advertiser.advertiser")}</Typography>
-            <Typography>Mestebeld Trucks B.V.</Typography>
+            <Typography>
+              {advertiser?.subsections?.[0]?.fields?.find(
+                (f) => f.key === "advertiser.name"
+              )?.display_value || "Not Available"}
+            </Typography>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography>{t("productDetail.advertiser.website")}</Typography>
-            <Typography>www.Example.nl</Typography>
+            <Typography>
+              {advertiser?.subsections?.[0]?.fields?.find(
+                (f) => f.key === "advertiser.website"
+              )?.display_value || "Not Available"}
+            </Typography>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography>{t("productDetail.advertiser.email")}</Typography>
-            <Typography>info@Example.nl</Typography>
+            <Typography>
+              {advertiser?.subsections?.[0]?.fields?.find(
+                (f) => f.key === "advertiser.email"
+              )?.display_value || "Not Available"}
+            </Typography>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography>{t("productDetail.advertiser.address")}</Typography>
-            <Typography>Musterstraße 123</Typography>
+            <Typography>
+              {advertiser?.subsections?.[0]?.fields?.find(
+                (f) => f.key === "advertiser.address"
+              )?.display_value || "Not Available"}
+            </Typography>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography>{t("productDetail.advertiser.postCode")}</Typography>
-            <Typography>8152BE</Typography>
+            <Typography>
+              {advertiser?.subsections?.[0]?.fields?.find(
+                (f) => f.key === "advertiser.postal_code"
+              )?.display_value || "Not Available"}
+            </Typography>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography>{t("productDetail.advertiser.place")}</Typography>
-            <Typography>Lemelerveld</Typography>
+            <Typography>
+              {advertiser?.subsections?.[0]?.fields?.find(
+                (f) => f.key === "advertiser.city"
+              )?.display_value || "Not Available"}
+            </Typography>
           </Box>
           <Box
             sx={{
@@ -126,11 +134,15 @@ export default function DescriptionAdvertiser() {
             </Typography>
             <Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}>
               <Avatar
-                src="/path-to-avatar.jpg"
-                alt="Daniel"
+                src={advertiser?.imageUrl || "/default-avatar.png"} // Use advertiser-provided image if available, else default
+                alt={advertiser?.name || "Sales Employee"}
                 sx={{ width: 32, height: 32 }}
               />
-              <Typography>Daniel (+313846800668)</Typography>
+              <Typography>
+                {advertiser?.subsections?.[0]?.fields?.find(
+                  (f) => f.key === "advertiser.telephone"
+                )?.display_value || "No Contact Info"}
+              </Typography>
             </Box>
           </Box>
         </Box>

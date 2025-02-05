@@ -3,7 +3,13 @@ import { Box, Typography, Button, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { useTranslation } from "react-i18next";
 
-export default function FilterHeader({ activeFilters = [], onRemoveFilter }) {
+export default function FilterHeader({
+  activeFilters = [],
+  onRemoveFilter,
+  onSearchChange,
+  onSearchSubmit,
+  searchKeyword,
+}) {
   const { t } = useTranslation();
 
   return (
@@ -109,6 +115,8 @@ export default function FilterHeader({ activeFilters = [], onRemoveFilter }) {
               padding: 0,
             },
           }}
+          value={searchKeyword}
+          onChange={onSearchChange}
         />
 
         <Button
@@ -121,6 +129,7 @@ export default function FilterHeader({ activeFilters = [], onRemoveFilter }) {
               sx={{ marginRight: { xs: "-12px", md: "0px" }, mt: "0px" }}
             />
           }
+          onClick={onSearchSubmit}
         >
           <span className=" hidden md:block">
             {t("filterHeader.searchButton")}

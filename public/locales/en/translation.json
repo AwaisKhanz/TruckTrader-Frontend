@@ -158,8 +158,8 @@
     }
   },
   "productDetailHeader": {
-    "likes": "{{count}}",
-    "views": "{{count}}",
+    "home": "Home",
+    "filter": "Filter",
     "searchPlaceholder": "Search Keywords",
     "searchButton": "Search"
   },
@@ -198,13 +198,19 @@
     },
     "emissions": {
       "title": "Emissions Standards",
-      "emissionClass": "Emission Class:"
+      "emissionClass": "Emission Class:",
+      "fuelConsumption": "Fuel Consumption (combined):"
     },
     "history": {
       "title": "History and Condition",
-      "productionDate": "Production date:",
-      "dateOfFirstRegistration": "Date of first registration:",
-      "generalCondition": "General Condition:"
+      "productionDate": "Production Date:",
+      "dateOfFirstRegistration": "Date of First Registration:",
+      "dateOfFirstAdmission": "Date of First Admission:",
+      "maintenanceBooklet": "Maintenance Booklet:",
+      "apkValidUntil": "APK Valid Until:",
+      "generalCondition": "General Condition:",
+      "numberOfKeys": "Number of Keys:",
+      "numberOfHandTransmitters": "Number of Hand Transmitters:"
     },
     "swipper": {
       "title": "Volvo Mini Truck 2019",
@@ -259,10 +265,10 @@
       "used": "Used",
       "new": "New"
     },
-    "priceRange": "Price Range",
+    "priceRange": "Odometer Range",
     "priceLabels": {
-      "min": "$5,000",
-      "max": "$100,000"
+      "min": "5,000",
+      "max": "100,000"
     },
     "model": "Model",
     "modelLabels": {

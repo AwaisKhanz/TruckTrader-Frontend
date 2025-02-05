@@ -1,7 +1,8 @@
 import React from "react";
 import { Box, CircularProgress, Typography } from "@mui/material";
+import ErrorIcon from "@mui/icons-material/Error";
 
-const Loading = ({ message = "Loading...", size = 32 }) => {
+const Error = ({ message = "Error", size = 32 }) => {
   return (
     <Box
       sx={{
@@ -13,14 +14,17 @@ const Loading = ({ message = "Loading...", size = 32 }) => {
         padding: "1rem",
       }}
     >
-      <CircularProgress
-        size={size}
-        sx={{ marginBottom: "1rem", color: "black" }}
+      <ErrorIcon
+        sx={{
+          marginBottom: "1rem",
+          color: "black",
+          fontSize: { xs: "24px", md: "32px" },
+        }}
       />
       <Typography
         variant="body1"
         color="black"
-        sx={{ fontWeight: 600, fontSize: "22px" }}
+        sx={{ fontWeight: 600, fontSize: "28px" }}
       >
         {message}
       </Typography>
@@ -28,4 +32,4 @@ const Loading = ({ message = "Loading...", size = 32 }) => {
   );
 };
 
-export default Loading;
+export default Error;

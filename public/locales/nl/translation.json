@@ -162,13 +162,19 @@
     },
     "emissions": {
       "title": "Emissienormen",
-      "emissionClass": "Emissieklasse:"
+      "emissionClass": "Emissieklasse:",
+      "fuelConsumption": "Brandstofverbruik (gemiddeld):"
     },
     "history": {
-      "title": "Geschiedenis en Conditie",
+      "title": "Historie en Staat",
       "productionDate": "Productiedatum:",
-      "dateOfFirstRegistration": "Datum van eerste registratie:",
-      "generalCondition": "Algemene Conditie:"
+      "dateOfFirstRegistration": "Datum eerste registratie:",
+      "dateOfFirstAdmission": "Datum eerste toelating:",
+      "maintenanceBooklet": "Onderhoudsboekje:",
+      "apkValidUntil": "APK geldig tot:",
+      "generalCondition": "Algemene staat:",
+      "numberOfKeys": "Aantal sleutels:",
+      "numberOfHandTransmitters": "Aantal handzenders:"
     },
     "swipper": {
       "title": "Volvo Mini Truck 2019",

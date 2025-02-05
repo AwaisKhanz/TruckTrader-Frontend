@@ -1,19 +1,17 @@
 import React from "react";
-import {
-  Box,
-  IconButton,
-  Typography,
-  TextField,
-  InputAdornment,
-  Button,
-} from "@mui/material";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import VisibilityIcon from "@mui/icons-material/Visibility";
+import { Box, Typography, TextField, Button } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { useTranslation } from "react-i18next";
+import { Breadcrumbs } from "@mui/material";
+import { Link } from "react-router-dom";
+import HomeIcon from "@mui/icons-material/Home";
 
-export default function ProductDetailHeader() {
+export default function ProductDetailHeader({
+  searchQuery,
+  setSearchQuery,
+  id,
+  product,
+}) {
   const { t } = useTranslation();
 
   return (
@@ -29,66 +27,64 @@ export default function ProductDetailHeader() {
       <Box
         sx={{
           display: "flex",
-          alignItems: "center",
+          alignItems: { xs: "", md: "center" },
           justifyContent: "space-between",
+          flexDirection: { xs: "column", md: "row" },
           gap: "16px",
         }}
       >
-        {/* Left Section */}
+        {/* Breadcrumbs Section - Home, Vehicle Type, Brand, Model */}
         <Box
           sx={{
             display: "flex",
-            alignItems: "stretch",
-            gap: { xs: "10px", md: "16px" },
+            alignItems: "center",
+            gap: "10px",
           }}
         >
-          {/* Back Button */}
-          <IconButton
-            sx={{
-              backgroundColor: "#F6F6F6",
-              padding: { xs: "6px 8px", md: "8px 10px" },
-              borderRadius: "20px",
-              display: { xs: "none", md: "block" },
-            }}
-          >
-            <ArrowBackIcon />
-          </IconButton>
+          <Breadcrumbs separator="›" aria-label="breadcrumb">
+            {/* Home Icon */}
+            <Link to="/" style={{ display: "flex", alignItems: "center" }}>
+              <HomeIcon fontSize="small" />
+            </Link>
+            {/* Brand Name */}
+            {product?.make && (
+              <Link
+                to={`/filter`}
+                style={{ fontSize: "14px", fontWeight: 500 }}
+              >
+                {product.make}
+              </Link>
+            )}
 
-          {/* Likes */}
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-              backgroundColor: "#F6F6F6",
-              color: "black",
-              padding: { xs: "6px 8px", md: "8px 10px" },
-              borderRadius: "20px",
-            }}
-          >
-            <FavoriteBorderIcon sx={{ color: "#BD0000" }} />
-            <Typography sx={{ fontWeight: "bold" }}>
-              {t("productDetailHeader.likes", { count: 231 })}
-            </Typography>
-          </Box>
+            {/* Model Name */}
+            {product?.model && (
+              <Link
+                to={`/filter`}
+                style={{ fontSize: "14px", fontWeight: 500 }}
+              >
+                {product.model}
+              </Link>
+            )}
 
-          {/* Views */}
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-              color: "black",
-              backgroundColor: "#F6F6F6",
-              padding: { xs: "6px 8px", md: "8px 10px" },
-              borderRadius: "20px",
-            }}
-          >
-            <VisibilityIcon sx={{ color: "#CCCCCC" }} />
-            <Typography sx={{ fontWeight: "bold" }}>
-              {t("productDetailHeader.views", { count: 0 })}
-            </Typography>
-          </Box>
+            {/* Vehicle Type */}
+            {product?.vehicleType && (
+              <Typography
+                sx={{
+                  fontSize: "14px",
+                  fontWeight: 600,
+                  maxWidth: "150px",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+                title={product.vehicleType}
+              >
+                {product.vehicleType.length > 15
+                  ? `${product.vehicleType.slice(0, 12)} ...`
+                  : product.vehicleType}
+              </Typography>
+            )}
+          </Breadcrumbs>
         </Box>
 
         {/* Right Section */}
@@ -105,6 +101,8 @@ export default function ProductDetailHeader() {
           <TextField
             placeholder={t("productDetailHeader.searchPlaceholder")}
             variant="standard"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
             InputProps={{
               disableUnderline: true,
               style: { fontSize: "14px", color: "#B0B0B0" },

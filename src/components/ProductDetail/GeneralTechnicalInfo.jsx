@@ -2,8 +2,24 @@ import React from "react";
 import { Box, Divider, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
-export default function GeneralTechnicalInfo() {
+export default function GeneralTechnicalInfo({ generalInfo, technicalInfo }) {
   const { t } = useTranslation();
+
+  console.log(technicalInfo);
+
+  // Extract general information fields
+  const generalFields = generalInfo?.subsections?.[0]?.fields || [];
+  const generalData = generalFields.reduce((acc, field) => {
+    acc[field.key] = field.display_value;
+    return acc;
+  }, {});
+
+  // Extract technical information fields
+  const technicalFields = technicalInfo?.subsections?.[0]?.fields || [];
+  const technicalData = technicalFields.reduce((acc, field) => {
+    acc[field.key] = field.display_value;
+    return acc;
+  }, {});
 
   return (
     <Box
@@ -42,27 +58,39 @@ export default function GeneralTechnicalInfo() {
         <Box sx={{ display: "flex", flexDirection: "column", gap: "8px" }}>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography>{t("productDetail.generalInfo.brand")}</Typography>
-            <Typography>Volvo</Typography>
+            <Typography sx={{ textAlign: "right" }}>
+              {generalData["general.make.name"] || "N/A"}
+            </Typography>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography>{t("productDetail.generalInfo.model")}</Typography>
-            <Typography>FM 300</Typography>
+            <Typography sx={{ textAlign: "right" }}>
+              {generalData["general.type.name"] || "N/A"}
+            </Typography>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography>{t("productDetail.generalInfo.type")}</Typography>
-            <Typography>FM 300</Typography>
+            <Typography sx={{ textAlign: "right" }}>
+              {generalData["general.type.name"] || "N/A"}
+            </Typography>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography>{t("productDetail.generalInfo.year")}</Typography>
-            <Typography>2006</Typography>
+            <Typography sx={{ textAlign: "right" }}>
+              {generalData["general.year"] || "N/A"}
+            </Typography>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography>{t("productDetail.generalInfo.odometer")}</Typography>
-            <Typography>128,888,000km</Typography>
+            <Typography sx={{ textAlign: "right" }}>
+              {generalData["condition.odometer"] || "N/A"}
+            </Typography>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography>{t("productDetail.generalInfo.category")}</Typography>
-            <Typography>Truck</Typography>
+            <Typography sx={{ textAlign: "right" }}>
+              {generalData["general.category"] || "N/A"}
+            </Typography>
           </Box>
         </Box>
       </Box>
@@ -93,35 +121,47 @@ export default function GeneralTechnicalInfo() {
         <Box sx={{ display: "flex", flexDirection: "column", gap: "8px" }}>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography>{t("productDetail.technicalInfo.assets")}</Typography>
-            <Typography>340 pk (250 kW)</Typography>
+            <Typography sx={{ textAlign: "right" }}>
+              {technicalData["powertrain.engine.power.combined"] || "N/A"}
+            </Typography>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography>{t("productDetail.technicalInfo.fuelType")}</Typography>
-            <Typography>Diesel</Typography>
+            <Typography sx={{ textAlign: "right" }}>
+              {technicalData["powertrain.engine.energy.type.code"] || "N/A"}
+            </Typography>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography>
               {t("productDetail.technicalInfo.drivetrain")}
             </Typography>
-            <Typography>RWD</Typography>
+            <Typography sx={{ textAlign: "right" }}>
+              {technicalData["powertrain.axles.driven_wheels"] || "N/A"}
+            </Typography>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography>
               {t("productDetail.technicalInfo.transmission")}
             </Typography>
-            <Typography>Manual</Typography>
+            <Typography sx={{ textAlign: "right" }}>
+              {technicalData["powertrain.transmission.formatted"] || "N/A"}
+            </Typography>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography>
               {t("productDetail.technicalInfo.axleConfiguration")}
             </Typography>
-            <Typography>6x4</Typography>
+            <Typography sx={{ textAlign: "right" }}>
+              {technicalData["powertrain.axles.configuration_string"] || "N/A"}
+            </Typography>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography>
               {t("productDetail.technicalInfo.dimensions")}
             </Typography>
-            <Typography>750x250x300 cm</Typography>
+            <Typography sx={{ textAlign: "right" }}>
+              {technicalData["body.dimensions.combined"] || "N/A"}
+            </Typography>
           </Box>
         </Box>
       </Box>
