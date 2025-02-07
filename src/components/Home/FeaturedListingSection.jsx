@@ -13,106 +13,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-
 import ListingCard from "../../components/Common/ListingCard";
-import truckImage from "../../assets/Home/FeatureListingSection/truck.png";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import { transformListingData } from "../../utils/common";
 
-const sampleData = [
-  {
-    id: 1,
-    title: "Volvo Mini Truck 2019",
-    year: "2019",
-    transmission: "Manual",
-    fuel: "Diesel",
-    weight: "50 Tons",
-    mileage: "250,00KM",
-    type: "Box Truck",
-    location: "De,Berlin",
-    price: "$96,340",
-    image: truckImage,
-  },
-  {
-    id: 2,
-    title: "Volvo Mini Truck 2019",
-    year: "2019",
-    transmission: "Manual",
-    fuel: "Diesel",
-    weight: "50 Tons",
-    mileage: "250,00KM",
-    type: "Box Truck",
-    location: "De,Berlin",
-    price: "$96,340",
-    image: truckImage,
-  },
-  {
-    id: 3,
-    title: "Volvo Mini Truck 2019",
-    year: "2019",
-    transmission: "Manual",
-    fuel: "Diesel",
-    weight: "50 Tons",
-    mileage: "250,00KM",
-    type: "Box Truck",
-    location: "De,Berlin",
-    price: "$96,340",
-    image: truckImage,
-  },
-  {
-    id: 4,
-    title: "Volvo Mini Truck 2019",
-    year: "2019",
-    transmission: "Manual",
-    fuel: "Diesel",
-    weight: "50 Tons",
-    mileage: "250,00KM",
-    type: "Box Truck",
-    location: "De,Berlin",
-    price: "$96,340",
-    image: truckImage,
-  },
-  {
-    id: 5,
-    title: "Volvo Mini Truck 2019",
-    year: "2019",
-    transmission: "Manual",
-    fuel: "Diesel",
-    weight: "50 Tons",
-    mileage: "250,00KM",
-    type: "Box Truck",
-    location: "De,Berlin",
-    price: "$96,340",
-    image: truckImage,
-  },
-  {
-    id: 6,
-    title: "Volvo Mini Truck 2019",
-    year: "2019",
-    transmission: "Manual",
-    fuel: "Diesel",
-    weight: "50 Tons",
-    mileage: "250,00KM",
-    type: "Box Truck",
-    location: "De,Berlin",
-    price: "$96,340",
-    image: truckImage,
-  },
-  {
-    id: 8,
-    title: "Volvo Mini Truck 2019",
-    year: "2019",
-    transmission: "Manual",
-    fuel: "Diesel",
-    weight: "50 Tons",
-    mileage: "250,00KM",
-    type: "Box Truck",
-    location: "De,Berlin",
-    price: "$96,340",
-    image: truckImage,
-  },
-];
-
-export default function FeaturedListingSection() {
+export default function FeaturedListingSection({ listings, loading }) {
   return (
     <Box sx={{ background: "#EDEDED" }}>
       <Box sx={{ maxWidth: "90%", mx: "auto", mt: "40px", py: "40px" }}>
@@ -153,11 +58,61 @@ export default function FeaturedListingSection() {
             480: { spaceBetween: 10 },
           }}
         >
-          {sampleData.map((item) => (
-            <SwiperSlide key={item.id} style={{ width: "325px" }}>
-              <ListingCard data={item} />
-            </SwiperSlide>
-          ))}
+          {loading
+            ? Array.from(new Array(5)).map((_, index) => (
+                <SwiperSlide
+                  key={index}
+                  style={{ width: "325px", height: "auto" }}
+                >
+                  <Box
+                    sx={{
+                      width: "100%",
+                      height: "400px",
+                      bgcolor: "#f0f0f0",
+                      borderRadius: "12px",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        width: "90%",
+                        height: "180px",
+                        bgcolor: "#e0e0e0",
+                        borderRadius: "8px",
+                      }}
+                    />
+                    <Box
+                      sx={{
+                        width: "80%",
+                        height: "20px",
+                        bgcolor: "#e0e0e0",
+                        borderRadius: "4px",
+                        mt: 2,
+                      }}
+                    />
+                    <Box
+                      sx={{
+                        width: "60%",
+                        height: "20px",
+                        bgcolor: "#e0e0e0",
+                        borderRadius: "4px",
+                        mt: 1,
+                      }}
+                    />
+                  </Box>
+                </SwiperSlide>
+              ))
+            : listings?.map((item) => (
+                <SwiperSlide
+                  key={item.id}
+                  style={{ width: "325px", height: "auto" }}
+                >
+                  <ListingCard data={transformListingData(item)} />
+                </SwiperSlide>
+              ))}
         </Swiper>
       </Box>
     </Box>

@@ -15,29 +15,10 @@ import TuneIcon from "@mui/icons-material/Tune";
 import { useTranslation } from "react-i18next";
 import Pagination from "@mui/material/Pagination";
 import api from "../services/api";
-
-const transformListingData = (listing) => {
-  return {
-    id: listing.id,
-    title: listing.description?.title || "No Title",
-    year: listing.general?.year || "N/A",
-    transmission:
-      listing.powertrain?.transmission?.type?.display_value || "N/A",
-    fuel:
-      listing.powertrain?.engine?.energy?.type?.code?.display_value || "N/A",
-    mileage: listing.condition?.odometer?.formatted || "N/A",
-    price:
-      listing.sales_conditions?.pricing?.asking?.in_eur?.formatted || "N/A",
-    image: listing.images?.[0]?.src || "https://via.placeholder.com/300",
-    location: listing.advertiser?.city || "N/A",
-    make: listing.general?.make?.name || "N/A",
-    model: listing.general?.model?.name || "N/A",
-    type: listing.general?.type?.name || "N/A",
-  };
-};
+import { transformListingData } from "../utils/common";
 
 export default function Filter() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [filters, setFilters] = useState({
     transmission: "Any",
     fuel: "Any",
@@ -66,10 +47,9 @@ export default function Filter() {
     try {
       const params = {
         _fieldset: "searchresults",
-        _locale: "nl_NL",
+        _locale: i18n.language === "en" ? "en_GB" : "nl_NL",
         keyword: keyword || searchKeyword,
         "general.category": "truck",
-        _order: "score",
         _offset: (page - 1) * itemsPerPage,
         _limit: itemsPerPage,
       };
@@ -115,7 +95,7 @@ export default function Filter() {
   // Fetch listings on component mount
   useEffect(() => {
     fetchListings(searchKeyword, currentPage);
-  }, [currentPage, filters]);
+  }, [currentPage, filters, t]);
 
   // Handle search input change
   const handleSearchChange = (event) => {

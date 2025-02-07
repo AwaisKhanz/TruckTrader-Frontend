@@ -25,16 +25,15 @@ export default function ProductDetail() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
+    setLoading(true);
     const fetchProductDetails = async () => {
       try {
         const response = await api.get(`/vehicle?_fieldset=details&id=${id}`, {
           params: {
-            // _subset: "trucks",
-            // _order: "last_changed",
-            // _locale: "en_US",
+            _locale: i18n.language === "en" ? "en_GB" : "nl_NL",
           },
         });
         const vehicleData = response.data.vehicle;
@@ -115,7 +114,7 @@ export default function ProductDetail() {
     };
 
     fetchProductDetails();
-  }, [id]);
+  }, [id, t]);
 
   const filteredSections = product?.sections?.filter(
     (section) =>

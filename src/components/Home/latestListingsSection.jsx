@@ -2,24 +2,11 @@ import React from "react";
 import { Box, Typography, Grid, Button } from "@mui/material";
 import ListingCard from "../../components/Common/ListingCard";
 import { useTranslation } from "react-i18next";
-import truckImage from "../../assets/Home/FeatureListingSection/truck.png";
+import { transformListingData } from "../../utils/common";
+
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
-const latestListings = Array(6).fill({
-  id: 1,
-  title: "Volvo Mini Truck 2019",
-  year: "2019",
-  transmission: "Manual",
-  fuel: "Diesel",
-  weight: "50 Tons",
-  mileage: "250,000KM",
-  type: "Box Truck",
-  location: "De,Berlin",
-  price: "$96,340",
-  image: truckImage,
-});
-
-export default function LatestListingSection() {
+export default function LatestListingSection({ listings, loading }) {
   const { t } = useTranslation();
 
   return (
@@ -55,11 +42,54 @@ export default function LatestListingSection() {
           gap: "24px",
         }}
       >
-        {latestListings.map((item, index) => (
-          <Box key={index}>
-            <ListingCard data={item} />
-          </Box>
-        ))}
+        {loading
+          ? Array.from(new Array(6)).map((_, index) => (
+              <Box
+                key={index}
+                sx={{
+                  width: "100%",
+                  height: "400px",
+                  bgcolor: "#f0f0f0",
+                  borderRadius: "12px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Box
+                  sx={{
+                    width: "90%",
+                    height: "180px",
+                    bgcolor: "#e0e0e0",
+                    borderRadius: "8px",
+                  }}
+                />
+                <Box
+                  sx={{
+                    width: "80%",
+                    height: "20px",
+                    bgcolor: "#e0e0e0",
+                    borderRadius: "4px",
+                    mt: 2,
+                  }}
+                />
+                <Box
+                  sx={{
+                    width: "60%",
+                    height: "20px",
+                    bgcolor: "#e0e0e0",
+                    borderRadius: "4px",
+                    mt: 1,
+                  }}
+                />
+              </Box>
+            ))
+          : listings?.map((item, index) => (
+              <Box key={index}>
+                <ListingCard data={transformListingData(item)} />
+              </Box>
+            ))}
       </Box>
     </Box>
   );

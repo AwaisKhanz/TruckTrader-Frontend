@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
 import backgroundImage from "../../assets/Home/FeaturedTrucks/Background.png";
+import { Link } from "react-router-dom";
 
 export default function FeaturedTrucksSection() {
   return (
@@ -55,9 +56,11 @@ export default function FeaturedTrucksSection() {
           >
             Highlighting the Car Everyone's Talking About This Month
           </Typography>
-          <Button variant="contained" color="secondary">
-            View All Trucks
-          </Button>
+          <Link to={"/filter"}>
+            <Button variant="contained" color="secondary">
+              View All Trucks
+            </Button>
+          </Link>
         </Box>
       </Box>
     </Box>
