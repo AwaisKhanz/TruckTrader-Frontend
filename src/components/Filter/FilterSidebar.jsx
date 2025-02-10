@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Typography,
@@ -17,17 +17,19 @@ export default function FilterSidebar({
   onResetFilters,
   onApplyFilters,
 }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const marksPrice = [
-    { value: 5000, label: t("filters.priceLabels.min") },
-    { value: 100000, label: t("filters.priceLabels.max") },
+    { value: 3000, label: 3000 },
+    { value: 100000, label: 100000 },
   ];
 
   const marksModel = [
-    { value: 2019, label: t("filters.modelLabels.min") },
-    { value: 2025, label: t("filters.modelLabels.max") },
+    { value: 2000, label: 2000 },
+    { value: 2025, label: 2025 },
   ];
+
+  console.log(marksPrice);
 
   const isFilterSelected = (filterField, value) =>
     filters[filterField] === value ||
@@ -61,7 +63,7 @@ export default function FilterSidebar({
       <Divider sx={{ bgcolor: "#E6E6E6", marginBottom: "16px" }} />
 
       {/* Transmission */}
-      <Box sx={{ marginBottom: "24px" }}>
+      {/* <Box sx={{ marginBottom: "24px" }}>
         <Typography
           sx={{
             mb: "16px",
@@ -95,7 +97,7 @@ export default function FilterSidebar({
             )
           )}
         </Box>
-      </Box>
+      </Box> */}
 
       {/* Fuel */}
       <Box sx={{ marginBottom: "24px" }}>
@@ -109,7 +111,16 @@ export default function FilterSidebar({
           {t("filters.fuel")}
         </Typography>
         <Box sx={{ display: "flex", gap: "12px", flexWrap: "wrap", mt: "8px" }}>
-          {["Any", "Petrol", "Diesel", "Hybrid", "Other"].map((label) => (
+          {[
+            "Any",
+            "Petrol",
+            "Diesel",
+            "Hybrid",
+            "electric",
+            "lpg",
+            "cng",
+            "Other",
+          ].map((label) => (
             <Button
               key={label}
               variant="contained"
@@ -142,55 +153,44 @@ export default function FilterSidebar({
           {t("filters.bodyType")}
         </Typography>
         <Box sx={{ display: "flex", gap: "12px", flexWrap: "wrap", mt: "8px" }}>
-          {["Any", "Box Truck", "Tanker", "Other"].map((label) => (
+          {[
+            { key: "cartransporter" },
+            { key: "closedbox" },
+            { key: "recoveryvehicle" },
+            { key: "panelvan" },
+            { key: "deliveryvan" },
+            { key: "concretemixer" },
+            { key: "lowloader" },
+            { key: "tipper" },
+            { key: "frigo" },
+            { key: "crane" },
+            { key: "agriculturalmachine" },
+            { key: "minibus" },
+            { key: "openbody" },
+            { key: "horsetransport" },
+            { key: "pickup" },
+            { key: "flatbed" },
+            { key: "standardtractor" },
+            { key: "tanker" },
+            { key: "sweeper" },
+            { key: "garbagetruck" },
+            { key: "other" },
+          ].map((type) => (
             <Button
-              key={label}
+              key={type.key}
               variant="contained"
-              onClick={() => onFilterChange("bodyType", label)}
+              onClick={() => onFilterChange("bodyType", type.key)}
               sx={{
                 padding: "4px 12px",
                 height: "26px",
                 fontSize: "12px",
-                backgroundColor: isFilterSelected("bodyType", label)
+                backgroundColor: isFilterSelected("bodyType", type.key)
                   ? "#BD0000"
                   : "#F6F6F6",
-                color: isFilterSelected("bodyType", label) ? "#fff" : "#000",
+                color: isFilterSelected("bodyType", type.key) ? "#fff" : "#000",
               }}
             >
-              {t(`filters.bodyTypeOptions.${label.toLowerCase()}`)}
-            </Button>
-          ))}
-        </Box>
-      </Box>
-
-      {/* Condition */}
-      <Box sx={{ marginBottom: "24px" }}>
-        <Typography
-          sx={{
-            mb: "16px",
-            fontSize: { xs: "12px", md: "18px" },
-            fontWeight: "500",
-          }}
-        >
-          {t("filters.condition")}
-        </Typography>
-        <Box sx={{ display: "flex", gap: "12px", flexWrap: "wrap", mt: "8px" }}>
-          {["Any", "Used", "New"].map((label) => (
-            <Button
-              key={label}
-              variant="contained"
-              onClick={() => onFilterChange("condition", label)}
-              sx={{
-                padding: "4px 12px",
-                height: "26px",
-                fontSize: "12px",
-                backgroundColor: isFilterSelected("condition", label)
-                  ? "#BD0000"
-                  : "#F6F6F6",
-                color: isFilterSelected("condition", label) ? "#fff" : "#000",
-              }}
-            >
-              {t(`filters.conditionOptions.${label.toLowerCase()}`)}
+              {t(`filters.bodyTypeOptions.${type.key}`)}
             </Button>
           ))}
         </Box>
@@ -212,7 +212,7 @@ export default function FilterSidebar({
             value={filters.priceRange}
             onChange={(_, newValue) => onFilterChange("priceRange", newValue)}
             step={1000}
-            min={5000}
+            min={3000}
             max={100000}
             marks={marksPrice}
             valueLabelDisplay="auto"
@@ -232,19 +232,65 @@ export default function FilterSidebar({
             mb: "16px",
           }}
         >
-          {t("filters.model")}
+          {t("filters.year")}
         </Typography>
         <Box sx={{ mx: 2 }}>
           <Slider
             value={filters.model}
             onChange={(_, newValue) => onFilterChange("model", newValue)}
             step={1}
-            min={2019}
+            min={2000}
             max={2025}
             marks={marksModel}
             valueLabelDisplay="auto"
             sx={{ color: "#BD0000" }}
           />
+        </Box>
+      </Box>
+
+      {/* Color Filter */}
+      <Box sx={{ marginBottom: "24px" }}>
+        <Typography
+          sx={{
+            mb: "16px",
+            fontSize: { xs: "12px", md: "18px" },
+            fontWeight: "500",
+          }}
+        >
+          {t("filters.color")}
+        </Typography>
+        <Box sx={{ display: "flex", gap: "16px", flexWrap: "wrap", mt: "8px" }}>
+          {[
+            { key: "beige", hex: "#F5F5DC" },
+            { key: "black", hex: "#000000" },
+            { key: "blue", hex: "#0000FF" },
+            { key: "brown", hex: "#8B4513" },
+            { key: "creme", hex: "#FFFDD0" },
+            { key: "gold", hex: "#FFD700" },
+            { key: "green", hex: "#008000" },
+            { key: "grey", hex: "#808080" },
+            { key: "orange", hex: "#FFA500" },
+            { key: "purple", hex: "#800080" },
+            { key: "red", hex: "#FF0000" },
+            { key: "silver", hex: "#C0C0C0" },
+            { key: "white", hex: "#FFFFFF" },
+            { key: "yellow", hex: "#FFFF00" },
+            { key: "other", hex: "#D3D3D3" },
+          ].map((color) => (
+            <Box
+              key={color.key}
+              onClick={() => onFilterChange("color", color.key)}
+              sx={{
+                height: "36px",
+                width: "36px",
+                backgroundColor: color.hex,
+                borderRadius: "4px",
+                border: isFilterSelected("color", color.key)
+                  ? "2px solid red"
+                  : "2px solid black",
+              }}
+            ></Box>
+          ))}
         </Box>
       </Box>
 

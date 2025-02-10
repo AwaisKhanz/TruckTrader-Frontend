@@ -24,9 +24,10 @@ export default function Filter() {
     fuel: "Any",
     bodyType: "Any",
     condition: "Any",
-    priceRange: [5000, 100000],
-    model: [1980, 2025],
+    priceRange: [3000, 100000],
+    model: [2000, 2025],
     features: [],
+    color: "Any",
   });
 
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -52,7 +53,10 @@ export default function Filter() {
         "general.category": "truck",
         _offset: (page - 1) * itemsPerPage,
         _limit: itemsPerPage,
+        _order: "general.year",
       };
+
+      console.log(filters);
 
       // Apply filters dynamically
       if (filters.fuel !== "Any") {
@@ -79,12 +83,16 @@ export default function Filter() {
       }
 
       if (filters.bodyType !== "Any") {
-        params["body.colour.primary"] = filters.bodyType.toLowerCase();
+        params["general.bodystyle.category"] = filters.bodyType;
+      }
+
+      if (filters.color !== "Any") {
+        params["body.colour.primary"] = filters.color;
       }
 
       const response = await api.get("/search", { params });
       setListings(response.data.results);
-      setTotalResults(response.data.num_results); // Update total number of results
+      setTotalResults(response.data.num_results);
     } catch (error) {
       console.error("Error fetching listings:", error);
     } finally {
@@ -120,10 +128,11 @@ export default function Filter() {
       t(`filters.transmissionOptions.${filters.transmission.toLowerCase()}`),
     filters.fuel !== "Any" &&
       t(`filters.fuelOptions.${filters.fuel.toLowerCase()}`),
-    filters.bodyType !== "Any" &&
-      t(`filters.bodyTypeOptions.${filters.bodyType.toLowerCase()}`),
+    filters.bodyType !== "Any" && filters.bodyType,
     filters.condition !== "Any" &&
       t(`filters.conditionOptions.${filters.condition.toLowerCase()}`),
+    ...filters.features.map((feature) => t(`filters.features.${feature}`)),
+    filters.color !== "Any" && filters.color,
     ...filters.features.map((feature) => t(`filters.features.${feature}`)),
   ].filter(Boolean);
 
@@ -140,7 +149,7 @@ export default function Filter() {
       bodyType: "Any",
       condition: "Any",
       priceRange: [5000, 100000],
-      model: [2019, 2025],
+      model: [2000, 2025],
       features: [],
     });
     setDrawerOpen(false);
@@ -148,13 +157,15 @@ export default function Filter() {
 
   // Handle removing individual active filter
   const handleRemoveFilter = (filter) => {
+    console.log(filter);
     setFilters((prev) => {
       const updatedFilters = { ...prev };
-
+      console.log(prev.color);
       if (prev.transmission === filter) updatedFilters.transmission = "Any";
       else if (prev.fuel === filter) updatedFilters.fuel = "Any";
       else if (prev.bodyType === filter) updatedFilters.bodyType = "Any";
       else if (prev.condition === filter) updatedFilters.condition = "Any";
+      else if (prev.color === filter) updatedFilters.color = "Any";
       else if (prev.features.includes(filter)) {
         updatedFilters.features = prev.features.filter(
           (feature) => feature !== filter
@@ -163,9 +174,6 @@ export default function Filter() {
 
       return updatedFilters;
     });
-
-    // Fetch updated listings after filter change
-    setTimeout(() => fetchListings(), 0);
   };
 
   // Handle applying filters

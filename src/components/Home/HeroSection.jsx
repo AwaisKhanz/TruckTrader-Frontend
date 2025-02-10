@@ -71,7 +71,6 @@ export default function HeroSection() {
           <span style={{ fontWeight: "600", color: "white" }}>
             {t("heroSection.subtitle.highlight2")}
           </span>
-          {t("heroSection.subtitle.part3")}
         </Typography>
 
         {/* Search Box */}

@@ -14,27 +14,26 @@
     "login": "Log In / Sign Up"
   },
   "heroSection": {
-    "heading": "Find Your Perfect Truck Right Now!",
+    "heading": "Find Your Next Truck Today!",
     "subtitle": {
-      "part1": "The ",
-      "highlight1": "ideal choice",
-      "part2": " for every journey, task, and adventure, offering unmatched reliability, exceptional performance, and ultimate comfort tailored ",
-      "highlight2": "to your needs",
-      "part3": "."
+      "part1": "Browse our ",
+      "highlight1": "extensive collection",
+      "part2": " of reliable and high-performance trucks. The perfect vehicle for your journey is just a ",
+      "highlight2": "click away."
     },
     "searchPlaceholder": "Search in Trucktrader....",
     "searchButton": "Search"
   },
   "highlightSection": {
     "left": {
-      "title": "How we Works?",
-      "description": "Lorem ipsum dolor sit amet consectetur. Diam a elementum aliquet sit orci elementum senectus. Aliquam viverra proin nunc nulla morbi etias sapien",
-      "readMore": "Read More"
+      "title": "Selling Your Truck? We've Got You Covered!",
+      "description": "List your truck on TruckTrader and reach thousands of potential buyers across the worldwide. It's fast, easy, and effective.",
+      "readMore": "Learn How to Sell Your Truck →"
     },
     "right": {
-      "title": "More than 300+ special collection trucks",
-      "description": "Lorem ipsum dolor sit amet consectetur. Diam a elementum aliquet sit orci elementum senectus. Aliquam viverra proin nun",
-      "button": "See All Trucks"
+      "title": "Hundreds of Trucks from Top Companies!",
+      "description": "Explore a wide selection of trucks directly from trusted companies. Only the best vehicles, carefully chosen for your convenience.",
+      "button": "View All Trucks"
     }
   },
   "category": {
@@ -250,13 +249,33 @@
       "petrol": "Petrol",
       "diesel": "Diesel",
       "hybrid": "Hybrid",
+      "electric": "Electric",
+      "lpg": "LPG",
+      "cng": "CNG",
       "other": "Other"
     },
     "bodyType": "Body Type",
     "bodyTypeOptions": {
-      "any": "Any",
-      "box truck": "Box Truck",
+      "cartransporter": "Car Transporter",
+      "closedbox": "Box Truck",
+      "recoveryvehicle": "Recovery Vehicle",
+      "panelvan": "Panel Van",
+      "deliveryvan": "Delivery Van",
+      "concretemixer": "Concrete Mixer",
+      "lowloader": "Low Loader",
+      "tipper": "Tipper",
+      "frigo": "Refrigerated Transport",
+      "crane": "Crane",
+      "agriculturalmachine": "Agricultural Machine",
+      "minibus": "Minibus",
+      "openbody": "Open Body",
+      "horsetransport": "Horse Transport",
+      "pickup": "Pick-Up",
+      "flatbed": "Flatbed",
+      "standardtractor": "Standard Tractor",
       "tanker": "Tanker",
+      "sweeper": "Sweeper",
+      "garbagetruck": "Garbage Truck",
       "other": "Other"
     },
     "condition": "Condition",
@@ -265,12 +284,30 @@
       "used": "Used",
       "new": "New"
     },
+    "color": "Color",
+    "colorOptions": {
+      "beige": "Beige",
+      "black": "Black",
+      "blue": "Blue",
+      "brown": "Brown",
+      "creme": "Creme",
+      "gold": "Gold",
+      "green": "Green",
+      "grey": "Grey",
+      "orange": "Orange",
+      "purple": "Purple",
+      "red": "Red",
+      "silver": "Silver",
+      "white": "White",
+      "yellow": "Yellow",
+      "other": "Other"
+    },
     "priceRange": "Odometer Range",
     "priceLabels": {
       "min": "5,000",
       "max": "100,000"
     },
-    "model": "Model",
+    "year": "Year",
     "modelLabels": {
       "min": "2019",
       "max": "2025"

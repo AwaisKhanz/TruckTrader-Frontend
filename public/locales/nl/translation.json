@@ -14,26 +14,25 @@
     "login": "Inloggen / Registreren"
   },
   "heroSection": {
-    "heading": "Vind nu uw perfecte vrachtwagen!",
+    "heading": "Vind je volgende vrachtwagen vandaag!",
     "subtitle": {
-      "part1": "De ",
-      "highlight1": "ideale keuze",
-      "part2": " voor elke reis, taak en avontuur, met ongeëvenaarde betrouwbaarheid, uitzonderlijke prestaties en ultiem comfort, afgestemd op ",
-      "highlight2": "uw behoeften",
-      "part3": "."
+      "part1": "Blader door onze ",
+      "highlight1": "uitgebreide collectie",
+      "part2": " van betrouwbare en hoogwaardige vrachtwagens. De perfecte voertuig voor jouw reis is slechts één ",
+      "highlight2": "klik verwijderd."
     },
     "searchPlaceholder": "Zoek in Trucktrader....",
     "searchButton": "Zoeken"
   },
   "highlightSection": {
     "left": {
-      "title": "Hoe we werken?",
-      "description": "Lorem ipsum dolor sit amet consectetur. Diam a elementum aliquet sit orci elementum senectus. Aliquam viverra proin nunc nulla morbi etias sapien",
-      "readMore": "Lees meer"
+      "title": "Verkopen van je vrachtwagen? Wij zorgen ervoor dat je bedekt bent!",
+      "description": "Plaats je vrachtwagen op TruckTrader en bereik duizenden potentiële kopers over de hele wereld. Het is snel, eenvoudig en effectief.",
+      "readMore": "Leer hoe je je vrachtwagen kunt verkopen →"
     },
     "right": {
-      "title": "Meer dan 300+ speciale collectie vrachtwagens",
-      "description": "Lorem ipsum dolor sit amet consectetur. Diam a elementum aliquet sit orci elementum senectus. Aliquam viverra proin nun",
+      "title": "Honderden vrachtwagens van topbedrijven!",
+      "description": "Ontdek een uitgebreide keuze aan vrachtwagens rechtstreeks van vertrouwde bedrijven. Alleen de beste voertuigen, zorgvuldig geselecteerd voor jouw gemak.",
       "button": "Bekijk alle vrachtwagens"
     }
   },
@@ -210,18 +209,38 @@
     },
     "fuel": "Brandstof",
     "fuelOptions": {
-      "any": "Elke",
+      "any": "Alle",
       "petrol": "Benzine",
       "diesel": "Diesel",
       "hybrid": "Hybride",
-      "other": "Andere"
+      "electric": "Elektrisch",
+      "lpg": "LPG",
+      "cng": "CNG",
+      "other": "Overig"
     },
     "bodyType": "Carrosserietype",
     "bodyTypeOptions": {
-      "any": "Elke",
-      "box truck": "Vrachtwagen",
+      "cartransporter": "Autotransporter",
+      "closedbox": "Bakwagen",
+      "recoveryvehicle": "Bergingswagen",
+      "panelvan": "Bestelauto",
+      "deliveryvan": "Bestelbus",
+      "concretemixer": "Betonmixer",
+      "lowloader": "Dieplader",
+      "tipper": "Kipper",
+      "frigo": "Koel-vriestransport",
+      "crane": "Kraan",
+      "agriculturalmachine": "Landbouwmachine",
+      "minibus": "Minibus",
+      "openbody": "Open laadbak",
+      "horsetransport": "Paardenvervoer",
+      "pickup": "Pick-Up",
+      "flatbed": "Platte bak",
+      "standardtractor": "Standaard trekker",
       "tanker": "Tankwagen",
-      "other": "Andere"
+      "sweeper": "Veegmachine",
+      "garbagetruck": "Vuilniswagen",
+      "other": "Overig"
     },
     "condition": "Conditie",
     "conditionOptions": {
@@ -229,12 +248,30 @@
       "used": "Gebruikt",
       "new": "Nieuw"
     },
+    "color": "Kleur",
+    "colorOptions": {
+      "beige": "Beige",
+      "black": "Zwart",
+      "blue": "Blauw",
+      "brown": "Bruin",
+      "creme": "Crème",
+      "gold": "Goud",
+      "green": "Groen",
+      "grey": "Grijs",
+      "orange": "Oranje",
+      "purple": "Paars",
+      "red": "Rood",
+      "silver": "Zilver",
+      "white": "Wit",
+      "yellow": "Geel",
+      "other": "Overig"
+    },
     "priceRange": "Prijsbereik",
     "priceLabels": {
       "min": "€5.000",
       "max": "€100.000"
     },
-    "model": "Model",
+    "year": "Jaar",
     "modelLabels": {
       "min": "2019",
       "max": "2025"

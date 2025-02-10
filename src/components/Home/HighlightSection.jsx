@@ -3,6 +3,7 @@ import { Box, Typography, Button } from "@mui/material";
 import backgroundImage from "../../assets/Home/HighlightSection/Highlight.png";
 import EastIcon from "@mui/icons-material/East";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export default function HighlightSection() {
   const { t } = useTranslation();
@@ -56,15 +57,17 @@ export default function HighlightSection() {
           }}
         >
           {t("highlightSection.left.description")}{" "}
-          <span
-            style={{
-              color: "#BD0000",
-              fontWeight: "bold",
-              textDecoration: "underline",
-            }}
-          >
-            {t("highlightSection.left.readMore")}
-          </span>
+          <Link to={"/register"}>
+            <span
+              style={{
+                color: "#BD0000",
+                fontWeight: "bold",
+                textDecoration: "underline",
+              }}
+            >
+              {t("highlightSection.left.readMore")}
+            </span>
+          </Link>
         </Typography>
       </Box>
 
