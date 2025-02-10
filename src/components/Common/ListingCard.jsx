@@ -4,10 +4,9 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import CalenderIcon from "../../assets/Home/FeatureListingSection/Calendar.png";
 import GasIcon from "../../assets/Home/FeatureListingSection/Gas.png";
 import SuspensionIcon from "../../assets/Home/FeatureListingSection/Suspension.png";
-import TonIcon from "../../assets/Home/FeatureListingSection/Ton.png";
 import TransmissionIcon from "../../assets/Home/FeatureListingSection/Transmission.png";
-import WheelIcon from "../../assets/Home/FeatureListingSection/Wheel.png";
 import { Link } from "react-router-dom";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 export default function ListingCard({ data }) {
   return (
@@ -23,9 +22,9 @@ export default function ListingCard({ data }) {
           flexDirection: "column",
           justifyContent: "space-between",
           // width: "325px",
-          transition: "transform 0.2s ease", // Optional animation for hover
+          transition: "transform 0.2s ease",
           "&:hover": {
-            transform: "scale(1.02)", // Slight zoom effect on hover
+            transform: "scale(1.02)",
           },
         }}
       >
@@ -65,14 +64,20 @@ export default function ListingCard({ data }) {
           </Box>
 
           {/* Title Section */}
+          {/* Title Section */}
           <Typography
             sx={{
               fontWeight: "600",
               fontSize: "20px",
               mb: "12px",
               color: "#000",
-              textOverflow: "ellipsis",
               fontStyle: "normal",
+              display: "-webkit-box",
+              WebkitBoxOrient: "vertical",
+              WebkitLineClamp: 2,
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              maxWidth: "100%",
             }}
           >
             {data.title}
@@ -140,10 +145,16 @@ export default function ListingCard({ data }) {
           >
             <Typography
               sx={{
-                fontSize: "20px",
-                color: "black",
+                fontSize: "14px",
+                color: "#292D32",
+                display: "flex",
+                alignItems: "center",
+                gap: "2px",
               }}
             >
+              <LocationOnIcon
+                sx={{ color: "#9E9E9E", mb: "1px", fontSize: "20px" }}
+              />
               {data.location}
             </Typography>
 

@@ -129,7 +129,7 @@ export default function FilterHeader({
               sx={{ marginRight: { xs: "-12px", md: "0px" }, mt: "0px" }}
             />
           }
-          onClick={onSearchSubmit}
+          // onClick={onSearchSubmit}
         >
           <span className=" hidden md:block">
             {t("filterHeader.searchButton")}

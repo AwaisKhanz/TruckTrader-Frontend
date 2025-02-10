@@ -108,13 +108,15 @@ export default function Filter() {
   // Handle search input change
   const handleSearchChange = (event) => {
     setSearchKeyword(event.target.value);
+    setCurrentPage(1);
+    fetchListings(event.target.value, 1);
   };
 
   // Handle search submission
-  const handleSearchSubmit = () => {
-    setCurrentPage(1); // Reset to the first page when performing a new search
-    fetchListings(searchKeyword, 1);
-  };
+  // const handleSearchSubmit = () => {
+  //   setCurrentPage(1);
+  //   fetchListings(searchKeyword, 1);
+  // };
 
   // Handle page change
   const handlePageChange = (event, page) => {
@@ -234,7 +236,7 @@ export default function Filter() {
             activeFilters={activeFilters}
             onRemoveFilter={handleRemoveFilter}
             onSearchChange={handleSearchChange}
-            onSearchSubmit={handleSearchSubmit}
+            // onSearchSubmit={handleSearchSubmit}
             searchKeyword={searchKeyword}
           />
 
