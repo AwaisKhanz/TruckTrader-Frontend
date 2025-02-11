@@ -5,6 +5,7 @@ import CalenderIcon from "../../assets/Home/FeatureListingSection/Calendar.png";
 import GasIcon from "../../assets/Home/FeatureListingSection/Gas.png";
 import SuspensionIcon from "../../assets/Home/FeatureListingSection/Suspension.png";
 import TransmissionIcon from "../../assets/Home/FeatureListingSection/Transmission.png";
+import WheelIcon from "../../assets/Home/FeatureListingSection/Wheel.png";
 import { Link } from "react-router-dom";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
@@ -64,7 +65,6 @@ export default function ListingCard({ data }) {
           </Box>
 
           {/* Title Section */}
-          {/* Title Section */}
           <Typography
             sx={{
               fontWeight: "600",
@@ -110,19 +110,23 @@ export default function ListingCard({ data }) {
               </Typography>
             </Grid>
             {/* <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-            <img loading="lazy" src={TonIcon} alt={"calendar"} />
-            <Typography sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}>
-              {data.type}
-            </Typography>
-          </Grid> */}
-            {/* <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-            <img loading="lazy" src={WheelIcon} alt={"calendar"} />
-            <Typography sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}>
-              {data.weight}
-            </Typography>
-          </Grid> */}
+              <img loading="lazy" src={TonIcon} alt={"calendar"} />
+              <Typography
+                sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
+              >
+                {data.type}
+              </Typography>
+            </Grid>
             <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-              <img loading="lazy" src={SuspensionIcon} alt={"calendar"} />
+              <img loading="lazy" src={WheelIcon} alt={"calendar"} />
+              <Typography
+                sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
+              >
+                {data.weight}
+              </Typography>
+            </Grid> */}
+            <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
+              <img loading="lazy" src={WheelIcon} alt={"calendar"} />
               <Typography
                 sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
               >
