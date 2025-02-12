@@ -35,7 +35,7 @@ export default function ContactHeader() {
           <Typography
             sx={{
               fontWeight: "600",
-              fontSize: { xs: "32px", md: "64px" },
+              fontSize: { xs: "24px", md: "42px" },
               marginBottom: "20px",
             }}
           >

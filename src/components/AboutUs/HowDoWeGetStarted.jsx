@@ -30,7 +30,7 @@ export default function HowDoWeGetStarted() {
   const { t } = useTranslation();
 
   return (
-    <Box sx={{ maxWidth: "90%", mx: "auto", my: { xs: "40px", md: "60px" } }}>
+    <Box sx={{ maxWidth: "90%", mx: "auto", mt: { xs: "60px", md: "120px" } }}>
       {/* Section Header */}
       <Box
         sx={{

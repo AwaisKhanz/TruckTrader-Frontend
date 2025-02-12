@@ -7,39 +7,35 @@ import DealershipIcon from "../../assets/Home/Services/dealership.png"; // Repla
 import AffordableIcon from "../../assets/Home/Services/affordable.png"; // Replace with actual icon path
 import backgroundImage from "../../assets/Home/Services/Background.png";
 
-const services = [
-  {
-    id: 1,
-    title: "All Brands",
-    description:
-      "Explore the complete list of global car manufacturers - from iconic giants to emerging innovators.",
-    icon: BrandIcon,
-  },
-  {
-    id: 2,
-    title: "Free Support",
-    description:
-      "Enjoy 24/7 reliable assistance - our free support team is always here to help with any questions or issues you may have!",
-    icon: SupportIcon,
-  },
-  {
-    id: 3,
-    title: "Dealership",
-    description:
-      "Find trusted dealerships near you - connecting you to the best deals and services for your dream car.",
-    icon: DealershipIcon,
-  },
-  {
-    id: 4,
-    title: "Affordable",
-    description:
-      "Quality and value combined - discover affordable options without compromising on excellence.",
-    icon: AffordableIcon,
-  },
-];
-
 export default function ServicesSection() {
   const { t } = useTranslation();
+
+  const services = [
+    {
+      id: 1,
+      title: "services.allBrands",
+      description: "services.allBrandsDescription",
+      icon: BrandIcon,
+    },
+    {
+      id: 2,
+      title: "services.freeSupport",
+      description: "services.freeSupportDescription",
+      icon: SupportIcon,
+    },
+    {
+      id: 3,
+      title: "services.dealership",
+      description: "services.dealershipDescription",
+      icon: DealershipIcon,
+    },
+    {
+      id: 4,
+      title: "services.affordable",
+      description: "services.affordableDescription",
+      icon: AffordableIcon,
+    },
+  ];
 
   return (
     <Box sx={{ maxWidth: "90%", mx: "auto", pb: { xs: "0px", md: "160px" } }}>
@@ -58,20 +54,6 @@ export default function ServicesSection() {
         }}
       >
         {/* Title */}
-        <Typography
-          variant="h6"
-          sx={{
-            backgroundColor: "#000",
-            display: "inline-block",
-            padding: "5px 20px",
-            borderRadius: "16px",
-            color: "#FFFFFF",
-            fontSize: "16px",
-            mb: "16px",
-          }}
-        >
-          {t("services.title")}
-        </Typography>
 
         <Typography
           variant="h3"

@@ -32,7 +32,7 @@ export default function HighlightSection() {
           padding: { xs: "20px 40px", md: "40px 50px" },
           display: "flex",
           flexDirection: "column",
-          justifyContent: "flex-end",
+          justifyContent: "center",
           minHeight: "346px",
           alignSelf: "stretch",
         }}
@@ -41,7 +41,7 @@ export default function HighlightSection() {
           sx={{
             fontWeight: "bold",
             marginBottom: "8px",
-            fontSize: { xs: "32px", md: "32px" },
+            fontSize: { xs: "24px", md: "28px" },
             color: "white",
           }}
         >
@@ -57,7 +57,7 @@ export default function HighlightSection() {
           }}
         >
           {t("highlightSection.left.description")}{" "}
-          <Link to={"/register"}>
+          <Link to={"/advertise"}>
             <span
               style={{
                 color: "#BD0000",
@@ -90,9 +90,8 @@ export default function HighlightSection() {
         <Typography
           sx={{
             fontWeight: "bold",
-            fontSize: "28px",
+            fontSize: { xs: "24px", md: "28px" },
             color: "#023247",
-            maxWidth: "316px",
           }}
         >
           {t("highlightSection.right.title")}
@@ -109,10 +108,12 @@ export default function HighlightSection() {
           >
             {t("highlightSection.right.description")}
           </Typography>
-          <Button variant="contained" sx={{ width: "auto" }}>
-            {t("highlightSection.right.button")}{" "}
-            <EastIcon sx={{ ml: "10px", fontSize: "18px" }} />
-          </Button>
+          <Link to={"/filter"}>
+            <Button variant="contained" sx={{ width: "auto" }}>
+              {t("highlightSection.right.button")}{" "}
+              <EastIcon sx={{ ml: "10px", fontSize: "18px" }} />
+            </Button>
+          </Link>
         </Box>
       </Box>
     </Box>

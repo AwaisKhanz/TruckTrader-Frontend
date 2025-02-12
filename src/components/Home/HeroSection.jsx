@@ -43,9 +43,8 @@ export default function HeroSection() {
           variant="h2"
           sx={{
             fontWeight: "bold",
-            fontSize: { xs: "30px", md: "64px" },
+            fontSize: { xs: "24px", md: "42px" },
             lineHeight: "1",
-            maxWidth: "541px",
             color: "#FFFFFF",
           }}
         >
@@ -56,7 +55,7 @@ export default function HeroSection() {
         <Typography
           sx={{
             maxWidth: "541px",
-            fontSize: { xs: "20px", md: "20px" },
+            fontSize: { xs: "16px", md: "20px" },
             lineHeight: "1.2",
             color: "#CDCDCD !important",
             fontWeight: "400 !important",

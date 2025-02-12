@@ -14,25 +14,25 @@
     "login": "Inloggen / Registreren"
   },
   "heroSection": {
-    "heading": "Vind je volgende vrachtwagen vandaag!",
+    "heading": "Ontdek vandaag jouw nieuwe truck!",
     "subtitle": {
-      "part1": "Blader door onze ",
-      "highlight1": "uitgebreide collectie",
-      "part2": " van betrouwbare en hoogwaardige vrachtwagens. De perfecte voertuig voor jouw reis is slechts één ",
+      "part1": "Verken onze ",
+      "highlight1": "brede selectie",
+      "part2": " trucks, dagelijks aangevuld met voertuigen van betrouwbare verkopers. De ideale truck voor jouw klus is slechts één ",
       "highlight2": "klik verwijderd."
     },
-    "searchPlaceholder": "Zoek in Trucktrader....",
+    "searchPlaceholder": "Zoek op merk, model of type truck...",
     "searchButton": "Zoeken"
   },
   "highlightSection": {
     "left": {
-      "title": "Verkopen van je vrachtwagen? Wij zorgen ervoor dat je bedekt bent!",
-      "description": "Plaats je vrachtwagen op TruckTrader en bereik duizenden potentiële kopers over de hele wereld. Het is snel, eenvoudig en effectief.",
+      "title": "Voertuig verkopen? Tijd om in de spotlight te komen!",
+      "description": "Bij TruckTrader helpen we je jouw voertuig onder de aandacht te brengen van de juiste doelgroep. Geen gedoe, gewoon een eenvoudig en krachtig platform waarmee je jouw voertuig direct kunt aanbieden aan duizenden potentiële kopers. ",
       "readMore": "Leer hoe je je vrachtwagen kunt verkopen →"
     },
     "right": {
-      "title": "Honderden vrachtwagens van topbedrijven!",
-      "description": "Ontdek een uitgebreide keuze aan vrachtwagens rechtstreeks van vertrouwde bedrijven. Alleen de beste voertuigen, zorgvuldig geselecteerd voor jouw gemak.",
+      "title": "Ontdek ons assortiment commerciële voertuigen!",
+      "description": "Verken ons uitgebreide aanbod aan trucks en bedrijfswagens van toonaangevende bedrijven. Wij bieden zorgvuldig geselecteerde voertuigen van betrouwbare merken, zodat je altijd op kwaliteit en gebruiksgemak kunt rekenen. Stel eenvoudig je zoekcriteria in en vind de perfecte match voor jouw bedrijf.",
       "button": "Bekijk alle vrachtwagens"
     }
   },
@@ -52,21 +52,21 @@
   },
   "services": {
     "title": "Onze Diensten",
-    "main": "Wij Bieden",
-    "highlight": "Topkwaliteit",
-    "mainEnd": " Services For Truck Dealers",
+    "main": "Jouw betrouwbare",
+    "highlight": "B2B-platform",
+    "mainEnd": " B2B-platform",
     "subtitle": "Verbinden van vrachtwagenhandelaren met ongeëvenaarde expertise en betrouwbare oplossingen. Uw vertrouwde partner voor naadloze handel en uitstekende ondersteuning.",
-    "allBrands": "Alle Merken",
-    "freeSupport": "Gratis Ondersteuning",
-    "dealership": "Dealerschap",
-    "affordable": "Betaalbaar",
-    "allBrandsDescription": "Verken de volledige lijst van wereldwijde autofabrikanten - van iconische giganten tot opkomende innovators.",
-    "freeSupportDescription": "Geniet van 24/7 betrouwbare hulp - ons gratis ondersteuningsteam staat altijd voor je klaar met al je vragen of problemen!",
-    "dealershipDescription": "Vind vertrouwde dealers bij jou in de buurt - en maak verbinding met de beste deals en services voor je droomauto.",
-    "affordableDescription": "Kwaliteit en waarde gecombineerd - ontdek betaalbare opties zonder in te leveren op kwaliteit."
+    "allBrands": "Gerichte Doelgroep",
+    "freeSupport": "Competitieve Prijzen",
+    "dealership": "Op Maat Gemaakte Oplossingen",
+    "affordable": "Continue Verbetering",
+    "allBrandsDescription": "Wij zorgen ervoor dat jouw advertenties de juiste mensen bereiken, zodat je optimale zichtbaarheid hebt bij potentiële kopers die actief op zoek zijn naar commerciële voertuigen.",
+    "freeSupportDescription": "Onze prijsstructuur biedt jou de beste waarde, waardoor het betaalbaar blijft om jouw voertuigen op ons platform te plaatsen en te verkopen.",
+    "dealershipDescription": "Heb je behoefte aan een aangepaste aanpak? Wij bieden flexibele opties en op maat gemaakte importfeeds, perfect afgestemd op jouw specifieke zakelijke wensen.",
+    "affordableDescription": "We werken voortdurend aan het verbeteren van ons platform en voegen regelmatig nieuwe functies toe. Daarbij staan we altijd open voor jouw aanbevelingen – jouw feedback is essentieel voor de toekomst van TruckTrader."
   },
   "footer": {
-    "description": "De sites Trucktrader.nl, Trucktrader.be, Trucktrader.lu en Trucktrader.world (alle talen) zijn zeer gebruiksvriendelijk, zodat de verkoper vrijwel geen moeite hoeft te doen om de volledige voorraad te tonen.",
+    "description": "Word vandaag nog onderdeel van TruckTrader en ontdek de voordelen van een toegewijd, flexibel en klantgericht platform voor de handel in commerciële voertuigen. Of je nu je vloot wilt verkopen of je activiteiten wilt uitbreiden met nieuwe voertuigen, TruckTrader staat voor je klaar om je bedrijf te laten groeien.",
     "copyright": "Copyright © 2024 Trucktrader Benelux B.V.",
     "terms": "Voorwaarden",
     "cookies": "Cookies",
@@ -84,40 +84,49 @@
       "contactUs": "Contact"
     }
   },
+
   "aboutHeader": {
     "title": "Over TruckTrader",
-    "description": "De websites Trucktrader.nl, Trucktrader.be, Trucktrader.lu en Trucktrader.world (alle talen) zijn zeer gebruiksvriendelijk, zodat de verkoper vrijwel geen moeite hoeft te doen om zijn volledige voorraad weer te geven. Natuurlijk moeten we ook de gebruiker/koper informeren die snel de advertenties kan bekijken die hij wil via onze geavanceerde zoekmachine; kortom, een platform waar koper en verkoper elkaar ontmoeten om DE DEAL te sluiten!"
+    "description": "Bij TruckTrader verbinden we bedrijven met de commerciële voertuigen die ze nodig hebben om succesvol te zijn. Ons platform is speciaal ontwikkeld om het kopen en verkopen van bedrijfsvoertuigen eenvoudig en efficiënt te maken. Met een focus op gebruiksgemak en een gericht publiek is TruckTrader dé plek voor B2B-voertuighandel."
   },
-
   "addedValue": {
-    "title": "De Toegevoegde Waarde Van",
+    "title": "Waarom kiezen voor TruckTrader?",
     "highlight": "TruckTrader",
     "userFriendly": {
-      "title": "Gebruiksvriendelijk, voor zowel de verkopers als kopers",
-      "description": "Ontworpen om kopen en verkopen eenvoudig, naadloos en aangenaam te maken voor iedereen"
+      "title": "Gerichte Doelgroep",
+      "description": "Wij zorgen ervoor dat jouw advertenties precies de juiste doelgroep bereiken, zodat je maximale zichtbaarheid krijgt bij kopers die actief op zoek zijn naar commerciële voertuigen."
     },
     "greatReach": {
-      "title": "Een platform met groot bereik en zichtbaarheid",
-      "description": "Een krachtig platform om uw publiek te vergroten en de zichtbaarheid van uw aanbiedingen te maximaliseren"
+      "title": "Concurrerende Prijzen",
+      "description": "Onze prijsstructuur biedt de beste waarde, waardoor je jouw voertuigen voordelig kunt adverteren en verkopen."
     },
     "cheapPlacement": {
-      "title": "Snel en goedkoop plaatsen van autovoorraad",
-      "description": "Snelle en kosteneffectieve plaatsing van auto-aanbiedingen, banners en advertorials"
+      "title": "Maatwerkoplossingen",
+      "description": "Heb je specifieke wensen? Wij bieden op maat gemaakte importfeeds en flexibele oplossingen die perfect aansluiten op jouw zakelijke behoeften."
     },
     "highQuality": {
-      "title": "Hoogwaardige advertenties tegen zeer concurrerende prijzen",
-      "description": "Hoogwaardige advertenties leveren tegen uitzonderlijk concurrerende prijzen"
+      "title": "Voortdurende Verbetering",
+      "description": "We blijven ons platform verbeteren met nieuwe functies en waarderen jouw input. Jouw feedback speelt een cruciale rol in de verdere ontwikkeling van TruckTrader."
     }
   },
-  "xmlFeedSection": {
-    "title": "Als er geen XML-feed beschikbaar is:",
-    "customFeeds": {
-      "title": "Aangepaste interne XML-feeds op aanvraag",
-      "description": "Als het nog niet beschikbaar is, maakt Trucktrader de XML-feed voor u in-house (op basis van een offerte)."
+  "howDoWeGetStarted": {
+    "title": "Waarom kiezen voor TruckTrader?",
+    "subtitle": "Vergroot je naamsbekendheid met een gratis vermelding in onze bedrijvengids.",
+    "step1": {
+      "title": "Directe Advertentiezichtbaarheid",
+      "description": "Zodra je account is geactiveerd, worden je advertenties direct zichtbaar. Geen onnodige vertragingen, je bereikt meteen potentiële kopers."
     },
-    "webFeeds": {
-      "title": "XML-feeds door uw webbeheerder",
-      "description": "U kunt een XML-feed laten ontwikkelen door de beheerder van uw eigen website."
+    "step2": {
+      "title": "Snel & Betrouwbaar Netwerk",
+      "description": "Ons platform draait op meerdere datacenterlocaties, waardoor bezoekers altijd een snelle en soepele ervaring hebben, ongeacht waar ze zich bevinden."
+    },
+    "step3": {
+      "title": "Voortdurende Ontwikkeling",
+      "description": "We blijven ons platform verbeteren en nieuwe functies toevoegen. Jouw feedback helpt ons de gebruikerservaring continu te optimaliseren."
+    },
+    "step4": {
+      "title": "Gratis Vermelding in de Bedrijvengids",
+      "description": "Vergroot je bereik met een gratis vermelding in onze bedrijvengids. Zo zorg je voor maximale exposure en maak je het potentiële klanten makkelijker om je te vinden."
     }
   },
   "productDetailHeader": {
@@ -334,16 +343,16 @@
   },
   "advertise": {
     "header": {
-      "title": "Adverteer Slimmer met",
-      "description": "Bereik duizenden vrachtwagenkopers in het hele land met een gestroomlijnde advertentie-ervaring. TruckTrader brengt je rechtstreeks in contact met het publiek dat je nodig hebt om verkoop te stimuleren."
+      "title": "Waarom adverteren op TruckTrader?",
+      "description": "Wil je jouw bereik vergroten en in contact komen met serieuze kopers in de commerciële voertuigensector? TruckTrader helpt je om de juiste mensen te bereiken."
     },
     "carCompanies": {
-      "title": "Autobedrijven",
-      "description": "TruckTrader heeft maandelijks meer dan 400.000 unieke bezoekers - dat zijn 400.000 potentiële kopers van gebruikte auto's elke maand! Enthousiast over de mogelijkheden? Stuur een e-mail naar sales@trucktrader.nl en wij nemen contact met je op."
+      "title": "Gerichte Doelgroep",
+      "description": "Bij TruckTrader houden we het graag eenvoudig. Ons platform is ontworpen voor moeiteloos kopen en verkopen van bedrijfsvoertuigen. Plaats een advertentie en bereik een doelgroep die actief op zoek is naar het juiste voertuig."
     },
     "individuals": {
-      "title": "Particulieren",
-      "description": "Als particulier kun je ook adverteren op TruckTrader. Met meer dan 400.000 unieke bezoekers per maand verkoop je je voertuig in een mum van tijd! Na registratie kun je direct je advertentie plaatsen!"
+      "title": "Hoge Zichtbaarheid",
+      "description": "Met duizenden bezoekers per maand zorgt TruckTrader voor maximale zichtbaarheid van jouw advertenties. Ons platform is speciaal ontwikkeld om jouw aanbod optimaal te presenteren, zodat jouw trucks de aandacht krijgen die ze verdienen.."
     }
   },
   "advertiseSignUp": {
@@ -355,6 +364,7 @@
       "firstName": "Voornaam",
       "lastName": "Achternaam",
       "street": "Straat",
+      "taxId": "BTW-nummer",
       "streetNumber": "Straatnummer",
       "country": "Land",
       "city": "Stad",
@@ -370,6 +380,7 @@
       "firstName": "Voer uw voornaam in",
       "lastName": "Voer uw achternaam in",
       "street": "Straat",
+      "TaxId": "Voer uw BTW-nummer",
       "streetNumber": "Straatnummer",
       "country": "Selecteer Land",
       "city": "Stad",

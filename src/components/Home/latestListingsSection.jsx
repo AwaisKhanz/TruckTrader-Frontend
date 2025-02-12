@@ -10,7 +10,7 @@ export default function LatestListingSection({ listings, loading }) {
   const { t } = useTranslation();
 
   return (
-    <Box sx={{ maxWidth: "90%", mx: "auto", pb: "60px" }}>
+    <Box sx={{ maxWidth: "90%", mx: "auto", py: "60px" }}>
       {/* Title and Show All Button */}
       <Box
         sx={{

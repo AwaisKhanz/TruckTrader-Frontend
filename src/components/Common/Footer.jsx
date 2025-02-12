@@ -15,7 +15,8 @@ export default function Footer() {
       sx={{
         maxWidth: { xs: "100%", md: "90%" },
         mx: "auto",
-        py: { xs: "30px", md: "60px" },
+        pt: { xs: "30px", md: "60px" },
+        pb: { xs: "0px", md: "60px" },
       }}
     >
       <Box

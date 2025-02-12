@@ -6,33 +6,43 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import VerifiedIcon from "@mui/icons-material/Verified";
 
+import TargetedAudienceIcon from "@mui/icons-material/People"; // New Icon
+import CompetitivePricingIcon from "@mui/icons-material/MonetizationOn"; // New Icon
+import CustomizedSolutionsIcon from "@mui/icons-material/Settings"; // New Icon
+import ContinuousImprovementIcon from "@mui/icons-material/Autorenew"; // New Icon
+
 const features = [
   {
     id: 1,
     title: "addedValue.userFriendly.title",
     description: "addedValue.userFriendly.description",
-    icon: <InfoIcon sx={{ fontSize: "40px", color: "#2E75BA" }} />,
+    icon: <TargetedAudienceIcon sx={{ fontSize: "40px", color: "#2E75BA" }} />,
   },
   {
     id: 2,
     title: "addedValue.greatReach.title",
     description: "addedValue.greatReach.description",
-    icon: <VisibilityIcon sx={{ fontSize: "40px", color: "#8E24AA" }} />,
+    icon: (
+      <CompetitivePricingIcon sx={{ fontSize: "40px", color: "#8E24AA" }} />
+    ),
   },
   {
     id: 3,
     title: "addedValue.cheapPlacement.title",
     description: "addedValue.cheapPlacement.description",
-    icon: <LocalOfferIcon sx={{ fontSize: "40px", color: "#F9A825" }} />,
+    icon: (
+      <CustomizedSolutionsIcon sx={{ fontSize: "40px", color: "#F9A825" }} />
+    ),
   },
   {
     id: 4,
     title: "addedValue.highQuality.title",
     description: "addedValue.highQuality.description",
-    icon: <VerifiedIcon sx={{ fontSize: "40px", color: "#E91E63" }} />,
+    icon: (
+      <ContinuousImprovementIcon sx={{ fontSize: "40px", color: "#E91E63" }} />
+    ),
   },
 ];
-
 export default function AddedValueSection() {
   const { t } = useTranslation();
 
@@ -50,7 +60,6 @@ export default function AddedValueSection() {
         }}
       >
         {t("addedValue.title")}{" "}
-        <span style={{ color: "#BD0000" }}>{t("addedValue.highlight")}</span>
       </Typography>
 
       {/* Features Grid */}

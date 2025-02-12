@@ -11,9 +11,9 @@ export default function AboutUs() {
     <Box>
       <AboutHeader />
       <AddedValueSection />
-      <ReadyMadeFeedsSection />
+      {/* <ReadyMadeFeedsSection /> */}
       <HowDoWeGetStarted />
-      <XmlFeedSection />
+      {/* <XmlFeedSection /> */}
     </Box>
   );
 }

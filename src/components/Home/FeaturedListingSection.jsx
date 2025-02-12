@@ -38,7 +38,7 @@ export default function FeaturedListingSection({ listings, loading }) {
               fontSize: { xs: "24px", md: "32px" },
             }}
           >
-            Featured listing
+            Feature listings
           </Typography>
           <Button variant="contained" color="secondary">
             Show All <ChevronRightIcon />

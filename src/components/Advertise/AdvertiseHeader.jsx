@@ -41,14 +41,13 @@ export default function AdvertiseHeader() {
         variant="h4"
         fontWeight="600"
         sx={{
-          fontSize: { xs: "24px", md: "64px" },
+          fontSize: { xs: "24px", md: "42px" },
           fontWeight: 500,
           color: "#000",
           mb: 2,
         }}
       >
         {t("advertise.header.title")}{" "}
-        <span className=" text-[#BD0000]"> TruckTrader</span>
       </Typography>
       <Typography
         variant="body1"

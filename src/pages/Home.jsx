@@ -65,9 +65,9 @@ export default function Home() {
       <HeroSection />
       <HighlightSection />
       <FeaturedListingSection listings={featureListings} loading={loading} />
-      <TruckCategorySection />
+      {/* <TruckCategorySection /> */}
       <LatestListingSection listings={latestListings} loading={loading} />
-      <FeaturedTrucksSection />
+      {/* <FeaturedTrucksSection /> */}
       <ServicesSection />
     </Box>
   );

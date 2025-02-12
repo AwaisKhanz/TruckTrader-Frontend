@@ -31,7 +31,7 @@ export default function DirectoryHeader() {
           <Typography
             sx={{
               fontWeight: "600",
-              fontSize: { xs: "24px", md: "64px" },
+              fontSize: { xs: "24px", md: "42px" },
               marginBottom: "20px",
               maxWidth: "1100px",
               mx: "auto",

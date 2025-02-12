@@ -3,7 +3,6 @@ import { Box, Typography, IconButton, Grid, Divider } from "@mui/material";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import CalenderIcon from "../../assets/Home/FeatureListingSection/Calendar.png";
 import GasIcon from "../../assets/Home/FeatureListingSection/Gas.png";
-import SuspensionIcon from "../../assets/Home/FeatureListingSection/Suspension.png";
 import TransmissionIcon from "../../assets/Home/FeatureListingSection/Transmission.png";
 import WheelIcon from "../../assets/Home/FeatureListingSection/Wheel.png";
 import { Link } from "react-router-dom";
@@ -109,22 +108,7 @@ export default function ListingCard({ data }) {
                 {data.fuel}
               </Typography>
             </Grid>
-            {/* <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-              <img loading="lazy" src={TonIcon} alt={"calendar"} />
-              <Typography
-                sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
-              >
-                {data.type}
-              </Typography>
-            </Grid>
-            <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-              <img loading="lazy" src={WheelIcon} alt={"calendar"} />
-              <Typography
-                sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
-              >
-                {data.weight}
-              </Typography>
-            </Grid> */}
+
             <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
               <img loading="lazy" src={WheelIcon} alt={"calendar"} />
               <Typography

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Grid,
@@ -10,9 +10,25 @@ import {
 } from "@mui/material";
 import { useForm, Controller } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+import emailjs from "emailjs-com";
+import axios from "axios";
 
 export default function AdvertiseSignUp() {
   const { t } = useTranslation();
+  const [countries, setCountries] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://restcountries.com/v3.1/all")
+      .then((response) => {
+        const countryList = response.data.map((country) => ({
+          code: country.cca2,
+          name: country.name.common,
+        }));
+        setCountries(countryList.sort((a, b) => a.name.localeCompare(b.name)));
+      })
+      .catch((error) => console.error("Error fetching countries:", error));
+  }, []);
 
   const {
     handleSubmit,
@@ -23,6 +39,42 @@ export default function AdvertiseSignUp() {
 
   const onSubmit = (data) => {
     console.log("Form Data:", data);
+
+    // Use EmailJS to send email with individual variables
+    emailjs
+      .send(
+        "service_001nte8", // Your EmailJS Service ID
+        "template_rusmobg", // Your EmailJS Template ID
+        {
+          to_name: "TruckTrader Support",
+          from_name: `${data.firstName} ${data.lastName}`,
+          from_email: data.email,
+          to_email: "support@trucktrader.nl", // Receiver email
+          subscription: data.subscription,
+          company: data.company,
+          cocNumber: data.cocNumber,
+          taxId: data.taxId,
+          firstName: data.firstName,
+          lastName: data.lastName,
+          street: data.street,
+          streetNumber: data.streetNumber,
+          country: data.country,
+          city: data.city,
+          phoneNumber: data.phoneNumber,
+          email: data.email,
+          zipCode: data.zipCode,
+          bank: data.bank,
+        },
+        "RVteankGgD0A41mdj" // Your EmailJS User ID
+      )
+      .then((response) => {
+        alert("Email sent successfully!");
+        console.log("Email response:", response);
+      })
+      .catch((error) => {
+        alert("Error sending email!");
+        console.error("Email error:", error);
+      });
   };
 
   return (
@@ -104,7 +156,7 @@ export default function AdvertiseSignUp() {
           {/* Rest of Fields */}
           {[
             { name: "cocNumber", label: "cocNumber" },
-            { name: "Insert", label: "Insert" },
+            { name: "taxId", label: "TaxId" },
             { name: "firstName", label: "firstName" },
             { name: "lastName", label: "lastName" },
             { name: "street", label: "street" },
@@ -141,8 +193,11 @@ export default function AdvertiseSignUp() {
                         helperText={errors[field.name]?.message}
                         sx={{ mt: 2 }}
                       >
-                        <MenuItem value="country1">Country 1</MenuItem>
-                        <MenuItem value="country2">Country 2</MenuItem>
+                        {countries.map((country) => (
+                          <MenuItem key={country.code} value={country.name}>
+                            {country.name}
+                          </MenuItem>
+                        ))}
                       </TextField>
                     ) : (
                       <TextField

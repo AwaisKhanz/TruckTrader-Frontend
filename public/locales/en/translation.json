@@ -18,21 +18,21 @@
     "subtitle": {
       "part1": "Browse our ",
       "highlight1": "extensive collection",
-      "part2": " of reliable and high-performance trucks. The perfect vehicle for your journey is just a ",
+      "part2": " of trucks, updated daily with vehicles from reliable and trusted sellers. Your perfect truck for the job is just a ",
       "highlight2": "click away."
     },
-    "searchPlaceholder": "Search in Trucktrader....",
+    "searchPlaceholder": "Search by make, model, or truck type...",
     "searchButton": "Search"
   },
   "highlightSection": {
     "left": {
-      "title": "Selling Your Truck? We've Got You Covered!",
-      "description": "List your truck on TruckTrader and reach thousands of potential buyers across the worldwide. It's fast, easy, and effective.",
-      "readMore": "Learn How to Sell Your Truck →"
+      "title": "Selling Your Truck? TruckTrader Delivers!",
+      "description": "Join our network and list your truck to reach thousands of buyers worldwide. Our platform is fast, easy, and effective, putting your truck in front of the right audience.",
+      "readMore": "Join Now!"
     },
     "right": {
-      "title": "Hundreds of Trucks from Top Companies!",
-      "description": "Explore a wide selection of trucks directly from trusted companies. Only the best vehicles, carefully chosen for your convenience.",
+      "title": "Explore Our Range of Commercial Vehicles",
+      "description": "Discover hundreds of trucks from leading companies! Browse our extensive selection of vehicles from trusted brands, each chosen with your convenience in mind. Fine-tune your search to find the perfect match.",
       "button": "View All Trucks"
     }
   },
@@ -47,27 +47,27 @@
     "posts": "789+ Posts"
   },
   "latestListings": {
-    "title": "Latest listing",
+    "title": "Latest listings",
     "showAll": "Show All"
   },
   "services": {
     "title": "Our Services",
-    "main": "We Provide",
-    "highlight": "Top-notch",
-    "mainEnd": " Services For Truck Dealers",
-    "subtitle": "Connecting truck dealers with unmatched expertise and reliable solutions. Your trusted partner for seamless trading and exceptional support.",
-    "allBrands": "All Brands",
-    "freeSupport": "Free Support",
-    "dealership": "Dealership",
-    "affordable": "Affordable",
-    "allBrandsDescription": "Explore the complete list of global car manufacturers - from iconic giants to emerging innovators.",
-    "freeSupportDescription": "Enjoy 24/7 reliable assistance - our free support team is always here to help with any questions or issues you may have!",
-    "dealershipDescription": "Find trusted dealerships near you - connecting you to the best deals and services for your dream car.",
-    "affordableDescription": "Quality and value combined - discover affordable options without compromising on excellence."
+    "main": "Your Trusted",
+    "highlight": "B2B Platform",
+    "mainEnd": " for Commercial Vehicles",
+    "subtitle": "At TruckTrader, we connect businesses with the commercial vehicles they need to drive success. Our platform is designed to facilitate seamless transactions between sellers and buyers in the commercial vehicle market, making it the go-to destination for B2B vehicle trading.",
+    "allBrands": "Targeted Audience",
+    "freeSupport": "Competitive Pricing",
+    "dealership": "Customized Solutions",
+    "affordable": "Continuous Improvement",
+    "allBrandsDescription": "We ensure your ads reach the right people, maximizing your exposure to potential buyers who are actively seeking commercial vehicles.",
+    "freeSupportDescription": "Our pricing structure is designed to offer you the best value, making it affordable to list and sell your vehicles on our platform.",
+    "dealershipDescription": "Need a tailored approach? We offer customized import feeds and flexible options to meet your specific business needs.",
+    "affordableDescription": "We are committed to enhancing our platform with new features and are always open to recommendations from our users. Your feedback is invaluable in shaping the future of TruckTrader."
   },
 
   "footer": {
-    "description": "The sites Trucktrader.nl, Trucktrader.be, Trucktrader.lu, and Trucktrader.world (all languages) are very user-friendly so that the selling party has to make virtually no effort to display its complete stock.",
+    "description": "Join TruckTrader today and experience the difference of a dedicated, flexible, and user-focused platform for commercial vehicle trading. Whether you're looking to sell your fleet or expand your operations with new vehicles, TruckTrader is here to support your business growth.",
     "copyright": "Copyright © 2024 Trucktrader Benelux B.V.",
     "terms": "Terms and conditions",
     "cookies": "Cookies",
@@ -88,26 +88,26 @@
 
   "aboutHeader": {
     "title": "About TruckTrader",
-    "description": "The sites Trucktrader.nl, Trucktrader.be, Trucktrader.lu, and Trucktrader.world (all languages) are very user-friendly so that the selling party has to make virtually no effort to display its complete stock. Of course, we also have to inform the user/buyer who can quickly view the advertisements he wants via our advanced search engine; in short, a platform where buyer and seller meet to close THE DEAL!"
+    "description": "At TruckTrader, we connect businesses with the commercial vehicles they need to succeed. Our platform is built to streamline transactions between buyers and sellers in the commercial vehicle market, making it the ultimate destination for B2B vehicle trading."
   },
   "addedValue": {
-    "title": "The Added Value Of",
+    "title": "Why Choose TruckTrader?",
     "highlight": "TruckTrader",
     "userFriendly": {
-      "title": "User-friendly, for both the selling and purchasing parties",
-      "description": "Designed to Make Buying and Selling Simple, Seamless, and Enjoyable for Everyone"
+      "title": "Targeted Audience",
+      "description": "We ensure your ads reach the right people, maximizing your visibility among buyers actively searching for commercial vehicles."
     },
     "greatReach": {
-      "title": "A platform with great reach and exposure",
-      "description": "A Powerful Platform to Broaden Your Audience and Maximize Visibility for Your Listings"
+      "title": "Competitive Pricing",
+      "description": "Our pricing structure is designed to provide the best value, making it cost-effective to list and sell your vehicles."
     },
     "cheapPlacement": {
-      "title": "Quick and cheap placement of car stock",
-      "description": "Quick and Cost-Effective Placement for Car Listings, Banners, and Advertorials"
+      "title": "Customized Solutions",
+      "description": "Looking for a tailored approach? We offer custom import feeds and flexible options to suit your business needs."
     },
     "highQuality": {
-      "title": "High quality advertisements at very competitive prices",
-      "description": "Delivering High-Quality Advertisements at Exceptionally Competitive Prices"
+      "title": "Continuous Improvement",
+      "description": "We’re constantly enhancing our platform with new features and value your input. Your feedback helps shape the future of TruckTrader."
     }
   },
   "readyMadeFeedsSection": {
@@ -126,23 +126,23 @@
     }
   },
   "howDoWeGetStarted": {
-    "title": "How Do We Get Started",
-    "subtitle": "Enhance your brand visibility with complimentary logo placement included in all your advertisements",
+    "title": "Why Choose TruckTrader?",
+    "subtitle": "Enhance your brand visibility with our complimentary business directory.",
     "step1": {
-      "title": "We place all your advertisements completely automatically and they are visible in real time",
-      "description": "We automate all your advertisements, ensuring they go live seamlessly and are visible in real time."
+      "title": "Instant Ad Visibility",
+      "description": "The moment your account is activated, your ads go live. No unnecessary delays—just immediate exposure to potential buyers looking for commercial vehicles."
     },
     "step2": {
-      "title": "With every advertisement a direct link to your webshop/website",
-      "description": "Every ad connects directly to your webshop, driving instant traffic and engagements."
+      "title": "Fast & Reliable Network",
+      "description": "Our platform is powered by multiple data center locations, ensuring fast load times and a smooth experience for visitors, no matter where they are in the world."
     },
     "step3": {
-      "title": "All your advertisements are automatically up to date",
-      "description": "Keep your ads fresh and relevant—automatically updated in real time."
+      "title": "Ongoing Platform Enhancements",
+      "description": "We continuously improve our platform by adding new features and optimizing performance. Your feedback helps us shape a better experience for all users."
     },
     "step4": {
-      "title": "Free placement of your logo with the advertisements",
-      "description": "Enhance your brand visibility with complimentary logo placement included in all your advertisements."
+      "title": "Free Business Directory Listing",
+      "description": "Get maximum exposure with a free listing in our business directory. Increase your reach and make it easier for potential customers to find you."
     }
   },
   "xmlFeedSection": {
@@ -370,16 +370,16 @@
   },
   "advertise": {
     "header": {
-      "title": "Advertise Smarter with",
-      "description": "Reach thousands of truck buyers nationwide with a streamlined advertising experience. TruckTrader connects you directly with the audience you need to drive sales."
+      "title": "Why Advertise on TruckTrader?",
+      "description": "Looking to expand your reach and connect with serious buyers in the commercial vehicle market? TruckTrader has you covered."
     },
     "carCompanies": {
-      "title": "Car Companies",
-      "description": "TruckTrader has over 400,000 unique visitors every month - that's 400,000 potential used car buyers each month! Got excited about the possibilities? Send an email to sales@trucktrader.nl and we'll get in touch with you."
+      "title": "Targeted Audience",
+      "description": "At TruckTrader, we believe in keeping things simple. Our platform is built for hassle-free buying and selling of commercial vehicles. Advertise with us and reach an audience that's actively looking for the right vehicle."
     },
     "individuals": {
-      "title": "Individuals",
-      "description": "As a private individual, you can also advertise on TruckTrader. With over 400,000 unique visitors every month, you’ll sell your vehicle in no time! Once registered, you can immediately enter your ad!"
+      "title": "High Visibility",
+      "description": "With thousands of visitors each month, TruckTrader gives your listings outstanding exposure. Our platform is built to showcase your inventory in the best possible light, ensuring your trucks receive the attention they deserve."
     }
   },
   "advertiseSignUp": {
@@ -388,7 +388,7 @@
       "subscription": "Select Subscription",
       "company": "Company",
       "cocNumber": "CoC Number",
-      "Insert": "Insert",
+      "TaxId": "Tax ID",
       "firstName": "First Name",
       "lastName": "Last Name",
       "street": "Street",
@@ -404,7 +404,7 @@
       "subscription": "Select Subscription",
       "company": "Company",
       "cocNumber": "CoC Number",
-      "Insert": "Insert",
+      "TaxId": "Enter Your Tax ID",
       "firstName": "Enter Your First Name",
       "lastName": "Enter Your Last Name",
       "street": "Street",
