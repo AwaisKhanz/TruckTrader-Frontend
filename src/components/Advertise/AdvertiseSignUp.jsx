@@ -49,7 +49,7 @@ export default function AdvertiseSignUp() {
           to_name: "TruckTrader Support",
           from_name: `${data.firstName} ${data.lastName}`,
           from_email: data.email,
-          to_email: "support@trucktrader.nl", // Receiver email
+          to_email: "niels@trucktrader.nl",
           subscription: data.subscription,
           company: data.company,
           cocNumber: data.cocNumber,

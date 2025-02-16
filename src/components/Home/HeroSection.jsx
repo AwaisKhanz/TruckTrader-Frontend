@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography, Button, InputBase } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import backgroundImage from "../../assets/Home/HeroSection/Hero.png";
@@ -6,8 +6,16 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 export default function HeroSection() {
+  const [searchText, setSearchText] = useState("");
   const { t } = useTranslation();
   const navigate = useNavigate();
+
+  const handleSearch = () => {
+    if (searchText.trim()) {
+      navigate(`/filter?search=${encodeURIComponent(searchText.trim())}`);
+    }
+  };
+
   return (
     <Box
       sx={{
@@ -73,6 +81,7 @@ export default function HeroSection() {
         </Typography>
 
         {/* Search Box */}
+
         <Box
           sx={{
             width: "100%",
@@ -87,6 +96,13 @@ export default function HeroSection() {
         >
           <InputBase
             placeholder="Search in Trucktrader...."
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                handleSearch();
+              }
+            }}
             sx={{
               flex: 1,
               fontSize: "16px",
@@ -97,12 +113,7 @@ export default function HeroSection() {
               },
             }}
           />
-          <Button
-            variant="contained"
-            onClick={() => {
-              navigate("/filter");
-            }}
-          >
+          <Button variant="contained" onClick={handleSearch}>
             <SearchIcon
               sx={{ marginRight: "4px", fontSize: { xs: "16px", md: "24px" } }}
             />

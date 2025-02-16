@@ -15,6 +15,7 @@ export default function FilterSidebar({
   filters,
   onFilterChange,
   onResetFilters,
+  activeFilters,
   onApplyFilters,
 }) {
   const { t, i18n } = useTranslation();
@@ -28,8 +29,6 @@ export default function FilterSidebar({
     { value: 2000, label: 2000 },
     { value: 2025, label: 2025 },
   ];
-
-  console.log(marksPrice);
 
   const isFilterSelected = (filterField, value) =>
     filters[filterField] === value ||
@@ -52,52 +51,39 @@ export default function FilterSidebar({
           alignItems: "center",
           gap: "12px",
           marginBottom: "16px",
+          justifyContent: "space-between",
         }}
       >
-        <TuneIcon sx={{ color: "#BD0000" }} />
-        <Typography variant="h6" fontWeight="600">
-          {t("filters.title")}
-        </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: "12px",
+          }}
+        >
+          <TuneIcon sx={{ color: "#BD0000" }} />
+          <Typography variant="h6" fontWeight="600">
+            {t("filters.title")}
+          </Typography>
+        </Box>
+        {activeFilters.length > 0 && (
+          <Button
+            variant="contained"
+            color="secondary"
+            sx={{
+              bgcolor: "#F6F6F6",
+              height: "30px",
+              fontSize: "14px",
+              padding: "0px !important",
+            }}
+            onClick={onResetFilters}
+          >
+            {t("filters.resettext")}
+          </Button>
+        )}
       </Box>
 
       <Divider sx={{ bgcolor: "#E6E6E6", marginBottom: "16px" }} />
-
-      {/* Transmission */}
-      {/* <Box sx={{ marginBottom: "24px" }}>
-        <Typography
-          sx={{
-            mb: "16px",
-            fontSize: { xs: "12px", md: "18px" },
-            fontWeight: "500",
-          }}
-        >
-          {t("filters.transmission")}
-        </Typography>
-        <Box sx={{ display: "flex", gap: "12px", flexWrap: "wrap", mt: "8px" }}>
-          {["Any", "Automatic", "Manual", "Semi Automatic", "Other"].map(
-            (label) => (
-              <Button
-                key={label}
-                variant="contained"
-                onClick={() => onFilterChange("transmission", label)}
-                sx={{
-                  padding: "4px 12px",
-                  height: "26px",
-                  fontSize: "12px",
-                  backgroundColor: isFilterSelected("transmission", label)
-                    ? "#BD0000"
-                    : "#F6F6F6",
-                  color: isFilterSelected("transmission", label)
-                    ? "#fff"
-                    : "#000",
-                }}
-              >
-                {t(`filters.transmissionOptions.${label.toLowerCase()}`)}
-              </Button>
-            )
-          )}
-        </Box>
-      </Box> */}
 
       {/* Fuel */}
       <Box sx={{ marginBottom: "24px" }}>

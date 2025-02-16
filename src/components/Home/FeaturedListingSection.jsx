@@ -16,8 +16,10 @@ import "swiper/css/scrollbar";
 import ListingCard from "../../components/Common/ListingCard";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { transformListingData } from "../../utils/common";
+import { useTranslation } from "react-i18next";
 
 export default function FeaturedListingSection({ listings, loading }) {
+  const { t } = useTranslation();
   return (
     <Box sx={{ background: "#EDEDED" }}>
       <Box sx={{ maxWidth: "90%", mx: "auto", mt: "40px", py: "40px" }}>
@@ -38,7 +40,7 @@ export default function FeaturedListingSection({ listings, loading }) {
               fontSize: { xs: "24px", md: "32px" },
             }}
           >
-            Feature listings
+            {t("featureListings.title")}
           </Typography>
           <Button variant="contained" color="secondary">
             Show All <ChevronRightIcon />

@@ -26,9 +26,9 @@
   },
   "highlightSection": {
     "left": {
-      "title": "Voertuig verkopen? Tijd om in de spotlight te komen!",
+      "title": "Voertuig verkopen?",
       "description": "Bij TruckTrader helpen we je jouw voertuig onder de aandacht te brengen van de juiste doelgroep. Geen gedoe, gewoon een eenvoudig en krachtig platform waarmee je jouw voertuig direct kunt aanbieden aan duizenden potentiële kopers. ",
-      "readMore": "Leer hoe je je vrachtwagen kunt verkopen →"
+      "readMore": "Meldt je nu aan!"
     },
     "right": {
       "title": "Ontdek ons assortiment commerciële voertuigen!",
@@ -46,8 +46,12 @@
     "parts": "Onderdelen",
     "posts": "789+ Berichten"
   },
+  "featureListings": {
+    "title": "Uitgelichte advertenties"
+  },
+
   "latestListings": {
-    "title": "Laatste aanbieding",
+    "title": "Recent toegevoegd",
     "showAll": "Alles tonen"
   },
   "services": {
@@ -297,6 +301,7 @@
       "Warranty": "Garantie"
     },
     "reset": "Filters Resetten",
+    "resettext": "Resetten",
     "apply": "Filters Toepassen"
   },
   "filterHeader": {
@@ -306,8 +311,8 @@
     "searchButton": "Zoeken"
   },
   "contactHeader": {
-    "title": "Neem Contact Met Ons Op",
-    "description": "Heeft u vragen over kopen, verkopen of adverteren bij ons? Ons team staat klaar om u te helpen met al uw vragen of om gedetailleerde ondersteuning te bieden. Aarzel niet om contact op te nemen—wij zijn slechts een bericht of telefoontje van u verwijderd."
+    "title": "Neem contact met ons op",
+    "description": "Heeft u vragen over kopen, verkopen of adverteren bij ons? Ons team staat klaar om u te helpen met al uw vragen of om gedetailleerde ondersteuning te bieden."
   },
   "contactForm": {
     "labels": {

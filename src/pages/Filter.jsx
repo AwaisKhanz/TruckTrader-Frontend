@@ -16,11 +16,13 @@ import { useTranslation } from "react-i18next";
 import Pagination from "@mui/material/Pagination";
 import api from "../services/api";
 import { transformListingData } from "../utils/common";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Filter() {
   const { t, i18n } = useTranslation();
+  const location = useLocation();
+  const navigate = useNavigate();
   const [filters, setFilters] = useState({
-    transmission: "Any",
     fuel: "Any",
     bodyType: "Any",
     condition: "Any",
@@ -55,8 +57,6 @@ export default function Filter() {
         _limit: itemsPerPage,
         _order: "general.year",
       };
-
-      console.log(filters);
 
       // Apply filters dynamically
       if (filters.fuel !== "Any") {
@@ -102,14 +102,26 @@ export default function Filter() {
 
   // Fetch listings on component mount
   useEffect(() => {
-    fetchListings(searchKeyword, currentPage);
-  }, [currentPage, filters, t]);
+    const params = new URLSearchParams(location.search);
+    const searchParam = params.get("search") || "";
+    setSearchKeyword(searchParam);
+    fetchListings(searchParam, currentPage);
+  }, [location.search, currentPage, filters, t]);
 
   // Handle search input change
   const handleSearchChange = (event) => {
-    setSearchKeyword(event.target.value);
+    const newSearch = event.target.value;
+    setSearchKeyword(newSearch);
     setCurrentPage(1);
-    fetchListings(event.target.value, 1);
+
+    // Update the URL with new search query
+    const params = new URLSearchParams(location.search);
+    if (newSearch) {
+      params.set("search", newSearch);
+    } else {
+      params.delete("search");
+    }
+    navigate(`?${params.toString()}`, { replace: true });
   };
 
   // Handle search submission
@@ -126,16 +138,15 @@ export default function Filter() {
 
   // Extract active filters
   const activeFilters = [
-    filters.transmission !== "Any" &&
-      t(`filters.transmissionOptions.${filters.transmission.toLowerCase()}`),
     filters.fuel !== "Any" &&
       t(`filters.fuelOptions.${filters.fuel.toLowerCase()}`),
     filters.bodyType !== "Any" && filters.bodyType,
     filters.condition !== "Any" &&
       t(`filters.conditionOptions.${filters.condition.toLowerCase()}`),
-    ...filters.features.map((feature) => t(`filters.features.${feature}`)),
+    ...new Set(
+      filters.features.map((feature) => t(`filters.features.${feature}`))
+    ),
     filters.color !== "Any" && filters.color,
-    ...filters.features.map((feature) => t(`filters.features.${feature}`)),
   ].filter(Boolean);
 
   // Handle filter changes
@@ -146,7 +157,6 @@ export default function Filter() {
   // Handle reset filters
   const handleResetFilters = () => {
     setFilters({
-      transmission: "Any",
       fuel: "Any",
       bodyType: "Any",
       condition: "Any",
@@ -159,12 +169,9 @@ export default function Filter() {
 
   // Handle removing individual active filter
   const handleRemoveFilter = (filter) => {
-    console.log(filter);
     setFilters((prev) => {
       const updatedFilters = { ...prev };
-      console.log(prev.color);
-      if (prev.transmission === filter) updatedFilters.transmission = "Any";
-      else if (prev.fuel === filter) updatedFilters.fuel = "Any";
+      if (prev.fuel === filter) updatedFilters.fuel = "Any";
       else if (prev.bodyType === filter) updatedFilters.bodyType = "Any";
       else if (prev.condition === filter) updatedFilters.condition = "Any";
       else if (prev.color === filter) updatedFilters.color = "Any";
@@ -181,7 +188,7 @@ export default function Filter() {
   // Handle applying filters
   const handleApplyFilters = () => {
     setDrawerOpen(false);
-    setCurrentPage(1); // Reset to the first page when applying new filters
+    setCurrentPage(1);
     fetchListings(searchKeyword, 1);
   };
 
@@ -203,6 +210,7 @@ export default function Filter() {
             onFilterChange={handleFilterChange}
             onResetFilters={handleResetFilters}
             onApplyFilters={handleApplyFilters}
+            activeFilters={activeFilters}
           />
         )}
 
@@ -226,6 +234,7 @@ export default function Filter() {
             onFilterChange={handleFilterChange}
             onResetFilters={handleResetFilters}
             onApplyFilters={handleApplyFilters}
+            activeFilters={activeFilters}
           />
         </Drawer>
 
@@ -263,7 +272,11 @@ export default function Filter() {
               <Box
                 sx={{
                   display: "grid",
-                  gridTemplateColumns: "repeat(auto-fit, minmax(315px, 1fr))",
+                  gridTemplateColumns:
+                    listings.length === 1
+                      ? "repeat(auto-fit, minmax(315px, 400px))"
+                      : "repeat(auto-fit, minmax(315px, 1fr))",
+                  justifyContent: listings.length === 1 ? "left" : "unset",
                   gap: "20px",
                   mt: "20px",
                 }}

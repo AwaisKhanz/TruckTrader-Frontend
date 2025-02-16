@@ -26,7 +26,7 @@
   },
   "highlightSection": {
     "left": {
-      "title": "Selling Your Truck? TruckTrader Delivers!",
+      "title": "Selling Your Truck?",
       "description": "Join our network and list your truck to reach thousands of buyers worldwide. Our platform is fast, easy, and effective, putting your truck in front of the right audience.",
       "readMore": "Join Now!"
     },
@@ -46,6 +46,11 @@
     "parts": "Parts",
     "posts": "789+ Posts"
   },
+  "featureListings": {
+    "title": "Feature listings",
+    "showAll": "Show All"
+  },
+
   "latestListings": {
     "title": "Latest listings",
     "showAll": "Show All"
@@ -324,6 +329,7 @@
       "Warranty": "Warranty"
     },
     "reset": "Reset Filters",
+    "resettext": "Reset",
     "apply": "Apply Filters"
   },
   "filterHeader": {
@@ -333,8 +339,8 @@
     "searchButton": "Search"
   },
   "contactHeader": {
-    "title": "Contact US",
-    "description": "Have questions about buying, selling, or advertising with us? Our team is here to assist you with any inquiries or provide detailed support. Don’t hesitate to reach out—we’re just a message or call away."
+    "title": "Contact us",
+    "description": "Have questions about buying, selling, or advertising with us? Our team is here to assist you with any inquiries or provide detailed support."
   },
   "contactForm": {
     "labels": {

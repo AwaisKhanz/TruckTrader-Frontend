@@ -9,6 +9,7 @@ export default function FilterHeader({
   onSearchChange,
   onSearchSubmit,
   searchKeyword,
+  onResetFilters,
 }) {
   const { t } = useTranslation();
 

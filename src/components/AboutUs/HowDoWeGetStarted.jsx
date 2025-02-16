@@ -55,7 +55,7 @@ export default function HowDoWeGetStarted() {
         <Typography
           variant="body2"
           sx={{
-            fontSize: { xs: "12px", md: "20px" },
+            fontSize: { xs: "12px", md: "14px" },
             fontWeight: "400",
             color: "#6A6A6A",
             maxWidth: { xs: "100%", md: "500px" },
