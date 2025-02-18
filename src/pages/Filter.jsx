@@ -74,14 +74,12 @@ export default function Filter() {
         params["general.year"] = `${filters.model[0]}-${filters.model[1]}`;
       }
 
-      if (filters.features.includes("Air Conditioning")) {
-        params["features.air_conditioning"] = true;
+      if (filters.features.length > 0) {
+        filters.features.forEach((feature) => {
+          const featureKey = feature.toLowerCase().replace(/ /g, "_");
+          params[`features.${featureKey}`] = true;
+        });
       }
-
-      if (filters.features.includes("Climate Control")) {
-        params["features.climate_control"] = true;
-      }
-
       if (filters.bodyType !== "Any") {
         params["general.bodystyle.category"] = filters.bodyType;
       }
@@ -140,7 +138,9 @@ export default function Filter() {
   const activeFilters = [
     filters.fuel !== "Any" &&
       t(`filters.fuelOptions.${filters.fuel.toLowerCase()}`),
-    filters.bodyType !== "Any" && filters.bodyType,
+    filters.bodyType !== "Any" &&
+      t(`filters.bodyTypeOptions.${filters.bodyType}`),
+    ,
     filters.condition !== "Any" &&
       t(`filters.conditionOptions.${filters.condition.toLowerCase()}`),
     ...new Set(
@@ -156,6 +156,9 @@ export default function Filter() {
 
   // Handle reset filters
   const handleResetFilters = () => {
+    const params = new URLSearchParams(location.search);
+    params.delete("search");
+    navigate(`?${params.toString()}`, { replace: true });
     setFilters({
       fuel: "Any",
       bodyType: "Any",
@@ -164,6 +167,7 @@ export default function Filter() {
       model: [2000, 2025],
       features: [],
     });
+    // setSearchKeyword("");
     setDrawerOpen(false);
   };
 
@@ -171,13 +175,71 @@ export default function Filter() {
   const handleRemoveFilter = (filter) => {
     setFilters((prev) => {
       const updatedFilters = { ...prev };
-      if (prev.fuel === filter) updatedFilters.fuel = "Any";
-      else if (prev.bodyType === filter) updatedFilters.bodyType = "Any";
-      else if (prev.condition === filter) updatedFilters.condition = "Any";
-      else if (prev.color === filter) updatedFilters.color = "Any";
-      else if (prev.features.includes(filter)) {
+
+      // Reverse mapping translations to original values
+      const reverseTranslations = {
+        ...Object.fromEntries(
+          ["cng", "Petrol", "Diesel", "Hybrid", "electric", "lpg", "Other"].map(
+            (fuel) => [t(`filters.fuelOptions.${fuel}`), fuel]
+          )
+        ),
+        ...Object.fromEntries(
+          [
+            "closedbox",
+            "cartransporter",
+            "recoveryvehicle",
+            "panelvan",
+            "deliveryvan",
+            "concretemixer",
+            "lowloader",
+            "tipper",
+            "frigo",
+            "crane",
+            "agriculturalmachine",
+            "minibus",
+            "openbody",
+            "horsetransport",
+            "pickup",
+            "flatbed",
+            "standardtractor",
+            "tanker",
+            "sweeper",
+            "garbagetruck",
+            "Other",
+          ].map((bodyType) => [
+            t(`filters.bodyTypeOptions.${bodyType}`),
+            bodyType,
+          ])
+        ),
+        ...Object.fromEntries(
+          ["new", "used"].map((condition) => [
+            t(`filters.conditionOptions.${condition}`),
+            condition,
+          ])
+        ),
+        ...Object.fromEntries(
+          [
+            "Air Conditioning",
+            "Climate Control",
+            "Cruise Control",
+            "PTO",
+            "Retarder",
+            "Tow Bar",
+            "Warranty",
+          ].map((feature) => [t(`filters.features.${feature}`), feature])
+        ),
+      };
+
+      const originalValue = reverseTranslations[filter] || filter;
+
+      if (prev.fuel === originalValue) updatedFilters.fuel = "Any";
+      else if (prev.bodyType === originalValue) updatedFilters.bodyType = "Any";
+      else if (prev.condition === originalValue)
+        updatedFilters.condition = "Any";
+      else if (prev.color === originalValue) updatedFilters.color = "Any";
+      else if (prev.features.includes(originalValue)) {
         updatedFilters.features = prev.features.filter(
-          (feature) => feature !== filter
+          (feature) => feature !== originalValue
         );
       }
 
@@ -211,6 +273,7 @@ export default function Filter() {
             onResetFilters={handleResetFilters}
             onApplyFilters={handleApplyFilters}
             activeFilters={activeFilters}
+            searchKeyword={searchKeyword}
           />
         )}
 

@@ -65,20 +65,20 @@ export default function Navbar() {
   };
 
   const drawerItems = [
-    { text: t("navbar.home"), icon: <HomeIcon />, link: "/" },
+    // { text: t("navbar.home"), icon: <HomeIcon />, link: "/" },
+    // {
+    //   text: t("navbar.advertise"),
+    //   icon: <AttachMoneyIcon />,
+    //   link: "/advertise",
+    // },
     { text: t("navbar.about"), icon: <InfoIcon />, link: "/about-us" },
-    { text: t("navbar.faq"), icon: <HelpOutlineIcon />, link: "/faq" },
-    { text: t("navbar.contact"), icon: <ContactMailIcon />, link: "/contact" },
-    {
-      text: t("navbar.advertise"),
-      icon: <AttachMoneyIcon />,
-      link: "/advertise",
-    },
     {
       text: t("navbar.directory"),
       icon: <AttachMoneyIcon />,
       link: "/directory",
     },
+    { text: t("navbar.contact"), icon: <ContactMailIcon />, link: "/contact" },
+    // { text: t("navbar.faq"), icon: <HelpOutlineIcon />, link: "/faq" },
   ];
 
   return (
@@ -197,9 +197,9 @@ export default function Navbar() {
             </Menu>
           </Box>
           {/* Login/Register Button */}
-          <Link to="/login">
+          <Link to="/advertise">
             <Button variant="contained" color="primary">
-              {t("navbar.login")}
+              {t("highlightSection.left.readMore")}
             </Button>
           </Link>
         </Box>
@@ -298,14 +298,14 @@ export default function Navbar() {
 
           <Divider sx={{ background: "#323232", my: "24px" }} />
           <Box>
-            <Link to={"/login"}>
+            <Link to={"/advertise"}>
               <Button
                 variant="contained"
                 color="primary"
                 fullWidth
                 sx={{ borderRadius: "20px", px: 3, mb: 2 }}
               >
-                {t("navbar.login")}
+                {t("highlightSection.left.readMore")}
               </Button>
             </Link>
 

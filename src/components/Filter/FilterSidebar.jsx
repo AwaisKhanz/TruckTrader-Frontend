@@ -17,6 +17,7 @@ export default function FilterSidebar({
   onResetFilters,
   activeFilters,
   onApplyFilters,
+  searchKeyword,
 }) {
   const { t, i18n } = useTranslation();
 
@@ -66,7 +67,7 @@ export default function FilterSidebar({
             {t("filters.title")}
           </Typography>
         </Box>
-        {activeFilters.length > 0 && (
+        {(activeFilters.length > 0 || searchKeyword?.length > 0) && (
           <Button
             variant="contained"
             color="secondary"
@@ -75,6 +76,7 @@ export default function FilterSidebar({
               height: "30px",
               fontSize: "14px",
               padding: "0px !important",
+              // borderRadius: "12px",
             }}
             onClick={onResetFilters}
           >
@@ -296,7 +298,6 @@ export default function FilterSidebar({
             "Air Conditioning",
             "Climate Control",
             "Cruise Control",
-            "Intrader",
             "PTO",
             "Retarder",
             "Tow Bar",

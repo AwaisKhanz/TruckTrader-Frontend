@@ -274,7 +274,7 @@ export default function ProductDetailSwipperCard({
               width: "100%",
             }}
           >
-            <Button
+            {/* <Button
               fullWidth
               sx={{
                 backgroundColor: "#F6F6F6",
@@ -284,7 +284,7 @@ export default function ProductDetailSwipperCard({
               endIcon={<CallIcon sx={{ mt: "-3px" }} />}
             >
               {t("productDetail.swipper.viewPhoneNumber")}
-            </Button>
+            </Button> */}
             <Button
               fullWidth
               variant="contained"

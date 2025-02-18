@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography, TextField, Button } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { useTranslation } from "react-i18next";
 import { Breadcrumbs } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 
-export default function ProductDetailHeader({
-  searchQuery,
-  setSearchQuery,
-  id,
-  product,
-}) {
+export default function ProductDetailHeader({ id, product }) {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearch = () => {
+    if (searchQuery.trim()) {
+      navigate(`/filter?search=${encodeURIComponent(searchQuery.trim())}`);
+    }
+  };
 
   return (
     <Box
@@ -103,9 +106,14 @@ export default function ProductDetailHeader({
             variant="standard"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                handleSearch();
+              }
+            }}
             InputProps={{
               disableUnderline: true,
-              style: { fontSize: "14px", color: "#B0B0B0" },
+              style: { fontSize: "14px" },
             }}
             sx={{
               flex: 1,
@@ -121,6 +129,7 @@ export default function ProductDetailHeader({
             sx={{
               minWidth: "40px !important",
             }}
+            onClick={handleSearch}
             startIcon={
               <SearchIcon
                 sx={{ marginRight: { xs: "-12px", md: "0px" }, mt: "-1px" }}

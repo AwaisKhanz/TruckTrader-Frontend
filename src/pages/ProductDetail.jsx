@@ -1,18 +1,7 @@
 import React, { useState, useEffect } from "react";
-import {
-  Box,
-  // Button,
-  Grid,
-  Typography,
-  // Card,
-  // CardContent,
-  Divider,
-} from "@mui/material";
+import { Box, Grid, Typography, Divider } from "@mui/material";
 import { useParams } from "react-router-dom";
 import ProductDetailHeader from "../components/ProductDetail/ProductDetailHeader";
-// import DescriptionAdvertiser from "../components/ProductDetail/DescriptionAdvertiser";
-// import GeneralTechnicalInfo from "../components/ProductDetail/GeneralTechnicalInfo";
-// import EmissionHistoryCondition from "../components/ProductDetail/EmissionHistoryCondition";
 import ProductDetailSwipperCard from "../components/ProductDetail/ProductDetailSwipperCard";
 import api from "../services/api";
 import Loading from "../components/Common/Loading";
@@ -24,7 +13,6 @@ export default function ProductDetail() {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [searchQuery, setSearchQuery] = useState("");
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
@@ -116,20 +104,6 @@ export default function ProductDetail() {
     fetchProductDetails();
   }, [id, t]);
 
-  const filteredSections = product?.sections?.filter(
-    (section) =>
-      section.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      section.subsections?.some((subsection) =>
-        subsection.fields?.some(
-          (field) =>
-            field.label.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            field.display_value
-              .toLowerCase()
-              .includes(searchQuery.toLowerCase())
-        )
-      )
-  );
-
   if (loading) {
     return <Loading />;
   }
@@ -140,12 +114,7 @@ export default function ProductDetail() {
 
   return (
     <Box>
-      <ProductDetailHeader
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-        id={id}
-        product={product}
-      />
+      <ProductDetailHeader id={id} product={product} />
 
       {/* Always Visible Cards */}
       <ProductDetailSwipperCard
@@ -172,7 +141,7 @@ export default function ProductDetail() {
             gap: "10px",
           }}
         >
-          {filteredSections?.map((section) => {
+          {product?.sections?.map((section) => {
             if (section.subsections?.length > 0) {
               return (
                 <Box
