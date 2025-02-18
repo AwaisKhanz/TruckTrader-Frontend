@@ -38,6 +38,7 @@ export default function Filter() {
   const [searchKeyword, setSearchKeyword] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [totalResults, setTotalResults] = useState(0);
+  const [isFilterApplied, setIsFilterApplied] = useState(false);
   const itemsPerPage = 15;
   const totalPages = Math.ceil(totalResults / itemsPerPage);
 
@@ -51,26 +52,25 @@ export default function Filter() {
       const params = {
         _fieldset: "searchresults",
         _locale: i18n.language === "en" ? "en_GB" : "nl_NL",
-        keyword: keyword || searchKeyword,
+        keyword: keyword,
         "general.category": "truck",
         _offset: (page - 1) * itemsPerPage,
         _limit: itemsPerPage,
         _order: "general.year",
       };
 
-      // Apply filters dynamically
       if (filters.fuel !== "Any") {
         params["powertrain.engine.energy.type.category"] =
           filters.fuel.toLowerCase();
       }
 
-      if (filters.priceRange.length === 2) {
+      if (isFilterApplied && filters.priceRange.length === 2) {
         params[
           "condition.odometer.value_in_km"
         ] = `${filters.priceRange[0]}-${filters.priceRange[1]}`;
       }
 
-      if (filters.model.length === 2) {
+      if (isFilterApplied && filters.model.length === 2) {
         params["general.year"] = `${filters.model[0]}-${filters.model[1]}`;
       }
 
@@ -80,6 +80,7 @@ export default function Filter() {
           params[`features.${featureKey}`] = true;
         });
       }
+
       if (filters.bodyType !== "Any") {
         params["general.bodystyle.category"] = filters.bodyType;
       }
@@ -88,7 +89,9 @@ export default function Filter() {
         params["body.colour.primary"] = filters.color;
       }
 
-      const response = await api.get("/search", { params });
+      const response = await api.get("/searchresults", {
+        params,
+      });
       setListings(response.data.results);
       setTotalResults(response.data.num_results);
     } catch (error) {
@@ -102,6 +105,7 @@ export default function Filter() {
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const searchParam = params.get("search") || "";
+    console.log("object", searchParam);
     setSearchKeyword(searchParam);
     fetchListings(searchParam, currentPage);
   }, [location.search, currentPage, filters, t]);
@@ -156,6 +160,8 @@ export default function Filter() {
 
   // Handle reset filters
   const handleResetFilters = () => {
+    setLoading(true);
+    setIsFilterApplied(false);
     const params = new URLSearchParams(location.search);
     params.delete("search");
     navigate(`?${params.toString()}`, { replace: true });
@@ -167,7 +173,6 @@ export default function Filter() {
       model: [2000, 2025],
       features: [],
     });
-    // setSearchKeyword("");
     setDrawerOpen(false);
   };
 
@@ -274,6 +279,8 @@ export default function Filter() {
             onApplyFilters={handleApplyFilters}
             activeFilters={activeFilters}
             searchKeyword={searchKeyword}
+            setIsFilterApplied={setIsFilterApplied}
+            isFilterApplied={isFilterApplied}
           />
         )}
 
@@ -298,6 +305,9 @@ export default function Filter() {
             onResetFilters={handleResetFilters}
             onApplyFilters={handleApplyFilters}
             activeFilters={activeFilters}
+            searchKeyword={searchKeyword}
+            setIsFilterApplied={setIsFilterApplied}
+            isFilterApplied={isFilterApplied}
           />
         </Drawer>
 
@@ -310,6 +320,7 @@ export default function Filter() {
             onSearchChange={handleSearchChange}
             // onSearchSubmit={handleSearchSubmit}
             searchKeyword={searchKeyword}
+            totalResults={totalResults}
           />
 
           {/* Mobile "Show Filters" Button */}

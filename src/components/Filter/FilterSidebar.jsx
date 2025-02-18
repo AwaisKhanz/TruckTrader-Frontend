@@ -18,6 +18,8 @@ export default function FilterSidebar({
   activeFilters,
   onApplyFilters,
   searchKeyword,
+  setIsFilterApplied,
+  isFilterApplied,
 }) {
   const { t, i18n } = useTranslation();
 
@@ -67,7 +69,9 @@ export default function FilterSidebar({
             {t("filters.title")}
           </Typography>
         </Box>
-        {(activeFilters.length > 0 || searchKeyword?.length > 0) && (
+        {(activeFilters.length > 0 ||
+          searchKeyword?.length > 0 ||
+          isFilterApplied) && (
           <Button
             variant="contained"
             color="secondary"
@@ -198,7 +202,10 @@ export default function FilterSidebar({
         <Box sx={{ mx: 2 }}>
           <Slider
             value={filters.priceRange}
-            onChange={(_, newValue) => onFilterChange("priceRange", newValue)}
+            onChange={(_, newValue) => {
+              setIsFilterApplied(true);
+              onFilterChange("priceRange", newValue);
+            }}
             step={1000}
             min={3000}
             max={100000}
@@ -225,7 +232,10 @@ export default function FilterSidebar({
         <Box sx={{ mx: 2 }}>
           <Slider
             value={filters.model}
-            onChange={(_, newValue) => onFilterChange("model", newValue)}
+            onChange={(_, newValue) => {
+              setIsFilterApplied(true);
+              onFilterChange("model", newValue);
+            }}
             step={1}
             min={2000}
             max={2025}

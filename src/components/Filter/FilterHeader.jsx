@@ -10,6 +10,7 @@ export default function FilterHeader({
   onSearchSubmit,
   searchKeyword,
   onResetFilters,
+  totalResults,
 }) {
   const { t } = useTranslation();
 
@@ -50,7 +51,7 @@ export default function FilterHeader({
               color: "#757575",
             }}
           >
-            892
+            {totalResults}
             <span className=" text-[#808080] text-[14px] ml-1">
               {t("filterHeader.resultsFound")}
             </span>
