@@ -83,20 +83,32 @@ export default function ListingCard({ data }) {
               maxWidth: "100%",
             }}
           >
-            {data.title}
+            {data?.make} {data.type}
           </Typography>
-
           {/* Features Section */}
-          <Grid container spacing={1}>
-            <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "12px",
+              rowGap: "8px",
+              alignItems: "center",
+            }}
+          >
+            <Box
+              sx={{ display: "flex", alignItems: "center", minWidth: "120px" }}
+            >
               <DateRangeIcon sx={{ color: "#292D32", fontSize: "18px" }} />
               <Typography
                 sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
               >
                 {data.year}
               </Typography>
-            </Grid>
-            <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
+            </Box>
+
+            <Box
+              sx={{ display: "flex", alignItems: "center", minWidth: "120px" }}
+            >
               <SettingsSuggestIcon
                 sx={{ color: "#292D32", fontSize: "18px" }}
               />
@@ -105,8 +117,11 @@ export default function ListingCard({ data }) {
               >
                 {data.transmission}
               </Typography>
-            </Grid>
-            <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
+            </Box>
+
+            <Box
+              sx={{ display: "flex", alignItems: "center", minWidth: "120px" }}
+            >
               <LocalGasStationIcon
                 sx={{ color: "#292D32", fontSize: "18px" }}
               />
@@ -115,17 +130,19 @@ export default function ListingCard({ data }) {
               >
                 {data.fuel}
               </Typography>
-            </Grid>
+            </Box>
 
-            <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
+            <Box
+              sx={{ display: "flex", alignItems: "center", minWidth: "120px" }}
+            >
               <SpeedIcon sx={{ color: "#292D32", fontSize: "18px" }} />
               <Typography
                 sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
               >
                 {data.mileage}
               </Typography>
-            </Grid>
-          </Grid>
+            </Box>
+          </Box>
         </Box>
 
         <Box>

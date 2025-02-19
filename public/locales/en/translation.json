@@ -21,7 +21,7 @@
       "part2": " of trucks, updated daily with vehicles from reliable and trusted sellers. Your perfect truck for the job is just a ",
       "highlight2": "click away."
     },
-    "searchPlaceholder": "Search by make, model, or truck type...",
+    "searchPlaceholder": "What are you looking for?",
     "searchButton": "Search"
   },
   "highlightSection": {
@@ -164,7 +164,7 @@
   "productDetailHeader": {
     "home": "Home",
     "filter": "Filter",
-    "searchPlaceholder": "Search Keywords",
+    "searchPlaceholder": "What are you looking for?",
     "searchButton": "Search"
   },
   "productDetail": {
@@ -335,7 +335,7 @@
   "filterHeader": {
     "truckList": "Truck List",
     "resultsFound": "Results Found",
-    "searchPlaceholder": "Search in Tracktrader...",
+    "searchPlaceholder": "What are you looking for?",
     "searchButton": "Search"
   },
   "contactHeader": {

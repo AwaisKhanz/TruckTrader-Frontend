@@ -9,7 +9,6 @@ import "swiper/css/scrollbar";
 import { useTranslation } from "react-i18next";
 import ContactDrawer from "./ContactDrawer";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import MailIcon from "@mui/icons-material/Mail";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import EventIcon from "@mui/icons-material/Event";
@@ -31,6 +30,7 @@ export default function ProductDetailSwipperCard({
   tonnage,
   vehicleType,
   odometerReading,
+  make,
 }) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const mainSwiperRef = useRef(null);
@@ -77,7 +77,7 @@ export default function ProductDetailSwipperCard({
                   fontSize: { xs: "20px", md: "24px" },
                 }}
               >
-                {title}
+                {make} {title}
               </Typography>
               <Typography sx={{ color: "#808080", fontWeight: 400 }}>
                 <LocationOnIcon /> {location}
@@ -184,7 +184,7 @@ export default function ProductDetailSwipperCard({
                     fontSize: { xs: "20px", md: "24px" },
                   }}
                 >
-                  {title}
+                  {make} {title}
                 </Typography>
                 <Typography sx={{ fontWeight: 400 }}>
                   <LocationOnIcon sx={{ mb: "3px", fontSize: "20px" }} />{" "}

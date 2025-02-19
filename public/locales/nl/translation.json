@@ -21,7 +21,7 @@
       "part2": " trucks, dagelijks aangevuld met voertuigen van betrouwbare verkopers. De ideale truck voor jouw klus is slechts één ",
       "highlight2": "klik verwijderd."
     },
-    "searchPlaceholder": "Zoek op merk, model of type truck...",
+    "searchPlaceholder": "Waar ben je naar op zoek?",
     "searchButton": "Zoeken"
   },
   "highlightSection": {
@@ -136,7 +136,7 @@
   "productDetailHeader": {
     "likes": "{{count}}",
     "views": "{{count}}",
-    "searchPlaceholder": "Zoekwoorden",
+    "searchPlaceholder": "Waar ben je naar op zoek?",
     "searchButton": "Zoeken"
   },
   "productDetail": {
@@ -307,7 +307,7 @@
   "filterHeader": {
     "truckList": "Vrachtwagenlijst",
     "resultsFound": "Resultaten gevonden",
-    "searchPlaceholder": "Zoeken in TrackTrader...",
+    "searchPlaceholder": "Waar ben je naar op zoek?",
     "searchButton": "Zoeken"
   },
   "contactHeader": {

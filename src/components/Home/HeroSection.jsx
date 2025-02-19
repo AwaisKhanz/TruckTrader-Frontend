@@ -95,7 +95,7 @@ export default function HeroSection() {
           }}
         >
           <InputBase
-            placeholder="Search in Trucktrader...."
+            placeholder={t("filterHeader.searchPlaceholder")}
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
             onKeyDown={(e) => {

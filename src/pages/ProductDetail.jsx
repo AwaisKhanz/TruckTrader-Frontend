@@ -37,6 +37,8 @@ export default function ProductDetail() {
           sales_conditions,
         } = vehicleData;
 
+        console.log(general);
+
         const generalInfo = sections.find((s) => s.key === "general");
         const technicalInfo = sections.find((s) => s.key === "technical");
         const emissionHistory = sections.find(
@@ -52,7 +54,7 @@ export default function ProductDetail() {
         const amount =
           sales_conditions?.pricing?.asking?.in_eur?.formatted ||
           "Price on request";
-        const productName = description?.title || "No Title";
+        const productName = general?.type?.name || "No Title";
 
         // Extract additional vehicle details for the grid
         const vehicleYear = general?.year || "N/A";
@@ -128,6 +130,7 @@ export default function ProductDetail() {
         tonnage={product.tonnage}
         vehicleType={product.vehicleType}
         odometerReading={product.condition}
+        make={product?.make}
       />
 
       {/* Dynamic Section Display */}
