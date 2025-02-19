@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import MailIcon from "@mui/icons-material/Mail";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 export default function ContactDrawer({ open, onClose }) {
   const theme = useTheme();
@@ -140,6 +141,7 @@ export default function ContactDrawer({ open, onClose }) {
         <Button
           variant="contained"
           fullWidth
+          endIcon={<ArrowForwardIcon sx={{ mt: "-1px" }} />}
           sx={{
             backgroundColor: "#BD0000",
             color: "#FFFFFF",
@@ -149,7 +151,7 @@ export default function ContactDrawer({ open, onClose }) {
             borderRadius: "12px",
           }}
         >
-          Send Message →
+          Send Message
         </Button>
       </Box>
     </Drawer>

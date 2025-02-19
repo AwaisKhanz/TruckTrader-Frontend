@@ -7,6 +7,10 @@ import TransmissionIcon from "../../assets/Home/FeatureListingSection/Transmissi
 import WheelIcon from "../../assets/Home/FeatureListingSection/Wheel.png";
 import { Link } from "react-router-dom";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import SpeedIcon from "@mui/icons-material/Speed";
+import DateRangeIcon from "@mui/icons-material/DateRange";
+import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
+import LocalGasStationIcon from "@mui/icons-material/LocalGasStation";
 
 export default function ListingCard({ data }) {
   return (
@@ -85,7 +89,7 @@ export default function ListingCard({ data }) {
           {/* Features Section */}
           <Grid container spacing={1}>
             <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-              <img loading="lazy" src={CalenderIcon} alt={"calendar"} />
+              <DateRangeIcon sx={{ color: "#292D32", fontSize: "18px" }} />
               <Typography
                 sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
               >
@@ -93,7 +97,9 @@ export default function ListingCard({ data }) {
               </Typography>
             </Grid>
             <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-              <img loading="lazy" src={TransmissionIcon} alt={"calendar"} />
+              <SettingsSuggestIcon
+                sx={{ color: "#292D32", fontSize: "18px" }}
+              />
               <Typography
                 sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
               >
@@ -101,7 +107,9 @@ export default function ListingCard({ data }) {
               </Typography>
             </Grid>
             <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-              <img loading="lazy" src={GasIcon} alt={"calendar"} />
+              <LocalGasStationIcon
+                sx={{ color: "#292D32", fontSize: "18px" }}
+              />
               <Typography
                 sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
               >
@@ -110,7 +118,7 @@ export default function ListingCard({ data }) {
             </Grid>
 
             <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-              <img loading="lazy" src={WheelIcon} alt={"calendar"} />
+              <SpeedIcon sx={{ color: "#292D32", fontSize: "18px" }} />
               <Typography
                 sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
               >

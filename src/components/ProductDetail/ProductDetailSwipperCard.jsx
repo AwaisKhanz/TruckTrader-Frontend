@@ -7,17 +7,18 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { useTranslation } from "react-i18next";
-import CalenderIcon from "../../assets/Home/FeatureListingSection/Calendar.png";
-import GasIcon from "../../assets/Home/FeatureListingSection/Gas.png";
-import SuspensionIcon from "../../assets/Home/FeatureListingSection/Suspension.png";
-import TonIcon from "../../assets/Home/FeatureListingSection/Ton.png";
-import TransmissionIcon from "../../assets/Home/FeatureListingSection/Transmission.png";
-import WheelIcon from "../../assets/Home/FeatureListingSection/Wheel.png";
 import ContactDrawer from "./ContactDrawer";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import MailIcon from "@mui/icons-material/Mail";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
+import EventIcon from "@mui/icons-material/Event";
+import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
+import LocalGasStationIcon from "@mui/icons-material/LocalGasStation";
+import ScaleIcon from "@mui/icons-material/Scale";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import SpeedIcon from "@mui/icons-material/Speed";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 export default function ProductDetailSwipperCard({
   images,
@@ -220,7 +221,7 @@ export default function ProductDetailSwipperCard({
               sx={{ mb: { xs: "30px", md: "36px" } }}
             >
               <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-                <img loading="lazy" src={CalenderIcon} alt="calendar" />
+                <EventIcon sx={{ color: "#292D32", fontSize: "18px" }} />
                 <Typography
                   sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
                 >
@@ -228,7 +229,9 @@ export default function ProductDetailSwipperCard({
                 </Typography>
               </Grid>
               <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-                <img loading="lazy" src={TransmissionIcon} alt="transmission" />
+                <SettingsSuggestIcon
+                  sx={{ color: "#292D32", fontSize: "18px" }}
+                />
                 <Typography
                   sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
                 >
@@ -236,7 +239,9 @@ export default function ProductDetailSwipperCard({
                 </Typography>
               </Grid>
               <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-                <img loading="lazy" src={GasIcon} alt="fuel type" />
+                <LocalGasStationIcon
+                  sx={{ color: "#292D32", fontSize: "18px" }}
+                />
                 <Typography
                   sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
                 >
@@ -244,7 +249,7 @@ export default function ProductDetailSwipperCard({
                 </Typography>
               </Grid>
               <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-                <img loading="lazy" src={TonIcon} alt="tonnage" />
+                <ScaleIcon sx={{ color: "#292D32", fontSize: "18px" }} />
                 <Typography
                   sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
                 >
@@ -252,7 +257,9 @@ export default function ProductDetailSwipperCard({
                 </Typography>
               </Grid>
               <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-                <img loading="lazy" src={WheelIcon} alt="vehicle type" />
+                <LocalShippingIcon
+                  sx={{ color: "#292D32", fontSize: "18px" }}
+                />
                 <Typography
                   sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
                 >
@@ -260,7 +267,7 @@ export default function ProductDetailSwipperCard({
                 </Typography>
               </Grid>
               <Grid item xs={4} sx={{ display: "flex", alignItems: "center" }}>
-                <img loading="lazy" src={SuspensionIcon} alt="odometer" />
+                <SpeedIcon sx={{ color: "#292D32", fontSize: "18px" }} />
                 <Typography
                   sx={{ color: "#292D32", ml: "4px", fontSize: "12px" }}
                 >
@@ -292,7 +299,7 @@ export default function ProductDetailSwipperCard({
             <Button
               fullWidth
               variant="contained"
-              endIcon={<MailIcon sx={{ mt: "-1px" }} />}
+              endIcon={<ArrowForwardIcon sx={{ mt: "-1px" }} />}
               onClick={() => setIsDrawerOpen(true)}
             >
               {t("productDetail.swipper.messageSeller")}

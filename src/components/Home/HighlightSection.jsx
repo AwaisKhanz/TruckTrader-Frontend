@@ -4,6 +4,7 @@ import backgroundImage from "../../assets/Home/HighlightSection/Highlight.png";
 import EastIcon from "@mui/icons-material/East";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 export default function HighlightSection() {
   const { t } = useTranslation();
@@ -109,9 +110,12 @@ export default function HighlightSection() {
             {t("highlightSection.right.description")}
           </Typography>
           <Link to={"/filter"}>
-            <Button variant="contained" sx={{ width: "auto" }}>
+            <Button
+              variant="contained"
+              sx={{ width: "auto" }}
+              endIcon={<ArrowForwardIcon sx={{ mt: "-1px" }} />}
+            >
               {t("highlightSection.right.button")}{" "}
-              <EastIcon sx={{ ml: "10px", fontSize: "18px" }} />
             </Button>
           </Link>
         </Box>
