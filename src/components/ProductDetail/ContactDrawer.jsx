@@ -10,7 +10,7 @@ import {
   useTheme,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
-import PhoneIcon from "@mui/icons-material/Phone";
+import MailIcon from "@mui/icons-material/Mail";
 
 export default function ContactDrawer({ open, onClose }) {
   const theme = useTheme();
@@ -56,7 +56,7 @@ export default function ContactDrawer({ open, onClose }) {
               gap: "8px",
             }}
           >
-            <PhoneIcon sx={{ color: "#BD0000", fontSize: "24px" }} />
+            <MailIcon sx={{ color: "#BD0000", fontSize: "24px", mt: "1px" }} />
             <Typography variant="h6" sx={{ fontWeight: "bold" }}>
               Contact
             </Typography>

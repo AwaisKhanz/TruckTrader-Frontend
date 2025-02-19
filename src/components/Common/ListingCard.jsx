@@ -49,7 +49,7 @@ export default function ListingCard({ data }) {
                 borderRadius: "16px",
               }}
             />
-            <IconButton
+            {/* <IconButton
               sx={{
                 position: "absolute",
                 top: "10px",
@@ -60,7 +60,7 @@ export default function ListingCard({ data }) {
               }}
             >
               <FavoriteBorderIcon sx={{ color: "white" }} />
-            </IconButton>
+            </IconButton> */}
           </Box>
 
           {/* Title Section */}

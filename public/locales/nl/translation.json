@@ -300,14 +300,14 @@
       "Tow Bar": "Trekhaak",
       "Warranty": "Garantie"
     },
-    "reset": "Filters Resetten",
-    "resettext": "Resetten",
+    "reset": "Filters Reset",
+    "resettext": "Reset",
     "apply": "Filters Toepassen"
   },
   "filterHeader": {
     "truckList": "Vrachtwagenlijst",
     "resultsFound": "Resultaten gevonden",
-    "searchPlaceholder": "Zoeken in Tracktrader...",
+    "searchPlaceholder": "Zoeken in TrackTrader...",
     "searchButton": "Zoeken"
   },
   "contactHeader": {

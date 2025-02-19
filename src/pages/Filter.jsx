@@ -27,7 +27,7 @@ export default function Filter() {
     bodyType: "Any",
     condition: "Any",
     priceRange: [3000, 100000],
-    model: [2000, 2025],
+    model: [1900, 2025],
     features: [],
     color: "Any",
   });
@@ -53,7 +53,7 @@ export default function Filter() {
         _fieldset: "searchresults",
         _locale: i18n.language === "en" ? "en_GB" : "nl_NL",
         keyword: keyword,
-        "general.category": "truck",
+        // "general.category": "van",
         _offset: (page - 1) * itemsPerPage,
         _limit: itemsPerPage,
         _order: "general.year",
@@ -170,7 +170,7 @@ export default function Filter() {
       bodyType: "Any",
       condition: "Any",
       priceRange: [5000, 100000],
-      model: [2000, 2025],
+      model: [1900, 2025],
       features: [],
     });
     setDrawerOpen(false);

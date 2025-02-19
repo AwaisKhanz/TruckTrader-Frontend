@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Box, Typography, Button, Grid } from "@mui/material";
+import { Box, Typography, Button, Grid, Dialog } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Navigation, Pagination, Thumbs } from "swiper/modules";
 import "swiper/css";
@@ -7,7 +7,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { useTranslation } from "react-i18next";
-import CallIcon from "@mui/icons-material/Call";
 import CalenderIcon from "../../assets/Home/FeatureListingSection/Calendar.png";
 import GasIcon from "../../assets/Home/FeatureListingSection/Gas.png";
 import SuspensionIcon from "../../assets/Home/FeatureListingSection/Suspension.png";
@@ -16,6 +15,9 @@ import TransmissionIcon from "../../assets/Home/FeatureListingSection/Transmissi
 import WheelIcon from "../../assets/Home/FeatureListingSection/Wheel.png";
 import ContactDrawer from "./ContactDrawer";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import MailIcon from "@mui/icons-material/Mail";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
 
 export default function ProductDetailSwipperCard({
   images,
@@ -32,6 +34,8 @@ export default function ProductDetailSwipperCard({
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const mainSwiperRef = useRef(null);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [openImageIndex, setOpenImageIndex] = useState(null);
+
   const { t } = useTranslation();
 
   return (
@@ -81,7 +85,7 @@ export default function ProductDetailSwipperCard({
             <Box
               sx={{
                 fontSize: {
-                  xs: amount === "Op aanvraag" ? "12px" : "16px",
+                  xs: amount === "Op aanvraag" ? "24px" : "16px",
                 },
                 fontWeight: 600,
                 whiteSpace: "nowrap",
@@ -101,7 +105,7 @@ export default function ProductDetailSwipperCard({
             pagination={{ clickable: true }}
           >
             {images.map((image, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={index} onClick={() => setOpenImageIndex(index)}>
                 <img
                   loading="lazy"
                   src={image.largest}
@@ -189,8 +193,8 @@ export default function ProductDetailSwipperCard({
               <Box
                 sx={{
                   fontSize: {
-                    xs: amount === "Op aanvraag" ? "12px" : "20px",
-                    md: amount === "Op aanvraag" ? "12px" : "32px",
+                    xs: amount === "Op aanvraag" ? "24px" : "20px",
+                    md: amount === "Op aanvraag" ? "24px" : "32px",
                   },
                   fontWeight: 600,
                   whiteSpace: "nowrap",
@@ -288,7 +292,7 @@ export default function ProductDetailSwipperCard({
             <Button
               fullWidth
               variant="contained"
-              endIcon={<CallIcon sx={{ mt: "-3px" }} />}
+              endIcon={<MailIcon sx={{ mt: "-1px" }} />}
               onClick={() => setIsDrawerOpen(true)}
             >
               {t("productDetail.swipper.messageSeller")}
@@ -301,6 +305,65 @@ export default function ProductDetailSwipperCard({
         open={isDrawerOpen}
         onClose={() => setIsDrawerOpen(false)}
       />
+
+      <Dialog
+        open={openImageIndex !== null}
+        onClose={() => setOpenImageIndex(null)}
+        // fullScreen
+        maxWidth="lg"
+        sx={{
+          backgroundColor: "rgba(0, 0, 0, 0.8)",
+          "& .MuiDialog-paper": {
+            backgroundColor: "transparent",
+          },
+        }}
+      >
+        {/* Close Button */}
+        <IconButton
+          onClick={() => setOpenImageIndex(null)}
+          sx={{
+            position: "absolute",
+            top: 20,
+            zIndex: 100,
+            right: 20,
+            color: "white",
+            backgroundColor: "rgba(0,0,0,0.6)",
+            "&:hover": {
+              backgroundColor: "rgba(0,0,0,0.8)",
+            },
+          }}
+        >
+          <CloseIcon />
+        </IconButton>
+
+        {/* Fullscreen Swiper with Correct Starting Slide */}
+        <Swiper
+          modules={[Navigation, Pagination, A11y]}
+          spaceBetween={10}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          initialSlide={openImageIndex}
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          {images.map((image, index) => (
+            <SwiperSlide key={index}>
+              <img
+                src={image.largest}
+                alt={`Fullscreen Image ${index + 1}`}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                }}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Dialog>
     </Box>
   );
 }

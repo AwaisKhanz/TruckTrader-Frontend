@@ -29,7 +29,7 @@ export default function FilterSidebar({
   ];
 
   const marksModel = [
-    { value: 2000, label: 2000 },
+    { value: 1900, label: 1900 },
     { value: 2025, label: 2025 },
   ];
 
@@ -237,7 +237,7 @@ export default function FilterSidebar({
               onFilterChange("model", newValue);
             }}
             step={1}
-            min={2000}
+            min={1900}
             max={2025}
             marks={marksModel}
             valueLabelDisplay="auto"

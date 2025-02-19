@@ -29,34 +29,24 @@ export default function FilterHeader({
       }}
     >
       {/* Left Section */}
-      <Box sx={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-        <Box
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          gap: activeFilters.length > 0 ? "8px" : "0px",
+        }}
+      >
+        <Typography
           sx={{
-            display: "flex",
-            alignItems: activeFilters.length > 0 ? "center" : "flex-start",
-            flexDirection: activeFilters.length > 0 ? "row" : "column",
-            gap: activeFilters.length > 0 ? "8px" : "2px",
+            fontSize: { xs: "14px", md: "20px" },
+            color: "#757575",
           }}
         >
-          <Typography
-            variant="h6"
-            fontWeight="600"
-            sx={{ fontSize: { xs: "14px", md: "20px" } }}
-          >
-            {t("filterHeader.truckList")}
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: { xs: "14px", md: "20px" },
-              color: "#757575",
-            }}
-          >
-            {totalResults}
-            <span className=" text-[#808080] text-[14px] ml-1">
-              {t("filterHeader.resultsFound")}
-            </span>
-          </Typography>
-        </Box>
+          {totalResults}
+          <span className=" text-[#808080] text-[14px] ml-1">
+            {t("filterHeader.resultsFound")}
+          </span>
+        </Typography>
         {/* Active Filters */}
         <Box
           sx={{
