@@ -16,6 +16,7 @@ import axios from "axios";
 export default function AdvertiseSignUp() {
   const { t } = useTranslation();
   const [countries, setCountries] = useState([]);
+  const [isloading, setIsLoading] = useState(false);
 
   useEffect(() => {
     axios
@@ -39,41 +40,60 @@ export default function AdvertiseSignUp() {
 
   const onSubmit = (data) => {
     console.log("Form Data:", data);
+    setIsLoading(true);
 
-    // Use EmailJS to send email with individual variables
-    emailjs
-      .send(
-        "service_001nte8", // Your EmailJS Service ID
-        "template_rusmobg", // Your EmailJS Template ID
-        {
-          to_name: "TruckTrader Support",
-          from_name: `${data.firstName} ${data.lastName}`,
-          from_email: data.email,
-          to_email: "niels@trucktrader.nl",
-          subscription: data.subscription,
-          company: data.company,
-          cocNumber: data.cocNumber,
-          taxId: data.taxId,
-          firstName: data.firstName,
-          lastName: data.lastName,
-          street: data.street,
-          streetNumber: data.streetNumber,
-          country: data.country,
-          city: data.city,
-          phoneNumber: data.phoneNumber,
-          email: data.email,
-          zipCode: data.zipCode,
-          bank: data.bank,
-        },
-        "RVteankGgD0A41mdj" // Your EmailJS User ID
-      )
-      .then((response) => {
-        alert("Email sent successfully!");
-        console.log("Email response:", response);
+    // Email to TruckTrader Support (existing template)
+    const supportEmailPromise = emailjs.send(
+      "service_001nte8", // Your EmailJS Service ID
+      "template_rusmobg", // Your existing Template ID for TruckTrader Support
+      {
+        to_name: "TruckTrader Support",
+        from_name: `${data.firstName} ${data.lastName}`,
+        from_email: data.email,
+        to_email: "niels@trucktrader.nl",
+        subscription: data.subscription,
+        company: data.company,
+        cocNumber: data.cocNumber,
+        taxId: data.taxId,
+        firstName: data.firstName,
+        lastName: data.lastName,
+        street: data.street,
+        streetNumber: data.streetNumber,
+        country: data.country,
+        city: data.city,
+        phoneNumber: data.phoneNumber,
+        email: data.email,
+        zipCode: data.zipCode,
+        bank: data.bank,
+      },
+      "RVteankGgD0A41mdj" // Your EmailJS User ID
+    );
+
+    // Confirmation email to the user (new template)
+    const userEmailPromise = emailjs.send(
+      "service_001nte8", // Your EmailJS Service ID
+      "template_002ia7h", // New Template ID for user confirmation (create this in EmailJS)
+      {
+        firstName: data.firstName,
+        email: data.email, // Send to the user's email
+      },
+      "RVteankGgD0A41mdj" // Your EmailJS User ID
+    );
+
+    // Handle both email promises
+    Promise.all([supportEmailPromise, userEmailPromise])
+      .then((responses) => {
+        alert("Emails sent successfully!");
+        console.log("Support Email response:", responses[0]);
+        console.log("User Email response:", responses[1]);
+        reset(); // Reset form after success
       })
       .catch((error) => {
-        alert("Error sending email!");
+        alert("Error sending emails!");
         console.error("Email error:", error);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   };
 
@@ -220,7 +240,7 @@ export default function AdvertiseSignUp() {
 
         <Box sx={{ mt: 4, display: "flex", gap: 2, justifyContent: "end" }}>
           <Button type="submit" variant="contained">
-            {t("advertiseSignUp.buttons.submit")}
+            {isloading ? "Loading..." : t("advertiseSignUp.buttons.submit")}
           </Button>
           <Button
             type="button"

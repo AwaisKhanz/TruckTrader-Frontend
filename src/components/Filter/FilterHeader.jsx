@@ -38,12 +38,12 @@ export default function FilterHeader({
       >
         <Typography
           sx={{
-            fontSize: { xs: "14px", md: "20px" },
+            fontSize: { xs: "14px", md: "16px" },
             color: "#757575",
           }}
         >
           {totalResults}
-          <span className=" text-[#808080] text-[14px] ml-1">
+          <span className=" text-[#808080] xs:text-[14px] md:16px ml-1">
             {t("filterHeader.resultsFound")}
           </span>
         </Typography>
@@ -118,7 +118,11 @@ export default function FilterHeader({
           }}
           startIcon={
             <SearchIcon
-              sx={{ marginRight: { xs: "-12px", md: "0px" }, mt: "0px" }}
+              sx={{
+                marginRight: { xs: "-12px", md: "0px" },
+                mt: "0px",
+                fontSize: { xs: "16px", md: "24px" },
+              }}
             />
           }
           // onClick={onSearchSubmit}

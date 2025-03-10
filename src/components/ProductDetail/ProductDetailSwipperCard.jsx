@@ -101,9 +101,23 @@ export default function ProductDetailSwipperCard({
             spaceBetween={10}
             slidesPerView={1}
             navigation
+            pagination={{
+              type: "fraction", // Display as fraction (e.g., 1/32)
+              renderFraction: function (currentClass, totalClass) {
+                return (
+                  '<span class="' +
+                  currentClass +
+                  '"></span>' +
+                  " / " +
+                  '<span class="' +
+                  totalClass +
+                  '"></span>'
+                );
+              },
+            }}
             onSwiper={(swiper) => (mainSwiperRef.current = swiper)}
             thumbs={{ swiper: thumbsSwiper }}
-            pagination={{ clickable: true }}
+            style={{ marginBottom: "20px" }} // Add spacing below for pagination
           >
             {images.map((image, index) => (
               <SwiperSlide key={index} onClick={() => setOpenImageIndex(index)}>
@@ -285,17 +299,6 @@ export default function ProductDetailSwipperCard({
               width: "100%",
             }}
           >
-            {/* <Button
-              fullWidth
-              sx={{
-                backgroundColor: "#F6F6F6",
-              }}
-              variant="contained"
-              color="secondary"
-              endIcon={<CallIcon sx={{ mt: "-3px" }} />}
-            >
-              {t("productDetail.swipper.viewPhoneNumber")}
-            </Button> */}
             <Button
               fullWidth
               variant="contained"
@@ -316,7 +319,6 @@ export default function ProductDetailSwipperCard({
       <Dialog
         open={openImageIndex !== null}
         onClose={() => setOpenImageIndex(null)}
-        // fullScreen
         maxWidth="lg"
         sx={{
           backgroundColor: "rgba(0, 0, 0, 0.8)",
@@ -325,7 +327,6 @@ export default function ProductDetailSwipperCard({
           },
         }}
       >
-        {/* Close Button */}
         <IconButton
           onClick={() => setOpenImageIndex(null)}
           sx={{
@@ -343,13 +344,26 @@ export default function ProductDetailSwipperCard({
           <CloseIcon />
         </IconButton>
 
-        {/* Fullscreen Swiper with Correct Starting Slide */}
+        {/* Fullscreen Swiper with Fraction Pagination */}
         <Swiper
           modules={[Navigation, Pagination, A11y]}
           spaceBetween={10}
           slidesPerView={1}
           navigation
-          pagination={{ clickable: true }}
+          pagination={{
+            type: "fraction", // Display as fraction (e.g., 1/32)
+            renderFraction: function (currentClass, totalClass) {
+              return (
+                '<span class="' +
+                currentClass +
+                '"></span>' +
+                " / " +
+                '<span class="' +
+                totalClass +
+                '"></span>'
+              );
+            },
+          }}
           initialSlide={openImageIndex}
           style={{
             width: "100%",

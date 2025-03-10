@@ -4,11 +4,8 @@ import { useTranslation } from "react-i18next";
 import HeroSection from "../components/Home/HeroSection";
 import HighlightSection from "../components/Home/HighlightSection";
 import FeaturedListingSection from "../components/Home/FeaturedListingSection";
-import TruckCategorySection from "../components/Home/TruckCategorySection";
 import LatestListingSection from "../components/Home/latestListingsSection";
-import FeaturedTrucksSection from "../components/Home/FeaturedTrucksSection";
 import ServicesSection from "../components/Home/ServicesSection";
-import { transformListingData } from "../utils/common";
 import api from "../services/api";
 
 export default function Home() {
@@ -17,8 +14,6 @@ export default function Home() {
   const [latestListings, setLatestListings] = useState([]);
   const { t, i18n } = useTranslation("");
 
-  // Fetch listings from the API
-  // Fetch listings from the API
   const fetchListings = async () => {
     setLoading(true);
     try {
@@ -65,9 +60,7 @@ export default function Home() {
       <HeroSection />
       <HighlightSection />
       <FeaturedListingSection listings={featureListings} loading={loading} />
-      {/* <TruckCategorySection /> */}
       <LatestListingSection listings={latestListings} loading={loading} />
-      {/* <FeaturedTrucksSection /> */}
       <ServicesSection />
     </Box>
   );

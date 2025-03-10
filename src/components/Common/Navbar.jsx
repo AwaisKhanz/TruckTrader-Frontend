@@ -15,15 +15,12 @@ import {
 } from "@mui/material";
 import { Menu, MenuItem } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
-import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import { useLocation } from "react-router-dom";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import logoBlack from "../../assets/logo_black.png";
-import logoWhite from "../../assets/logo_white.png";
+import CloseIcon from "@mui/icons-material/Close";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { languages } from "../../constants/Languages";
@@ -237,7 +234,16 @@ export default function Navbar() {
           role="presentation"
           onKeyDown={toggleDrawer(false)}
         >
-          <Logo color="white" />
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <Logo color="white" />
+            <CloseIcon onClick={toggleDrawer(false)} />
+          </Box>
 
           <Divider sx={{ background: "#323232", my: "24px" }} />
 

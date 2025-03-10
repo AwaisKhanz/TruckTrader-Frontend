@@ -3,12 +3,12 @@ import { Box, Typography } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { useTranslation } from "react-i18next";
-import logoWhite from "../../assets/logo_white.png";
 import { Link } from "react-router-dom";
 import Logo from "./logo";
 
 export default function Footer() {
   const { t } = useTranslation();
+  const currentYear = new Date().getFullYear(); // Get current year dynamically
 
   return (
     <Box
@@ -96,12 +96,7 @@ export default function Footer() {
                 >
                   {t("footer.menu.about")}
                 </Link>
-                <Link
-                  to="/content"
-                  className=" text-[#FFFFFF80] hover:text-white"
-                >
-                  {t("footer.menu.content")}
-                </Link>
+
                 <Link
                   to="/advertise"
                   className=" text-[#FFFFFF80] hover:text-white"
@@ -131,9 +126,9 @@ export default function Footer() {
                   gap: "8px",
                 }}
               >
-                <Link to="/book" className=" text-[#FFFFFF80] hover:text-white">
+                {/* <Link to="/book" className=" text-[#FFFFFF80] hover:text-white">
                   {t("footer.quickLinks.book")}
-                </Link>
+                </Link> */}
                 <Link
                   to="/privacy-policy"
                   className=" text-[#FFFFFF80] hover:text-white"
@@ -141,7 +136,7 @@ export default function Footer() {
                   {t("footer.quickLinks.privacyPolicy")}
                 </Link>
                 <Link
-                  to="/contact-us"
+                  to="/contact"
                   className=" text-[#FFFFFF80] hover:text-white"
                 >
                   {t("footer.quickLinks.contactUs")}
@@ -158,7 +153,8 @@ export default function Footer() {
               color: "white",
             }}
           >
-            © 2024 Trucktrader Benelux B.V. |{" "}
+            © {currentYear} Trucktrader Benelux B.V. |{" "}
+            {/* Updated to use dynamic year */}
             <Link to="/terms" className=" text-[#FFFFFF80] hover:text-white">
               {t("footer.terms")}
             </Link>{" "}
