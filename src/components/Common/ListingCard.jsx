@@ -71,7 +71,7 @@ export default function ListingCard({ data }) {
           <Typography
             sx={{
               fontWeight: "600",
-              fontSize: "20px",
+              fontSize: "15px",
               mb: "12px",
               color: "#000",
               fontStyle: "normal",

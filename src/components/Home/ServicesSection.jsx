@@ -5,7 +5,7 @@ import BrandIcon from "../../assets/Home/Services/brand.png"; // Replace with ac
 import SupportIcon from "../../assets/Home/Services/support.png"; // Replace with actual icon path
 import DealershipIcon from "../../assets/Home/Services/dealership.png"; // Replace with actual icon path
 import AffordableIcon from "../../assets/Home/Services/affordable.png"; // Replace with actual icon path
-import backgroundImage from "../../assets/Home/Services/Background.png";
+import backgroundImage from "../../assets/Home/Services/Background.jpeg";
 
 export default function ServicesSection() {
   const { t } = useTranslation();
@@ -44,46 +44,68 @@ export default function ServicesSection() {
           position: "relative",
           width: "100%",
           height: { xs: "auto", md: "560px !important" },
-          backgroundImage: `url(${backgroundImage})`,
+          backgroundImage: { xs: "", md: `url(${backgroundImage})` },
           backgroundSize: "cover",
           backgroundPosition: "center",
-          padding: { xs: "15px", md: "60px 20px" },
+          padding: { xs: "0", md: "60px 20px" },
           borderRadius: "20px",
           color: "#FFFFFF",
           textAlign: "center",
         }}
       >
+        <Box
+          sx={{
+            position: "absolute",
+            inset: "0",
+            bgcolor: "rgba(0, 0, 0, 0.5)",
+            zIndex: "10",
+            borderRadius: "20px",
+            display: { xs: "none", md: "block" },
+          }}
+        ></Box>
         {/* Title */}
 
-        <Typography
-          variant="h3"
+        <Box
           sx={{
-            fontWeight: "bold",
-            fontSize: { xs: "24px", md: "58px" },
-            lineHeight: "1.3",
-            mb: "16px",
-            maxWidth: "800px",
-            mx: "auto",
+            bgcolor: { xs: "black", md: "transparent" },
+            padding: { xs: "25px", md: "0px" },
+            borderRadius: "20px",
           }}
         >
-          {t("services.main")}{" "}
-          <span style={{ color: "#BD0000" }}>{t("services.highlight")}</span>{" "}
-          {t("services.mainEnd")}
-        </Typography>
+          <Typography
+            variant="h3"
+            sx={{
+              fontWeight: "bold",
+              fontSize: { xs: "24px", md: "58px" },
+              lineHeight: "1.3",
+              mb: "16px",
+              maxWidth: "800px",
+              mx: "auto",
+              zIndex: "9999999 !important",
+              position: "relative",
+            }}
+          >
+            {t("services.main")}{" "}
+            <span style={{ color: "#BD0000" }}>{t("services.highlight")}</span>{" "}
+            {t("services.mainEnd")}
+          </Typography>
 
-        <Typography
-          variant="body1"
-          sx={{
-            fontSize: "16px",
-            lineHeight: "1.5",
-            color: "#FFFFFFB3",
-            mb: "40px",
-            maxWidth: "800px",
-            mx: "auto",
-          }}
-        >
-          {t("services.subtitle")}
-        </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: "16px",
+              lineHeight: "1.5",
+              color: "#FFFFFFB3",
+              mb: "40px",
+              maxWidth: "800px",
+              mx: "auto",
+              zIndex: "30 !important",
+              position: "relative",
+            }}
+          >
+            {t("services.subtitle")}
+          </Typography>
+        </Box>
 
         {/* Services Grid */}
         <Box
@@ -93,6 +115,7 @@ export default function ServicesSection() {
             transform: { xs: "", md: "translateY(-50%)" },
             px: { xs: "", md: "30px" },
             mt: { xs: "80px !important", md: "" },
+            zIndex: "30 !important",
           }}
         >
           <Grid
