@@ -514,5 +514,171 @@
     "or": "Or",
     "continueWithGoogle": "Continue With",
     "continueWithFacebook": "Continue With"
+  },
+  "privacy_policy": {
+    "title": "General Terms and Conditions for TruckTrader - Business",
+    "part1": {
+      "title": "1. Scope and Amendments of the General Terms and Conditions",
+      "1.1": {
+        "text1": "TruckTrader Benelux B.V., established at Keizersgracht 520 H, (1017 EK) Amsterdam, registered in the trade register under number 66324939 (hereinafter referred to in singular form as \"TruckTrader\"), declares that these general terms and conditions apply to the legal relationship between TruckTrader and you, as an entrepreneur (hereinafter referred to as \"User\"), which is established in connection with services related to the TruckTrader platform (hereinafter referred to as \"the Platform\"), available through the websites ",
+        "link1": "www.trucktrader.nl",
+        "text2": ", ",
+        "link2": "www.trucktrader.be",
+        "text3": ", and ",
+        "link3": "www.trucktrader.lu",
+        "text4": ". In addition to the conditions related to the legal relationship between parties in the form of subscriptions for the Platform, there are requirements regarding the formatting of advertisements intended for the Platform and instructions concerning data protection."
+      },
+      "1.2": "Special agreements between TruckTrader and the User, in addition to these general terms and conditions and/or any subscriptions, are only valid if recorded in writing.",
+      "1.3": "The application of any general and/or purchasing conditions of the User is hereby explicitly rejected.",
+      "1.4": "TruckTrader reserves the right to modify these terms and conditions to the extent that it is reasonable for the User to accept such changes, taking into account the interests of TruckTrader. This is particularly the case if the modifications do not have adverse economic consequences for the User, such as changes in the registration process or due to modified or new services or functionalities within the TruckTrader Platform.",
+      "1.5": "TruckTrader will notify the User of any changes to the general terms and conditions via email. Changes will be deemed accepted by the User if no objection is raised within four weeks after notification."
+    },
+    "part2": {
+      "title": "2. Services and Modifications",
+      "2.1": "TruckTrader operates an online platform where Users can place and manage advertisements for motor vehicles for a fee. The scope of the services is limited to the ability to publish advertisements for motor vehicles in TruckTrader's databases and make them accessible to third parties via the internet. Any additional services agreed upon with the User depend on the selected service package offered by TruckTrader.",
+      "2.2": "Use of TruckTrader's services and database is permitted only to the extent provided for in these general terms and conditions (especially in Article 3) and in accordance with the selected service package. By purchasing a service from TruckTrader, the User agrees to these general terms and conditions and their content.",
+      "2.3": "TruckTrader reserves the right to modify, discontinue, or replace paid services or their components on the Platform at any time, considering the reasonable interests of Users. The User has no entitlement to the continuation of specific services or functionalities on the Platform."
+    },
+    "part3": {
+      "title": "3. Usage Rights",
+      "3.1": "By submitting advertisement data, the User grants TruckTrader and its affiliated companies the following non-exclusive, transferable, and unlimited rights to the submitted data: (i) The right to archive and store the data, including electronically recording, storing, and linking it to other data sources; (ii) The right to reproduce and distribute the data via electronic or other media (such as the internet, newspapers, and magazines) within the scope of the selected service package; (iii) The right to modify, shorten, supplement, and integrate the data with other data for functionality within the Platform and the chosen service package. TruckTrader may authorize third parties to perform the above actions under its responsibility.",
+      "3.2": "Any data (such as texts, photos, and advertisements) or marks (such as trademarks, trade names, and logos) made available by the User on TruckTrader’s database and websites may be subject to copyright, trademark, or competition law protection. The User must comply with these protections.",
+      "3.3": "Users are prohibited from misusing their access to TruckTrader’s platform or providing third parties with unauthorized access. Misuse includes: Automated database queries using software; Copying database content (in whole or in part) and making it available on other websites or media unless it concerns the User’s own data.",
+      "3.4": "If TruckTrader provides software for use, the User receives a non-exclusive, non-transferable right to use the software on a single computer for the duration of the agreement. The User must return or confirm deletion of the software upon contract termination.",
+      "3.5": "A contractual penalty of €5,000 applies for violations of Articles 3.2, 3.3, and 3.4, in addition to possible claims for damages."
+    },
+    "part4": {
+      "title": "4. Conclusion of Agreements and Registration",
+      "4.1": "To use TruckTrader’s services, the User must register on the TruckTrader Platform. Only legal entities and legally competent natural persons acting in the course of their business or profession are eligible for registration. The person registering on behalf of a legal entity must be authorized to enter into the relevant agreement on behalf of that entity.",
+      "4.2": "The User is obliged to provide all requested registration data fully and truthfully. As part of the registration and agreement, TruckTrader is entitled to request an extract from the trade register and/or business register, as well as any documents or information deemed necessary or useful for concluding or maintaining the agreement. TruckTrader is entitled to verify the accuracy of the provided information. Data provided by the User to TruckTrader will be processed by TruckTrader for the purpose for which it was provided and in accordance with the Privacy Statement of TruckTrader, as published on TruckTrader’s website(s).",
+      "4.3": "By submitting their registration data to TruckTrader, the User requests the establishment of an agreement with TruckTrader.",
+      "4.4": "TruckTrader reserves the right to decide at its own discretion whether to accept the User’s request to enter into an agreement. Submitting a request by a (prospective) User does not oblige TruckTrader to conclude an agreement. If TruckTrader does not confirm the registration within a reasonable period via email to the email address provided by the User, the request expires. Upon acceptance of the request by TruckTrader, an agreement between the User and TruckTrader is established under the terms outlined in the agreement.",
+      "4.5": "Only one registration is permitted per User (i.e., per legal or natural person). If the User has multiple branches, each branch must be registered as a separate user with TruckTrader. Registration with TruckTrader is non-transferable. Each User receives a unique password for access to the Platform.",
+      "4.6": {
+        "text1": "The User is obliged to promptly notify TruckTrader of any changes to their data. This can be done via ",
+        "link1": "…..@TruckTrader.nl",
+        "text2": "."
+      },
+      "4.7": "The User is obliged not to disclose their password, even if requested. TruckTrader emphasizes that its employees are not authorized to ask the User for their password. If the User forgets their password, they can request a new one via the “Forgot Password” function on the TruckTrader Platform website(s), which will be sent to the email address provided by the User. TruckTrader does not have access to Users’ passwords.",
+      "4.8": {
+        "text1": "The User is liable for damages resulting from third parties gaining knowledge of their password due to the User’s intent or negligence. If the User’s password is stolen or if they become aware that it is being used unlawfully by third parties, they must immediately notify TruckTrader via the feedback function on the Platform website(s) or by email at ",
+        "link1": "info@TruckTrader.nl",
+        "text2": "."
+      }
+    },
+    "part5": {
+      "title": "5. Prices",
+      "5.1": "TruckTrader operates on a subscription basis with various pricing structures, from which the User selects one or more subscription types. The subscription types are listed on TruckTrader’s website(s). If the User changes the subscription type during the term of an agreement, TruckTrader is entitled to charge any higher amount (pro rata) to the User. TruckTrader does not issue refunds during the term of an agreement due to a subscription change by the User.",
+      "5.2": "Price adjustments during the term of the agreement will be communicated to the User by TruckTrader at least four weeks prior to their effective date. In such cases, the User is entitled to terminate the agreement effective from the date the price increase takes effect. If the User continues to use TruckTrader’s services after the price adjustment takes effect, they are deemed to have agreed to the price change."
+    },
+    "part6": {
+      "title": "6. Payment, Due Date, and Default",
+      "6.1": "Unless otherwise agreed, TruckTrader invoices its services to the User annually. Payment of the invoice amount is collected exclusively via automatic debit or direct payment upon subscription by the User. TruckTrader provides the User with an invoice. At the start of an agreement between TruckTrader and the User, the User must provide a direct debit authorization as supplied by TruckTrader.",
+      "6.2": "The User is in default if any invoice amount is not paid within fourteen days of the invoice date. If the User is in default, TruckTrader is entitled to charge default interest based on the statutory commercial interest rate. The User is free to demonstrate that TruckTrader has suffered less damage. This does not affect TruckTrader’s right to claim statutory commercial interest or to prove to the User that a higher compensation is due. In the case of collection costs incurred by TruckTrader for any amount owed by the User, these costs are set at 15% of the amount payable by the User.",
+      "6.3": "TruckTrader is always entitled to offset any claims it has against the User, whether due or not, against any counterclaims the User may have against TruckTrader. Without TruckTrader’s permission, the User is not entitled to offset any claims they may have against TruckTrader. The User is not entitled to suspend their payment obligations towards TruckTrader.",
+      "6.4": "If the User believes that TruckTrader has failed to fulfill any obligation under its services, the User must inform TruckTrader immediately, but no later than 7 days after discovering this. In such a case, TruckTrader will respond within a reasonable period and consult with the User to reach a solution."
+    },
+    "part7": {
+      "title": "7. Contract Duration and Termination",
+      "7.1": "The agreement between TruckTrader and the User is concluded for a term of 1 (one) year. Agreements with a term of at least 1 year may be terminated by TruckTrader or the User with at least 2 (two) months’ notice before the end of the current term, failing which the agreement is renewed for the originally agreed term of at least 1 (one) year.",
+      "7.2": {
+        "text1": "TruckTrader is entitled to terminate the agreement immediately due to serious circumstances, particularly in the following cases:",
+        "list": {
+          "a": {
+            "text": "The User fails to comply with essential obligations under the agreement, including these general terms and conditions, and does not remedy this failure within ten working days despite a written notice from TruckTrader. Essential obligations include, in particular:",
+            "sublist": {
+              "1": "Article 3 (i.e., the obligation to use TruckTrader’s services only as permitted);",
+              "2": "Article 4.2 (i.e., the obligation to provide truthful information);",
+              "3": "Article 4.7 (i.e., the prohibition on making the assigned password available to third parties);",
+              "4": "Article 12 (i.e., the obligation to comply with advertisement formatting requirements and not to post data deemed unlawful by TruckTrader);"
+            }
+          },
+          "b": "The User is in default of payment of any invoice sent by TruckTrader for more than thirty days or objects to automatic debits without reason;",
+          "c": "The User is insolvent or at risk of becoming so (e.g., when wage claims or supplier claims are no longer met), or TruckTrader learns that a third party has seized the User’s assets;",
+          "d": "The User is declared bankrupt, granted a moratorium on payments (or a similar measure), or a request for such a procedure is filed and not withdrawn within five days."
+        }
+      }
+    },
+    "part8": {
+      "title": "8. Blocking of Data, Access Denial, and Other Sanctions",
+      "8.1": {
+        "text1": "The inclusion of the User’s data in TruckTrader’s database is at TruckTrader’s discretion. TruckTrader may refuse to include certain data and will notify the User accordingly. TruckTrader will particularly refuse to include or will remove the User’s data if it:",
+        "list": {
+          "1": "does not comply with TruckTrader’s formatting requirements for advertisements, or",
+          "2": "is deemed unlawful by TruckTrader, suspected of being unlawful, or",
+          "3": "is subject to the application of Article 7.2 of these general terms and conditions;"
+        }
+      },
+      "8.2": "If third parties object to data placed by the User, TruckTrader is entitled, to prevent adverse legal consequences for itself, to immediately remove such data (temporarily or otherwise) from TruckTrader’s database without any review. TruckTrader will then notify the User accordingly.",
+      "8.3": {
+        "text1": "TruckTrader is entitled to deny the User access to the database immediately if:",
+        "list": {
+          "1": "the User has repeatedly violated TruckTrader’s formatting requirements for advertisements, as communicated to the User, or has placed data deemed unlawful by TruckTrader or suspected by TruckTrader of being unlawful;",
+          "2": "the User is in default of payment, has revoked their direct debit authorization, or has objected to an automatic debit without reason;",
+          "3": "there is a reasonable suspicion that a third party is using the User’s access to the TruckTrader Platform;",
+          "4": "another instance of database misuse or exceeding usage rights occurs;",
+          "5": "there is an application of Article 7.2 of these general terms and conditions;"
+        },
+        "text2": "In all cases, TruckTrader will issue a timely warning to the User before blocking access, unless circumstances require TruckTrader to take immediate action."
+      },
+      "8.4": "TruckTrader is entitled to charge the User €75.00 excluding VAT in administrative fees for lifting a block, regardless of the duration of the block.",
+      "8.5": {
+        "text1": "If the User violates the provisions of this article again, TruckTrader will take measures to permanently exclude the User from the database. TruckTrader is also entitled to impose a contractual penalty of €500.00 for each week during which a violation of any provision of the agreement between TruckTrader and the User, including these general terms and conditions, or misuse of the database persists.",
+        "list": {
+          "1": "If the User falsely presents themselves as a private individual when placing an advertisement, TruckTrader is entitled to impose a contractual penalty of €500.00 per offered vehicle."
+        }
+      }
+    },
+    "part9": {
+      "title": "9. Responsibility for Data and Indemnification",
+      "9.1": "The responsibility for the legality or accuracy of the data placed by the User in TruckTrader’s database rests solely with the User. TruckTrader provides only technical services to the User and does not act as a mediator or representative, nor does TruckTrader act on behalf of the User in any other capacity.",
+      "9.2": "TruckTrader is also not a party to any agreement between the User and third parties that arises based on the User’s data included in the database or displayed on the TruckTrader Platform.",
+      "9.3": "TruckTrader is not obliged to verify the accuracy of the User’s data placed in TruckTrader’s database or to investigate facts that might suggest unlawful conduct.",
+      "9.4": "The User indemnifies TruckTrader against all claims that third parties may assert against TruckTrader due to a violation of their rights by an advertisement of the User or due to any other use of TruckTrader’s website(s) and/or Platform by the User. In such cases, the User also bears all costs for necessary legal assistance for TruckTrader, including court fees and legal representation costs. If a third party believes their rights have been violated, TruckTrader is entitled to temporarily take the User’s relevant content offline until it is determined whether the content can be reinstated.",
+      "9.5": "TruckTrader is entitled to display content related to third-party reviews on its website. TruckTrader is in no way liable or responsible for the content of reviews posted by third parties."
+    },
+    "part10": {
+      "title": "10. Warranties",
+      "10.1": "TruckTrader guarantees that the database is available more than 90% of the time on an annual basis. Availability as referred to above means that data can be entered into the database and retrieved from the database via the TruckTrader Platform.",
+      "10.2": "Exclusions from the availability warranty mentioned above include interruptions necessary for system maintenance, such as creating backups, within reasonable limits, and interruptions due to force majeure or other causes beyond TruckTrader’s control. These include, for example, emergency measures to prevent the spread of a virus or an attack by third parties on the TruckTrader Platform. TruckTrader will, if possible, announce the times of such interruptions in advance on the website.",
+      "10.3": "TruckTrader is not liable for the display quality of images included in the database, particularly not for color deviations. The User is responsible for correctly providing their data, including images, and ensuring their quality. TruckTrader may advise the User in this regard but assumes no responsibility for the (content of) the data provided by the User."
+    },
+    "part11": {
+      "title": "11. Liability of TruckTrader",
+      "11.1": {
+        "text1": "Within the scope of the agreement, TruckTrader is only liable for damages suffered by the User:",
+        "list": {
+          "1": "that result from intent or gross negligence on the part of TruckTrader or one or more of its representatives or subordinates;",
+          "2": "that result from TruckTrader’s failure to comply with an essential part of the agreement, provided that TruckTrader has first been put in default by the User and has not remedied the failure within a reasonable period;",
+          "3": "that are based on statutory product liability provisions;",
+          "4": "if, within the context of a sale or contracting agreement, TruckTrader has guaranteed a specific quality of the item or has fraudulently misrepresented it; and/or",
+          "5": "that result from harm to another person’s life, body, or health and can be attributed to TruckTrader’s failure to comply with the agreement or that of one or more of its representatives or subordinates."
+        }
+      },
+      "11.2": "TruckTrader is fully liable in cases of damage caused by intent or gross negligence or in cases of harm to life, body, or health. Otherwise, claims for damages are limited to foreseeable damages typical of the agreement. In the event of TruckTrader’s untimely performance of the agreement, compensation for resulting delay damages is limited to 5% of the order amount that the User must pay to TruckTrader under the current agreement for one calendar year. The foregoing does not affect claims for damages under statutory product liability provisions.",
+      "11.3": "TruckTrader is only liable for the loss of the User’s data to the extent that the User ensures, through backups or otherwise, that their data can be restored at reasonable cost. TruckTrader’s liability is limited to normal restoration costs. The foregoing does not affect the provisions of Article 11.2.",
+      "11.4": "TruckTrader’s liability, which under Article 11.2 is limited to foreseeable damages, is further limited to a maximum of €10,000.00, or in the case of pure financial loss, to a maximum of €5,000.00.",
+      "11.5": "TruckTrader is not liable for indirect damages, consequential damages, or lost profits, nor for costs that the User must incur in the context of executing their agreement with TruckTrader.",
+      "11.6": "In cases other than those mentioned in Articles 11.1 through 11.3, TruckTrader’s liability is excluded regardless of the legal basis. TruckTrader cannot be held liable for damages to the User resulting from taking content offline, as stipulated in Article 8.2 of these terms and conditions.",
+      "11.7": "If TruckTrader’s liability is excluded, this also applies to the (personal) liability of its (indirect) directors and shareholders, staff, employees, representatives, and subordinates."
+    },
+    "part12": {
+      "title": "12. Liability of the User",
+      "12.1": "The User is obliged to comply with TruckTrader’s formatting requirements for advertisements when preparing data to be placed and to ensure that the data does not violate legal regulations (in particular, copyright, trademark, and competition law provisions). The User is, in particular, obliged not to provide data that is punishable (such as offensive, defamatory, inflammatory, or pornographic data), unlawful, or that damages TruckTrader’s credibility.",
+      "12.2": "The User is obliged, upon TruckTrader’s first request, to indemnify TruckTrader against any third-party claims arising from a violation of the obligation mentioned in Article 12.1 and to compensate all damages resulting from the violation, in particular all reasonable costs incurred by TruckTrader for legal assistance."
+    },
+    "part13": {
+      "title": "13. Final Provisions",
+      "13.1": "The place of performance of the agreement is (1017 EK) Amsterdam, Keizersgracht 520 H. The court in Amsterdam has exclusive jurisdiction to hear disputes arising from an agreement between TruckTrader and the User. Dutch law applies to the agreement between the User and TruckTrader, excluding the Vienna Sales Convention, regardless of the User’s place of residence or establishment.",
+      "13.2": "Amendments or additions to the agreement between TruckTrader and the User, including this provision, are only valid if agreed in writing. For the purposes of this provision, a writing also includes a fax or an email. Amendments or additions are not valid if they are otherwise concluded electronically.",
+      "13.3": "TruckTrader is entitled to transfer its rights and obligations under the agreement, in whole or in part, to a third party, provided it observes a notification period of four weeks. The User is entitled to terminate the agreement with immediate effect following such notification.",
+      "13.4": "If one or more provisions of the agreement, including these general terms and conditions, are wholly or partially void or voided, the remaining provisions of the agreement remain fully in force. The parties will strive to replace the wholly or partially void or voided provision with a reasonable provision, taking into account, as far as possible, the purpose and intent of the original provision. The foregoing applies similarly if it later becomes apparent that the agreement contains a gap.",
+      "13.5": "A translation of these General Terms and Conditions is provided solely as a service to Users of the TruckTrader Platform. In the event of a dispute over the content of a translation of the General Terms and Conditions, this Dutch text shall prevail.",
+      "footer": {
+        "text1": "General Terms and Conditions – TruckTrader Business",
+        "text2": "March 2025",
+        "text3": "Version 1.0"
+      }
+    }
   }
 }

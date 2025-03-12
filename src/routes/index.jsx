@@ -16,6 +16,7 @@ import ProductDetail from "../pages/ProductDetail";
 import Directory from "../pages/Directory";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import PrivacyPolicy from "../pages/PrivacyPolicies";
 
 export default function AppRoutes() {
   return (
@@ -95,6 +96,7 @@ export default function AppRoutes() {
           </AuthLayout>
         }
       />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
       {/* 404 Not Found Route */}
       <Route
