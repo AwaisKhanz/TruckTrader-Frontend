@@ -14,11 +14,13 @@ import MailIcon from "@mui/icons-material/Mail";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import emailjs from "emailjs-com";
 import { useForm } from "react-hook-form";
+import { useToast } from "../Common/toast-component";
 
 export default function ContactDrawer({ open, onClose }) {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const [loading, setLoading] = useState(false);
+  const { showToast } = useToast();
 
   const {
     register,
@@ -44,13 +46,12 @@ export default function ContactDrawer({ open, onClose }) {
         "4a-NTj6xYPJSiNOVi" // Your EmailJS Public Key
       )
       .then(() => {
-        alert("Message sent successfully!");
+        showToast("Message sent successfully!", "success");
         reset();
         onClose(); // Close drawer on success
       })
       .catch((error) => {
-        alert("Failed to send message!");
-        console.error("EmailJS error:", error);
+        showToast("Failed to send message!", "error");
       })
       .finally(() => {
         setLoading(false); // Stop loading

@@ -7,13 +7,14 @@ import theme from "./theme/theme";
 import { BrowserRouter as Router } from "react-router-dom";
 // import AuthProvider from "./context/AuthContext";
 import "./i18n";
+import { ToastProvider } from "./components/Common/toast-component";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Router>
     <ThemeProvider theme={theme}>
-      {/* <AuthProvider> */}
-      <App />
-      {/* </AuthProvider> */}
+      <ToastProvider>
+        <App />
+      </ToastProvider>
     </ThemeProvider>
   </Router>
 );

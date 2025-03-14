@@ -4,11 +4,13 @@ import { useForm, Controller } from "react-hook-form";
 import { Phone, AccessTime } from "@mui/icons-material";
 import BackgroundImage from "../../assets/Contact/ContactForm/Background.png";
 import { useTranslation } from "react-i18next";
+import { useToast } from "../Common/toast-component";
 import emailjs from "emailjs-com";
 
 export default function ContactForm() {
   const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
+  const { showToast } = useToast();
 
   const {
     handleSubmit,
@@ -16,7 +18,6 @@ export default function ContactForm() {
     formState: { errors },
     reset,
   } = useForm();
-
   const sendEmail = (data) => {
     setLoading(true); // Start loading
     emailjs
@@ -34,12 +35,11 @@ export default function ContactForm() {
         "4a-NTj6xYPJSiNOVi" // Your EmailJS Public Key
       )
       .then(() => {
-        alert("Message sent successfully!");
+        showToast("Message sent successfully!", "success");
         reset(); // Reset form on success
       })
       .catch((error) => {
-        alert("Failed to send message!");
-        console.error("EmailJS error:", error);
+        showToast("Failed to send message!", "error");
       })
       .finally(() => {
         setLoading(false); // Stop loading

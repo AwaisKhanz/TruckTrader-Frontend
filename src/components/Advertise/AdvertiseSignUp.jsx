@@ -12,19 +12,22 @@ import { useForm, Controller } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import emailjs from "emailjs-com";
 import axios from "axios";
+import { useToast } from "../Common/toast-component";
 
 export default function AdvertiseSignUp() {
   const { t } = useTranslation();
   const [countries, setCountries] = useState([]);
   const [isloading, setIsLoading] = useState(false);
+  const { showToast } = useToast();
 
   useEffect(() => {
     axios
-      .get("https://restcountries.com/v3.1/all")
+      .get("https://countriesnow.space/api/v0.1/countries")
       .then((response) => {
-        const countryList = response.data.map((country) => ({
-          code: country.cca2,
-          name: country.name.common,
+        const countriesData = response.data;
+        const countryList = countriesData.data.map((country) => ({
+          code: country.iso2,
+          name: country.country,
         }));
         setCountries(countryList.sort((a, b) => a.name.localeCompare(b.name)));
       })
@@ -39,7 +42,6 @@ export default function AdvertiseSignUp() {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log("Form Data:", data);
     setIsLoading(true);
 
     // Email to TruckTrader Support (existing template)
@@ -83,14 +85,11 @@ export default function AdvertiseSignUp() {
     // Handle both email promises
     Promise.all([supportEmailPromise, userEmailPromise])
       .then((responses) => {
-        alert("Emails sent successfully!");
-        console.log("Support Email response:", responses[0]);
-        console.log("User Email response:", responses[1]);
-        reset(); // Reset form after success
+        showToast("Message sent successfully!", "success");
+        reset();
       })
       .catch((error) => {
-        alert("Error sending emails!");
-        console.error("Email error:", error);
+        showToast("Failed to send message!", "error");
       })
       .finally(() => {
         setIsLoading(false);
