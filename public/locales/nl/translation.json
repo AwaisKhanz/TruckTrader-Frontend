@@ -84,7 +84,7 @@
     "quickLinksTitle": "Snelle links",
     "quickLinks": {
       "book": "Boek",
-      "privacyPolicy": "Privacybeleid",
+      "privacyPolicy": "Algemene voorwaarden",
       "contactUs": "Contact"
     }
   },
@@ -342,7 +342,7 @@
       },
       "message": "Bericht is verplicht"
     },
-    "submitButton": "Verzenden →",
+    "submitButton": "Indienen →",
     "officeHours": "Maandag tot vrijdag 09:00 – 17:00",
     "phone": "(+31) 20 737 28 99"
   },
@@ -365,56 +365,59 @@
     "labels": {
       "subscription": "Selecteer Abonnement",
       "company": "Bedrijf",
-      "cocNumber": "CoC Nummer",
+      "kvkNumber": "KVK-number",
       "firstName": "Voornaam",
       "lastName": "Achternaam",
       "street": "Straat",
-      "taxId": "BTW-nummer",
-      "streetNumber": "Straatnummer",
+      "btwNumber": "BTW-nummer",
+      "streetNumber": "Huisnummer",
       "country": "Land",
       "city": "Stad",
       "phoneNumber": "Telefoonnummer",
       "email": "E-mail",
       "zipCode": "Postcode",
-      "bank": "Bank"
+      "bank": "Bank",
+      "remarks": "Opmerkingen"
     },
     "placeholders": {
-      "subscription": "Selecteer Abonnement",
+      "subscription": "Selecteer abonnement",
       "company": "Bedrijf",
-      "cocNumber": "CoC Nummer",
+      "kvkNumber": "KVK-number",
       "firstName": "Voer uw voornaam in",
       "lastName": "Voer uw achternaam in",
       "street": "Straat",
-      "TaxId": "Voer uw BTW-nummer",
-      "streetNumber": "Straatnummer",
+      "btwNumber": "Voer uw BTW-nummer",
+      "streetNumber": "Huisnummer",
       "country": "Selecteer Land",
       "city": "Stad",
       "phoneNumber": "Voer uw telefoonnummer in",
       "email": "Voer uw e-mail in",
-      "zipCode": "Postcode",
-      "bank": "Bank"
+      "zipCode": "Voer uw  Postcode",
+      "bank": "Voer uw Bank",
+      "remarks": "Voer uw Opmerkingen"
     },
     "errors": {
       "subscription": "Abonnement is verplicht",
       "company": "Bedrijf is verplicht",
-      "cocNumber": "CoC Nummer is verplicht",
+      "kvkNumber": "KVK-number is verplicht",
       "firstName": "Voornaam is verplicht",
       "lastName": "Achternaam is verplicht",
       "street": "Straat is verplicht",
-      "streetNumber": "Straatnummer is verplicht",
+      "streetNumber": "Huisnummer is verplicht",
       "country": "Land is verplicht",
       "city": "Stad is verplicht",
       "phoneNumber": "Telefoonnummer is verplicht",
       "email": "E-mail is verplicht",
       "zipCode": "Postcode is verplicht",
-      "bank": "Bank is verplicht"
+      "bank": "Bank is verplicht",
+      "btwNumber": "BTW-nummer is verplicht"
     },
     "buttons": {
       "submit": "Indienen",
-      "reset": "Reset"
+      "reset": "Wissen"
     },
     "options": {
-      "basic": "Basis",
+      "basic": "€2,50 per voertuigen met een minimum van €25 per maand",
       "premium": "Premium"
     }
   },

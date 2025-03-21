@@ -15,24 +15,30 @@ import axios from "axios";
 import { useToast } from "../Common/toast-component";
 
 export default function AdvertiseSignUp() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [countries, setCountries] = useState([]);
   const [isloading, setIsLoading] = useState(false);
   const { showToast } = useToast();
 
+  const generateCountryList = (language) => {
+    const regionNames = new Intl.DisplayNames([language], { type: "region" });
+    const list = [];
+    for (let i = 65; i <= 90; i++) {
+      for (let j = 65; j <= 90; j++) {
+        const code = String.fromCharCode(i) + String.fromCharCode(j);
+        const name = regionNames.of(code);
+        if (name && name !== code) {
+          list.push({ code, name });
+        }
+      }
+    }
+    return list.sort((a, b) => a.name.localeCompare(b.name));
+  };
+
+  // In your component:
   useEffect(() => {
-    axios
-      .get("https://countriesnow.space/api/v0.1/countries")
-      .then((response) => {
-        const countriesData = response.data;
-        const countryList = countriesData.data.map((country) => ({
-          code: country.iso2,
-          name: country.country,
-        }));
-        setCountries(countryList.sort((a, b) => a.name.localeCompare(b.name)));
-      })
-      .catch((error) => console.error("Error fetching countries:", error));
-  }, []);
+    setCountries(generateCountryList(i18n.language));
+  }, [i18n.language]);
 
   const {
     handleSubmit,
@@ -56,7 +62,7 @@ export default function AdvertiseSignUp() {
         subscription: data.subscription,
         company: data.company,
         cocNumber: data.cocNumber,
-        taxId: data.taxId,
+        btwNumber: data.taxId,
         firstName: data.firstName,
         lastName: data.lastName,
         street: data.street,
@@ -140,9 +146,9 @@ export default function AdvertiseSignUp() {
                     <MenuItem value="basic">
                       {t("advertiseSignUp.options.basic")}
                     </MenuItem>
-                    <MenuItem value="premium">
+                    {/* <MenuItem value="premium">
                       {t("advertiseSignUp.options.premium")}
-                    </MenuItem>
+                    </MenuItem> */}
                   </TextField>
                 </Box>
               )}
@@ -174,17 +180,17 @@ export default function AdvertiseSignUp() {
 
           {/* Rest of Fields */}
           {[
-            { name: "cocNumber", label: "cocNumber" },
-            { name: "taxId", label: "TaxId" },
+            { name: "kvkNumber", label: "kvkNumber" },
+            { name: "btwNumber", label: "btwNumber" },
             { name: "firstName", label: "firstName" },
             { name: "lastName", label: "lastName" },
             { name: "street", label: "street" },
             { name: "streetNumber", label: "streetNumber" },
-            { name: "country", label: "country", isSelect: true },
-            { name: "city", label: "city" },
-            { name: "phoneNumber", label: "phoneNumber" },
-            { name: "email", label: "email" },
             { name: "zipCode", label: "zipCode" },
+            { name: "city", label: "city" },
+            { name: "country", label: "country", isSelect: true },
+            { name: "email", label: "email" },
+            { name: "phoneNumber", label: "phoneNumber" },
             { name: "bank", label: "bank" },
           ].map((field) => (
             <Grid item xs={12} md={6} key={field.name}>
@@ -235,6 +241,27 @@ export default function AdvertiseSignUp() {
               />
             </Grid>
           ))}
+
+          <Grid item xs={12} md={12}>
+            <Controller
+              name="remarks"
+              control={control}
+              defaultValue=""
+              render={({ field: inputField }) => (
+                <Box>
+                  <Typography>{t("advertiseSignUp.labels.remarks")}</Typography>
+                  <TextField
+                    multiline
+                    rows={4}
+                    {...inputField}
+                    placeholder={t(`advertiseSignUp.placeholders.remarks`)}
+                    fullWidth
+                    sx={{ mt: 2 }}
+                  />
+                </Box>
+              )}
+            />
+          </Grid>
         </Grid>
 
         <Box sx={{ mt: 4, display: "flex", gap: 2, justifyContent: "end" }}>

@@ -18,12 +18,13 @@ export default function ContactForm() {
     formState: { errors },
     reset,
   } = useForm();
+
   const sendEmail = (data) => {
-    setLoading(true); // Start loading
+    setLoading(true);
     emailjs
       .send(
-        "service_9a389ij", // Your EmailJS Service ID
-        "template_8hfu2a9", // Your EmailJS Template ID
+        "service_9a389ij",
+        "template_8hfu2a9",
         {
           to_email: "niels@trucktrader.nl",
           firstName: data.firstName,
@@ -32,17 +33,17 @@ export default function ContactForm() {
           phoneNumber: data.phone,
           message: data.message,
         },
-        "4a-NTj6xYPJSiNOVi" // Your EmailJS Public Key
+        "4a-NTj6xYPJSiNOVi"
       )
       .then(() => {
         showToast("Message sent successfully!", "success");
-        reset(); // Reset form on success
+        reset();
       })
       .catch((error) => {
         showToast("Failed to send message!", "error");
       })
       .finally(() => {
-        setLoading(false); // Stop loading
+        setLoading(false);
       });
   };
 
@@ -71,13 +72,15 @@ export default function ContactForm() {
                   name="firstName"
                   control={control}
                   defaultValue=""
-                  rules={{ required: "First Name is required" }}
+                  rules={{ required: t("contactForm.errors.firstName") }}
                   render={({ field }) => (
                     <Box>
-                      <Typography>First Name</Typography>
+                      <Typography>
+                        {t("contactForm.labels.firstName")}
+                      </Typography>
                       <TextField
                         {...field}
-                        placeholder="Enter Your First Name"
+                        placeholder={t("contactForm.placeholders.firstName")}
                         fullWidth
                         error={!!errors.firstName}
                         helperText={errors.firstName?.message}
@@ -92,13 +95,15 @@ export default function ContactForm() {
                   name="lastName"
                   control={control}
                   defaultValue=""
-                  rules={{ required: "Last Name is required" }}
+                  rules={{ required: t("contactForm.errors.lastName") }}
                   render={({ field }) => (
                     <Box>
-                      <Typography>Last Name</Typography>
+                      <Typography>
+                        {t("contactForm.labels.lastName")}
+                      </Typography>
                       <TextField
                         {...field}
-                        placeholder="Enter Your Last Name"
+                        placeholder={t("contactForm.placeholders.lastName")}
                         fullWidth
                         error={!!errors.lastName}
                         helperText={errors.lastName?.message}
@@ -114,18 +119,18 @@ export default function ContactForm() {
                   control={control}
                   defaultValue=""
                   rules={{
-                    required: "Email is required",
+                    required: t("contactForm.errors.email.required"),
                     pattern: {
                       value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/,
-                      message: "Invalid email address",
+                      message: t("contactForm.errors.email.invalid"),
                     },
                   }}
                   render={({ field }) => (
                     <Box>
-                      <Typography>Email</Typography>
+                      <Typography>{t("contactForm.labels.email")}</Typography>
                       <TextField
                         {...field}
-                        placeholder="Enter Your Email"
+                        placeholder={t("contactForm.placeholders.email")}
                         fullWidth
                         error={!!errors.email}
                         helperText={errors.email?.message}
@@ -141,18 +146,18 @@ export default function ContactForm() {
                   control={control}
                   defaultValue=""
                   rules={{
-                    required: "Phone Number is required",
+                    required: t("contactForm.errors.phone.required"),
                     pattern: {
                       value: /^[0-9]+$/,
-                      message: "Invalid phone number",
+                      message: t("contactForm.errors.phone.invalid"),
                     },
                   }}
                   render={({ field }) => (
                     <Box>
-                      <Typography>Phone Number</Typography>
+                      <Typography>{t("contactForm.labels.phone")}</Typography>
                       <TextField
                         {...field}
-                        placeholder="Enter Your Phone Number"
+                        placeholder={t("contactForm.placeholders.phone")}
                         fullWidth
                         error={!!errors.phone}
                         helperText={errors.phone?.message}
@@ -167,13 +172,13 @@ export default function ContactForm() {
                   name="message"
                   control={control}
                   defaultValue=""
-                  rules={{ required: "Message cannot be empty" }}
+                  rules={{ required: t("contactForm.errors.message") }}
                   render={({ field }) => (
                     <Box>
-                      <Typography>Message</Typography>
+                      <Typography>{t("contactForm.labels.message")}</Typography>
                       <TextField
                         {...field}
-                        placeholder="Write Your Message"
+                        placeholder={t("contactForm.placeholders.message")}
                         multiline
                         rows={5}
                         fullWidth
@@ -200,9 +205,9 @@ export default function ContactForm() {
                 type="submit"
                 variant="contained"
                 sx={{ width: { xs: "100%", md: "auto" } }}
-                disabled={loading} // Disable button when loading
+                disabled={loading}
               >
-                {loading ? "Sending..." : "Send Message"}
+                {loading ? "Sending..." : t("contactForm.submitButton")}
               </Button>
               <Box
                 sx={{
@@ -222,7 +227,20 @@ export default function ContactForm() {
                 >
                   <AccessTime sx={{ color: "#BD0000" }} />
                   <Typography sx={{ fontSize: "16px", color: "#6A6A6A" }}>
-                    Office Hours: 9AM - 5PM
+                    {t("contactForm.officeHours")}
+                  </Typography>
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    color: "#808080",
+                  }}
+                >
+                  <Phone sx={{ color: "#BD0000" }} />
+                  <Typography sx={{ fontSize: "16px", color: "#6A6A6A" }}>
+                    {t("contactForm.phone")}
                   </Typography>
                 </Box>
               </Box>

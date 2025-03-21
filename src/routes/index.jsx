@@ -20,93 +20,95 @@ import PrivacyPolicy from "../pages/PrivacyPolicies";
 
 export default function AppRoutes() {
   return (
-    <Routes>
-      {/* Routes with MainLayout */}
-      <Route
-        path="/"
-        element={
-          <MainLayout>
-            <Home />
-          </MainLayout>
-        }
-      />
-      <Route
-        path="/filter"
-        element={
-          <MainLayout>
-            <Filter />
-          </MainLayout>
-        }
-      />
-      <Route
-        path="/about-us"
-        element={
-          <MainLayout>
-            <AboutUs />
-          </MainLayout>
-        }
-      />
-      <Route
-        path="/advertise"
-        element={
-          <MainLayout>
-            <Advertise />
-          </MainLayout>
-        }
-      />
-      <Route
-        path="/directory"
-        element={
-          <MainLayout>
-            <Directory />
-          </MainLayout>
-        }
-      />
-      <Route
-        path="/contact"
-        element={
-          <MainLayout>
-            <Contact />
-          </MainLayout>
-        }
-      />
-      <Route
-        path="/product-detail/:id"
-        element={
-          <MainLayout>
-            <ProductDetail />
-          </MainLayout>
-        }
-      />
+    <>
+      <Routes>
+        {/* Routes with MainLayout */}
+        <Route
+          path="/"
+          element={
+            <MainLayout>
+              <Home />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/filter"
+          element={
+            <MainLayout>
+              <Filter />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/about-us"
+          element={
+            <MainLayout>
+              <AboutUs />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/advertise"
+          element={
+            <MainLayout>
+              <Advertise />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/directory"
+          element={
+            <MainLayout>
+              <Directory />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <MainLayout>
+              <Contact />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/product-detail/:id"
+          element={
+            <MainLayout>
+              <ProductDetail />
+            </MainLayout>
+          }
+        />
 
-      {/* Routes with AuthLayout */}
-      <Route
-        path="/login"
-        element={
-          <AuthLayout>
-            <Login />
-          </AuthLayout>
-        }
-      />
-      <Route
-        path="/register"
-        element={
-          <AuthLayout>
-            <Register />
-          </AuthLayout>
-        }
-      />
-      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        {/* Routes with AuthLayout */}
+        <Route
+          path="/login"
+          element={
+            <AuthLayout>
+              <Login />
+            </AuthLayout>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <AuthLayout>
+              <Register />
+            </AuthLayout>
+          }
+        />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
-      {/* 404 Not Found Route */}
-      <Route
-        path="*"
-        element={
-          <MainLayout>
-            <NotFound />
-          </MainLayout>
-        }
-      />
-    </Routes>
+        {/* 404 Not Found Route */}
+        <Route
+          path="*"
+          element={
+            <MainLayout>
+              <NotFound />
+            </MainLayout>
+          }
+        />
+      </Routes>
+    </>
   );
 }

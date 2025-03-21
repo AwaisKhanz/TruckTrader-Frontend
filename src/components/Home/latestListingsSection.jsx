@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { transformListingData } from "../../utils/common";
 
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import { Link } from "react-router-dom";
 
 export default function LatestListingSection({ listings, loading }) {
   const { t } = useTranslation();
@@ -12,27 +13,29 @@ export default function LatestListingSection({ listings, loading }) {
   return (
     <Box sx={{ maxWidth: "90%", mx: "auto", py: "60px" }}>
       {/* Title and Show All Button */}
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          mb: "40px",
-        }}
-      >
-        <Typography
+      <Link to={"/filter"}>
+        <Box
           sx={{
-            fontWeight: "bold",
-            color: "#212121",
-            fontSize: { xs: "24px", md: "32px" },
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            mb: "40px",
           }}
         >
-          {t("latestListings.title")}
-        </Typography>
-        <Button variant="contained" color="secondary">
-          {t("latestListings.showAll")} <ChevronRightIcon />
-        </Button>
-      </Box>
+          <Typography
+            sx={{
+              fontWeight: "bold",
+              color: "#212121",
+              fontSize: { xs: "24px", md: "32px" },
+            }}
+          >
+            {t("latestListings.title")}
+          </Typography>
+          <Button variant="contained" color="secondary">
+            {t("latestListings.showAll")} <ChevronRightIcon />
+          </Button>
+        </Box>
+      </Link>
 
       {/* Grid of Listings */}
       <Box

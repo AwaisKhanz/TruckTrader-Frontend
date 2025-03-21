@@ -17,6 +17,7 @@ import ListingCard from "../../components/Common/ListingCard";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { transformListingData } from "../../utils/common";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export default function FeaturedListingSection({ listings, loading }) {
   const { t } = useTranslation();
@@ -24,28 +25,30 @@ export default function FeaturedListingSection({ listings, loading }) {
     <Box sx={{ background: "#EDEDED" }}>
       <Box sx={{ maxWidth: "90%", mx: "auto", mt: "40px", py: "40px" }}>
         {/* Title and Show All Button */}
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            mb: "20px",
-          }}
-        >
-          <Typography
-            variant="h5"
+        <Link to={"/filter"}>
+          <Box
             sx={{
-              fontWeight: "bold",
-              color: "#212121",
-              fontSize: { xs: "24px", md: "32px" },
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              mb: "20px",
             }}
           >
-            {t("featureListings.title")}
-          </Typography>
-          <Button variant="contained" color="secondary">
-            Show All <ChevronRightIcon />
-          </Button>
-        </Box>
+            <Typography
+              variant="h5"
+              sx={{
+                fontWeight: "bold",
+                color: "#212121",
+                fontSize: { xs: "24px", md: "32px" },
+              }}
+            >
+              {t("featureListings.title")}
+            </Typography>
+            <Button variant="contained" color="secondary">
+              Show All <ChevronRightIcon />
+            </Button>
+          </Box>
+        </Link>
 
         {/* Swiper Slider */}
         <Swiper

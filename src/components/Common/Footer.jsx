@@ -8,7 +8,12 @@ import Logo from "./logo";
 
 export default function Footer() {
   const { t } = useTranslation();
-  const currentYear = new Date().getFullYear(); // Get current year dynamically
+  const currentYear = new Date().getFullYear();
+
+  // Function to scroll to top
+  const handleScrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
 
   return (
     <Box
@@ -87,19 +92,24 @@ export default function Footer() {
                   gap: "8px",
                 }}
               >
-                <Link to="/" className=" text-[#FFFFFF80] hover:text-white">
+                <Link
+                  to="/"
+                  onClick={handleScrollToTop}
+                  className="text-[#FFFFFF80] hover:text-white"
+                >
                   {t("footer.menu.home")}
                 </Link>
                 <Link
                   to="/about-us"
-                  className=" text-[#FFFFFF80] hover:text-white"
+                  onClick={handleScrollToTop}
+                  className="text-[#FFFFFF80] hover:text-white"
                 >
                   {t("footer.menu.about")}
                 </Link>
-
                 <Link
                   to="/advertise"
-                  className=" text-[#FFFFFF80] hover:text-white"
+                  onClick={handleScrollToTop}
+                  className="text-[#FFFFFF80] hover:text-white"
                 >
                   {t("footer.menu.advertise")}
                 </Link>
@@ -126,18 +136,17 @@ export default function Footer() {
                   gap: "8px",
                 }}
               >
-                {/* <Link to="/book" className=" text-[#FFFFFF80] hover:text-white">
-                  {t("footer.quickLinks.book")}
-                </Link> */}
                 <Link
                   to="/privacy-policy"
-                  className=" text-[#FFFFFF80] hover:text-white"
+                  onClick={handleScrollToTop}
+                  className="text-[#FFFFFF80] hover:text-white"
                 >
                   {t("footer.quickLinks.privacyPolicy")}
                 </Link>
                 <Link
                   to="/contact"
-                  className=" text-[#FFFFFF80] hover:text-white"
+                  onClick={handleScrollToTop}
+                  className="text-[#FFFFFF80] hover:text-white"
                 >
                   {t("footer.quickLinks.contactUs")}
                 </Link>
@@ -154,12 +163,19 @@ export default function Footer() {
             }}
           >
             © {currentYear} Trucktrader Benelux B.V. |{" "}
-            {/* Updated to use dynamic year */}
-            <Link to="/terms" className=" text-[#FFFFFF80] hover:text-white">
+            <Link
+              to="/terms"
+              onClick={handleScrollToTop}
+              className="text-[#FFFFFF80] hover:text-white"
+            >
               {t("footer.terms")}
             </Link>{" "}
             |{" "}
-            <Link to="/cookies" className=" text-[#FFFFFF80] hover:text-white">
+            <Link
+              to="/cookies"
+              onClick={handleScrollToTop}
+              className="text-[#FFFFFF80] hover:text-white"
+            >
               {t("footer.cookies")}
             </Link>
           </Typography>
@@ -176,7 +192,7 @@ export default function Footer() {
             <Link to="https://www.linkedin.com" target="_blank">
               <LinkedInIcon sx={{ color: "#fff", fontSize: "32px" }} />
             </Link>
-            <Link to="https://www.facebook.com" target="_blank">
+            <Link to="https://www.facebook.com/TruckTrader.nl" target="_blank">
               <FacebookIcon sx={{ color: "#fff", fontSize: "32px" }} />
             </Link>
           </Box>
