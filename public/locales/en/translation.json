@@ -168,6 +168,7 @@
     "searchButton": "Search"
   },
   "productDetail": {
+    "yes": "Yes",
     "description": {
       "title": "Descriptions",
       "content": "Compact and efficient, the 2019 Volvo Mini Truck offers a 3,500 kg payload, fuel-efficient diesel engine, and advanced safety features. Its ergonomic cab ensures comfort, making it ideal for urban deliveries."
@@ -371,8 +372,7 @@
       "message": "Message is required"
     },
     "submitButton": "Submit →",
-    "officeHours": "Monday till Friday 09:00 – 17:00",
-    "phone": "(+31) 20 737 28 99"
+    "officeHours": "Monday till Friday 09:00 – 17:00"
   },
   "advertise": {
     "header": {
@@ -393,8 +393,8 @@
     "labels": {
       "subscription": "Select Subscription",
       "company": "Company",
-      "kvkNumber": "KVK-number",
-      "btwNumber": "BTW-number",
+      "kvkNumber": "CoC-number",
+      "btwNumber": "Tax-ID",
       "firstName": "First Name",
       "lastName": "Last Name",
       "street": "Street",
@@ -410,8 +410,8 @@
     "placeholders": {
       "subscription": "Select subscription",
       "company": "Company",
-      "kvkNumber": "KVK-number",
-      "btwNumber": "Enter Your BTW-number",
+      "kvkNumber": "CoC-number",
+      "btwNumber": "Enter Your Tax-ID",
       "firstName": "Enter Your First Name",
       "lastName": "Enter Your Last Name",
       "street": "Street",
@@ -427,7 +427,7 @@
     "errors": {
       "subscription": "Subscription is required",
       "company": "Company is required",
-      "kvkNumber": "KVK-number is required",
+      "kvkNumber": "CoC-number is required",
       "Insert": "Insert is required",
       "firstName": "First name is required",
       "lastName": "Last name is required",
@@ -439,7 +439,7 @@
       "email": "Email is required",
       "zipCode": "Zip Code is required",
       "bank": "Bank is required",
-      "btwNumber": "BTW-number is required"
+      "btwNumber": "Tax-ID is required"
     },
     "buttons": {
       "submit": "Submit",

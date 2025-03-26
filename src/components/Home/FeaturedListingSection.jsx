@@ -45,7 +45,7 @@ export default function FeaturedListingSection({ listings, loading }) {
               {t("featureListings.title")}
             </Typography>
             <Button variant="contained" color="secondary">
-              Show All <ChevronRightIcon />
+              {t("latestListings.showAll")} <ChevronRightIcon />
             </Button>
           </Box>
         </Link>

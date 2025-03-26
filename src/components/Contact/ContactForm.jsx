@@ -230,19 +230,6 @@ export default function ContactForm() {
                     {t("contactForm.officeHours")}
                   </Typography>
                 </Box>
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "8px",
-                    color: "#808080",
-                  }}
-                >
-                  <Phone sx={{ color: "#BD0000" }} />
-                  <Typography sx={{ fontSize: "16px", color: "#6A6A6A" }}>
-                    {t("contactForm.phone")}
-                  </Typography>
-                </Box>
               </Box>
             </Box>
           </form>

@@ -7,6 +7,7 @@ import api from "../services/api";
 import Loading from "../components/Common/Loading";
 import Error from "../components/Common/Error";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -116,6 +117,30 @@ export default function ProductDetail() {
 
   return (
     <Box>
+      {/* Add SEO Meta Tags */}
+      <Helmet>
+        <title>{`${product.make}  ${product.vehicleYear} - ${product.title} | TruckTrader`}</title>
+        <meta
+          name="description"
+          content={`${product.make}  (${product.vehicleYear}) - ${product.fuelType}, ${product.transmission}, ${product.condition} mileage. Available in ${product.location} for ${product.amount}.`}
+        />
+        <meta
+          name="keywords"
+          content={`${product.make},  ${product.vehicleType}, ${product.vehicleYear}, ${product.fuelType}, ${product.transmission}, used vehicle, ${product.location}`}
+        />
+        <meta
+          property="og:title"
+          content={`${product.make} ${product.vehicleYear} - ${product.title}`}
+        />
+        <meta
+          property="og:description"
+          content={`${product.make} ${product.vehicleYear}) - ${product.fuelType}, ${product.transmission}, ${product.condition} mileage. Available in ${product.location} for ${product.amount}.`}
+        />
+        <meta property="og:image" content={product.images[0]?.url || ""} />
+        <meta property="og:url" content={window.location.href} />
+        <meta property="og:type" content="product" />
+      </Helmet>
+
       <ProductDetailHeader id={id} product={product} />
 
       {/* Always Visible Cards */}
@@ -226,8 +251,7 @@ export default function ProductDetail() {
                             <Typography
                               sx={{ textAlign: "right", fontWeight: 500 }}
                             >
-                              {/* If there's a display_value, show it; otherwise, just show the label */}
-                              {feature.display_value || "Yes"}
+                              {feature.display_value || t("productDetail.yes")}
                             </Typography>
                           </Box>
                         ))}

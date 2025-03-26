@@ -52,7 +52,7 @@ export default function ProductDetailHeader({ id, product }) {
             {/* Brand Name */}
             {product?.make && (
               <Link
-                to={`/filter`}
+                to={`/filter?search=${product.make}`}
                 style={{ fontSize: "14px", fontWeight: 500 }}
               >
                 {product.make}
@@ -62,7 +62,7 @@ export default function ProductDetailHeader({ id, product }) {
             {/* Model Name */}
             {product?.model && (
               <Link
-                to={`/filter`}
+                to={`/filter?search=${product.model}`}
                 style={{ fontSize: "14px", fontWeight: 500 }}
               >
                 {product.model}

@@ -52,7 +52,7 @@
 
   "latestListings": {
     "title": "Recent toegevoegd",
-    "showAll": "Alles tonen"
+    "showAll": "Toon alles"
   },
   "services": {
     "title": "Onze Diensten",
@@ -140,6 +140,7 @@
     "searchButton": "Zoeken"
   },
   "productDetail": {
+    "yes": "Ja",
     "description": {
       "title": "Beschrijvingen",
       "content": "Compact en efficiënt, de Volvo Mini Truck 2019 biedt een laadvermogen van 3.500 kg, een zuinige dieselmotor en geavanceerde veiligheidsvoorzieningen. De ergonomische cabine biedt comfort, waardoor het ideaal is voor stedelijke leveringen."
@@ -343,8 +344,7 @@
       "message": "Bericht is verplicht"
     },
     "submitButton": "Indienen →",
-    "officeHours": "Maandag tot vrijdag 09:00 – 17:00",
-    "phone": "(+31) 20 737 28 99"
+    "officeHours": "Maandag tot vrijdag 09:00 – 17:00"
   },
   "advertise": {
     "header": {
