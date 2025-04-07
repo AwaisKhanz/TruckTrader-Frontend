@@ -310,6 +310,7 @@ export default function Navbar() {
                 color="primary"
                 fullWidth
                 sx={{ borderRadius: "20px", px: 3, mb: 2 }}
+                onClick={toggleDrawer(false)}
               >
                 {t("highlightSection.left.readMore")}
               </Button>

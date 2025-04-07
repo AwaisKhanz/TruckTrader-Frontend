@@ -137,7 +137,7 @@ export default function Footer() {
                 }}
               >
                 <Link
-                  to="/privacy-policy"
+                  to="/terms-and-conditions"
                   onClick={handleScrollToTop}
                   className="text-[#FFFFFF80] hover:text-white"
                 >
@@ -162,22 +162,7 @@ export default function Footer() {
               color: "white",
             }}
           >
-            © {currentYear} Trucktrader Benelux B.V. |{" "}
-            <Link
-              to="/terms"
-              onClick={handleScrollToTop}
-              className="text-[#FFFFFF80] hover:text-white"
-            >
-              {t("footer.terms")}
-            </Link>{" "}
-            |{" "}
-            <Link
-              to="/cookies"
-              onClick={handleScrollToTop}
-              className="text-[#FFFFFF80] hover:text-white"
-            >
-              {t("footer.cookies")}
-            </Link>
+            © {currentYear} Trucktrader Benelux B.V.
           </Typography>
           {/* Right Section: Social Media Links */}
           <Box

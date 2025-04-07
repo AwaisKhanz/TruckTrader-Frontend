@@ -97,7 +97,7 @@ export default function AppRoutes() {
             </AuthLayout>
           }
         />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<PrivacyPolicy />} />
 
         {/* 404 Not Found Route */}
         <Route
