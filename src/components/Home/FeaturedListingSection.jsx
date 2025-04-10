@@ -9,7 +9,6 @@ import {
   Mousewheel,
 } from "swiper/modules";
 import "swiper/css";
-import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
@@ -21,6 +20,7 @@ import { Link } from "react-router-dom";
 
 export default function FeaturedListingSection({ listings, loading }) {
   const { t } = useTranslation();
+
   return (
     <Box sx={{ background: "#EDEDED" }}>
       <Box sx={{ maxWidth: "90%", mx: "auto", mt: "40px", py: "40px" }}>
@@ -53,7 +53,7 @@ export default function FeaturedListingSection({ listings, loading }) {
         {/* Swiper Slider */}
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y, Mousewheel]}
-          autoplay={500}
+          autoplay={{ delay: 500 }}
           spaceBetween={20}
           mousewheel={{ forceToAxis: true }}
           slidesPerView="auto"
@@ -63,54 +63,86 @@ export default function FeaturedListingSection({ listings, loading }) {
             480: { spaceBetween: 10 },
           }}
         >
-          {loading
-            ? Array.from(new Array(5)).map((_, index) => (
-                <SwiperSlide
-                  key={index}
-                  style={{ width: "325px", height: "auto" }}
+          {loading ? (
+            Array.from(new Array(5)).map((_, index) => (
+              <SwiperSlide
+                key={index}
+                style={{ width: "325px", height: "auto" }}
+              >
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: "400px",
+                    bgcolor: "#f0f0f0",
+                    borderRadius: "12px",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
                 >
                   <Box
                     sx={{
-                      width: "100%",
-                      height: "400px",
-                      bgcolor: "#f0f0f0",
-                      borderRadius: "12px",
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "center",
-                      alignItems: "center",
+                      width: "90%",
+                      height: "180px",
+                      bgcolor: "#e0e0e0",
+                      borderRadius: "8px",
                     }}
-                  >
-                    <Box
-                      sx={{
-                        width: "90%",
-                        height: "180px",
-                        bgcolor: "#e0e0e0",
-                        borderRadius: "8px",
-                      }}
-                    />
-                    <Box
-                      sx={{
-                        width: "80%",
-                        height: "20px",
-                        bgcolor: "#e0e0e0",
-                        borderRadius: "4px",
-                        mt: 2,
-                      }}
-                    />
-                    <Box
-                      sx={{
-                        width: "60%",
-                        height: "20px",
-                        bgcolor: "#e0e0e0",
-                        borderRadius: "4px",
-                        mt: 1,
-                      }}
-                    />
-                  </Box>
+                  />
+                  <Box
+                    sx={{
+                      width: "80%",
+                      height: "20px",
+                      bgcolor: "#e0e0e0",
+                      borderRadius: "4px",
+                      mt: 2,
+                    }}
+                  />
+                  <Box
+                    sx={{
+                      width: "60%",
+                      height: "20px",
+                      bgcolor: "#e0e0e0",
+                      borderRadius: "4px",
+                      mt: 1,
+                    }}
+                  />
+                </Box>
+              </SwiperSlide>
+            ))
+          ) : (
+            <>
+              {/* First listing */}
+              {listings?.[0] && (
+                <SwiperSlide style={{ width: "325px", height: "auto" }}>
+                  <ListingCard data={transformListingData(listings[0])} />
                 </SwiperSlide>
-              ))
-            : listings?.map((item) => (
+              )}
+
+              {/* Advertisement as second item */}
+              <SwiperSlide style={{ width: "325px", height: "auto" }}>
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: "400px",
+                    borderRadius: "12px",
+                    overflow: "hidden",
+                  }}
+                >
+                  <img
+                    src={"/assets/listingad1.png"}
+                    alt="Advertisement"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      // objectFit: "contain",
+                    }}
+                  />
+                </Box>
+              </SwiperSlide>
+
+              {/* Remaining listings */}
+              {listings?.slice(1).map((item) => (
                 <SwiperSlide
                   key={item.id}
                   style={{ width: "325px", height: "auto" }}
@@ -118,6 +150,8 @@ export default function FeaturedListingSection({ listings, loading }) {
                   <ListingCard data={transformListingData(item)} />
                 </SwiperSlide>
               ))}
+            </>
+          )}
         </Swiper>
       </Box>
     </Box>

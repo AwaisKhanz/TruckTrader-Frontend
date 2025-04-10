@@ -53,7 +53,6 @@ export default function Filter() {
         _fieldset: "searchresults",
         _locale: i18n.language === "en" ? "en_GB" : "nl_NL",
         keyword: keyword,
-        // "general.category": "van",
         _offset: (page - 1) * itemsPerPage,
         _limit: itemsPerPage,
         _order: "general.year",
@@ -105,7 +104,6 @@ export default function Filter() {
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const searchParam = params.get("search") || "";
-    console.log("object", searchParam);
     setSearchKeyword(searchParam);
     fetchListings(searchParam, currentPage);
   }, [location.search, currentPage, filters, t]);
@@ -116,7 +114,6 @@ export default function Filter() {
     setSearchKeyword(newSearch);
     setCurrentPage(1);
 
-    // Update the URL with new search query
     const params = new URLSearchParams(location.search);
     if (newSearch) {
       params.set("search", newSearch);
@@ -125,12 +122,6 @@ export default function Filter() {
     }
     navigate(`?${params.toString()}`, { replace: true });
   };
-
-  // Handle search submission
-  // const handleSearchSubmit = () => {
-  //   setCurrentPage(1);
-  //   fetchListings(searchKeyword, 1);
-  // };
 
   // Handle page change
   const handlePageChange = (event, page) => {
@@ -144,7 +135,6 @@ export default function Filter() {
       t(`filters.fuelOptions.${filters.fuel.toLowerCase()}`),
     filters.bodyType !== "Any" &&
       t(`filters.bodyTypeOptions.${filters.bodyType}`),
-    ,
     filters.condition !== "Any" &&
       t(`filters.conditionOptions.${filters.condition.toLowerCase()}`),
     ...new Set(
@@ -181,7 +171,6 @@ export default function Filter() {
     setFilters((prev) => {
       const updatedFilters = { ...prev };
 
-      // Reverse mapping translations to original values
       const reverseTranslations = {
         ...Object.fromEntries(
           ["cng", "Petrol", "Diesel", "Hybrid", "electric", "lpg", "Other"].map(
@@ -318,7 +307,6 @@ export default function Filter() {
             activeFilters={activeFilters}
             onRemoveFilter={handleRemoveFilter}
             onSearchChange={handleSearchChange}
-            // onSearchSubmit={handleSearchSubmit}
             searchKeyword={searchKeyword}
             totalResults={totalResults}
           />
@@ -336,13 +324,28 @@ export default function Filter() {
             </Box>
           )}
 
-          {/* Grid of Listings */}
+          {/* Listings Section */}
           {loading ? (
             <Box sx={{ display: "flex", justifyContent: "center", my: "20px" }}>
               <CircularProgress size={40} sx={{ color: "#BD0000" }} />
             </Box>
           ) : (
             <>
+              {/* Full-width banner image before listings */}
+              <Box sx={{ mb: "20px" }}>
+                <img
+                  src="/assets/filterbanner.png" // Replace with your banner image path
+                  alt="Banner"
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    borderRadius: "12px",
+                    objectFit: "cover",
+                  }}
+                />
+              </Box>
+
+              {/* Grid of Listings */}
               <Box
                 sx={{
                   display: "grid",
@@ -356,17 +359,104 @@ export default function Filter() {
                 }}
               >
                 {listings.length > 0 ? (
-                  listings.map((item, index) => (
-                    <Box key={index}>
-                      <ListingCard data={transformListingData(item)} />
+                  <>
+                    {/* First two listings */}
+                    {listings.slice(0, 2).map((item, index) => (
+                      <Box key={index}>
+                        <ListingCard data={transformListingData(item)} />
+                      </Box>
+                    ))}
+
+                    {/* Third item as promoted item (advertisement) */}
+                    <Box>
+                      <Box
+                        sx={{
+                          width: "100%",
+                          height: "100%",
+                          borderRadius: "12px",
+                          overflow: "hidden",
+                        }}
+                      >
+                        <img
+                          src="/assets/listingad1.png"
+                          alt="Promoted Advertisement"
+                          style={{
+                            width: "100%",
+                            height: "100%",
+                          }}
+                        />
+                      </Box>
                     </Box>
-                  ))
+
+                    {/* Full-width advertisement after first 3 items */}
+                    {listings.length > 2 && (
+                      <Box
+                        sx={{
+                          gridColumn: "1 / -1", // Span full width
+                          mt: "20px",
+                          mb: "20px",
+                        }}
+                      >
+                        <Box
+                          sx={{
+                            background: "#FFF",
+                            borderRadius: "12px",
+                            p: 2,
+                            display: "flex",
+                            alignItems: "center",
+                            height: "100%",
+                            gap: 2,
+                          }}
+                        >
+                          <Box sx={{ width: "50%" }}>
+                            <Typography
+                              variant="h6"
+                              sx={{ fontWeight: "bold" }}
+                            >
+                              Advertising Title
+                            </Typography>
+                            <Typography variant="body2" sx={{ mt: 1, mb: 2 }}>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor incididunt ut labore
+                              et dolore magna aliqua. Ut enim ad minim veniam.
+                            </Typography>
+                            <Button
+                              variant="contained"
+                              color="primary"
+                              sx={{ height: "42px", fontSize: "12px" }}
+                            >
+                              Take Advantage Now
+                            </Button>
+                          </Box>
+                          <Box sx={{ width: "50%", height: "100%" }}>
+                            <img
+                              src="/assets/filterbanner.png" // Replace with your full-width ad image path
+                              alt="Full Width Ad"
+                              style={{
+                                height: "100%",
+                                borderRadius: "8px",
+                                objectFit: "cover",
+                              }}
+                            />
+                          </Box>
+                        </Box>
+                      </Box>
+                    )}
+
+                    {/* Remaining listings */}
+                    {listings.slice(2).map((item, index) => (
+                      <Box key={index + 2}>
+                        <ListingCard data={transformListingData(item)} />
+                      </Box>
+                    ))}
+                  </>
                 ) : (
                   <Typography sx={{ textAlign: "center", mt: 2 }}>
                     No listings found.
                   </Typography>
                 )}
               </Box>
+
               {/* Pagination Controls */}
               {listings.length > 0 && (
                 <Box sx={{ display: "flex", justifyContent: "center", mt: 5 }}>
@@ -377,20 +467,20 @@ export default function Filter() {
                     color="primary"
                     sx={{
                       "& .MuiPaginationItem-root": {
-                        color: "black", // Default color for unselected pages
+                        color: "black",
                         "&.Mui-selected": {
-                          backgroundColor: "#BD0000", // Background color for the selected page
-                          color: "white", // Text color for the selected page
+                          backgroundColor: "#BD0000",
+                          color: "white",
                           "&:hover": {
-                            backgroundColor: "darkred", // Hover color for the selected page
+                            backgroundColor: "darkred",
                           },
                         },
                         "&.MuiPaginationItem-previousNext": {
-                          color: "#BD0000", // Color for the previous/next arrows
+                          color: "#BD0000",
                         },
                       },
                       "& .MuiPaginationItem-icon": {
-                        color: "#BD0000", // Color for the arrow icons
+                        color: "#BD0000",
                       },
                     }}
                   />

@@ -69,11 +69,11 @@ export default function Navbar() {
     //   link: "/advertise",
     // },
     { text: t("navbar.about"), icon: <InfoIcon />, link: "/about-us" },
-    {
-      text: t("navbar.directory"),
-      icon: <AttachMoneyIcon />,
-      link: "/directory",
-    },
+    // {
+    //   text: t("navbar.directory"),
+    //   icon: <AttachMoneyIcon />,
+    //   link: "/directory",
+    // },
     { text: t("navbar.contact"), icon: <ContactMailIcon />, link: "/contact" },
     // { text: t("navbar.faq"), icon: <HelpOutlineIcon />, link: "/faq" },
   ];

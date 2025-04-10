@@ -14,25 +14,25 @@
     "login": "Inloggen / Registreren"
   },
   "heroSection": {
-    "heading": "Ontdek vandaag jouw nieuwe truck!",
+    "heading": "Op zoek naar een truck, machine of bedrijfsvoertuig?",
     "subtitle": {
-      "part1": "Verken onze ",
-      "highlight1": "brede selectie",
-      "part2": " trucks, dagelijks aangevuld met voertuigen van betrouwbare verkopers. De ideale truck voor jouw klus is slechts één ",
-      "highlight2": "klik verwijderd."
+      "part1": "Ons aanbod ",
+      "highlight1": "groeit dagelijks",
+      "part2": " met nieuwe trucks, landbouw- en bouwvoertuigen van betrouwbare verkopers. Wat je ook zoekt – je vindt het hier, ",
+      "highlight2": "snel en eenvoudig."
     },
     "searchPlaceholder": "Waar ben je naar op zoek?",
     "searchButton": "Zoeken"
   },
   "highlightSection": {
     "left": {
-      "title": "Een voertuig verkopen?",
-      "description": "Bij TruckTrader helpen we je jouw voertuig onder de aandacht te brengen van de juiste doelgroep. Geen gedoe, gewoon een eenvoudig en krachtig platform waarmee je jouw voertuig direct kunt aanbieden aan duizenden potentiële kopers. ",
-      "readMore": "Meld je nu aan!"
+      "title": "Snel verkopen?",
+      "description": "Bij TruckTrader plaats je in no-time jouw truck, bus, machine of onderdeel. Jij zet het erop, wij zorgen dat de juiste mensen het zien. Simpel, effectief en zonder gezeur. ",
+      "readMore": "Probeer het nu zelf!"
     },
     "right": {
-      "title": "Ontdek ons assortiment commerciële voertuigen!",
-      "description": "Verken ons uitgebreide aanbod aan trucks en bedrijfswagens van toonaangevende bedrijven. Wij bieden zorgvuldig geselecteerde voertuigen van betrouwbare merken, zodat je altijd op kwaliteit en gebruiksgemak kunt rekenen. Stel eenvoudig je zoekcriteria in en vind de perfecte match voor jouw bedrijf.",
+      "title": "Trucks, machines en bedrijfswagens voor elke klus",
+      "description": "Of je nu op zoek bent naar een vrachtwagen, trekker of bouwvoertuig – je zit hier goed. Wij verzamelen aanbod van betrouwbare verkopers, zodat jij snel de juiste keuze kunt maken.",
       "button": "Bekijk ons aanbod"
     }
   },
@@ -60,17 +60,17 @@
     "highlight": "B2B-platform",
     "mainEnd": " B2B-platform",
     "subtitle": "Verbinden van vrachtwagenhandelaren met ongeëvenaarde expertise en betrouwbare oplossingen. Uw vertrouwde partner voor naadloze handel en uitstekende ondersteuning.",
-    "allBrands": "Gerichte Doelgroep",
-    "freeSupport": "Competitieve Prijzen",
-    "dealership": "Op Maat Gemaakte Oplossingen",
-    "affordable": "Continue Verbetering",
-    "allBrandsDescription": "Wij zorgen ervoor dat jouw advertenties de juiste mensen bereiken, zodat je optimale zichtbaarheid hebt bij potentiële kopers die actief op zoek zijn naar commerciële voertuigen.",
-    "freeSupportDescription": "Onze prijsstructuur biedt jou de beste waarde, waardoor het betaalbaar blijft om jouw voertuigen op ons platform te plaatsen en te verkopen.",
-    "dealershipDescription": "Heb je behoefte aan een aangepaste aanpak? Wij bieden flexibele opties en op maat gemaakte importfeeds, perfect afgestemd op jouw specifieke zakelijke wensen.",
-    "affordableDescription": "We werken voortdurend aan het verbeteren van ons platform en voegen regelmatig nieuwe functies toe. Daarbij staan we altijd open voor jouw aanbevelingen – jouw feedback is essentieel voor de toekomst van TruckTrader."
+    "allBrands": "Gerichte doelgroep",
+    "freeSupport": "Goede deal, groot bereik",
+    "dealership": "Maatwerk? Geen probleem",
+    "affordable": "We blijven sleutelen",
+    "allBrandsDescription": "Jouw advertentie komt terecht bij mensen die écht zoeken – van transporteurs tot bouwbedrijven en alles daartussen.",
+    "freeSupportDescription": "Adverteren hoeft niet duur te zijn. Bij TruckTrader krijg je veel zichtbaarheid voor een eerlijke prijs.",
+    "dealershipDescription": "Heb je iets speciaals nodig? Van aangepaste importfeeds tot andere wensen – we denken graag met je mee.",
+    "affordableDescription": "TruckTrader is nooit ‘af’. We bouwen steeds verder, voegen nieuwe functies toe en staan open voor jouw ideeën."
   },
   "footer": {
-    "description": "Word vandaag nog onderdeel van TruckTrader en ontdek de voordelen van een toegewijd, flexibel en klantgericht platform voor de handel in commerciële voertuigen. Of je nu je vloot wilt verkopen of je activiteiten wilt uitbreiden met nieuwe voertuigen, TruckTrader staat voor je klaar om je bedrijf te laten groeien.",
+    "description": "Sluit je aan bij TruckTrader. Of je nu één voertuig wilt verkopen of je hele vloot wilt uitbreiden – bij ons zit je goed. TruckTrader is het platform voor slimme ondernemers in transport, bouw en agro.",
     "copyright": "Copyright © 2024 Trucktrader Benelux B.V.",
     "terms": "Voorwaarden",
     "cookies": "Cookies",
@@ -90,47 +90,47 @@
   },
 
   "aboutHeader": {
-    "title": "Over TruckTrader",
-    "description": "Bij TruckTrader verbinden we bedrijven met de commerciële voertuigen die ze nodig hebben om succesvol te zijn. Ons platform is speciaal ontwikkeld om het kopen en verkopen van bedrijfsvoertuigen eenvoudig en efficiënt te maken. Met een focus op gebruiksgemak en een gericht publiek is TruckTrader dé plek voor B2B-voertuighandel."
+    "title": "TruckTrader: dé plek voor bedrijfsvoertuigen en meer",
+    "description": "Wij brengen bedrijven samen met wat ze nodig hebben om vooruit te kunnen: van vrachtwagens en bestelbussen tot graafmachines en onderdelen. TruckTrader is gebouwd voor één ding: makkelijk en snel zakelijk handelen. Of je nu koopt of verkoopt, bij ons zit je goed – zonder gedoe, mét het juiste publiek."
   },
   "addedValue": {
     "title": "Waarom kiezen voor TruckTrader?",
     "highlight": "TruckTrader",
     "userFriendly": {
-      "title": "Gerichte Doelgroep",
-      "description": "Wij zorgen ervoor dat jouw advertenties precies de juiste doelgroep bereiken, zodat je maximale zichtbaarheid krijgt bij kopers die actief op zoek zijn naar commerciële voertuigen."
+      "title": "Gerichte doelgroep",
+      "description": "Jouw advertentie komt precies terecht bij mensen die zoeken naar wat jij aanbiedt – of dat nou een vrachtwagen is, een graafmachine of een onderdeel. Zo krijg je maximale zichtbaarheid bij echte kopers."
     },
     "greatReach": {
-      "title": "Concurrerende Prijzen",
-      "description": "Onze prijsstructuur biedt de beste waarde, waardoor je jouw voertuigen voordelig kunt adverteren en verkopen."
+      "title": "Betaalbaar en effectief",
+      "description": "Groot bereik, zonder groot prijskaartje. Bij TruckTrader haal je het meeste uit je advertentiebudget."
     },
     "cheapPlacement": {
-      "title": "Maatwerkoplossingen",
-      "description": "Heb je specifieke wensen? Wij bieden op maat gemaakte importfeeds en flexibele oplossingen die perfect aansluiten op jouw zakelijke behoeften."
+      "title": "Flexibel en persoonlijk",
+      "description": "Geen bedrijf is hetzelfde. Daarom bieden we maatwerkoplossingen die precies doen wat jij nodig hebt – van importfeeds tot slimme koppelingen."
     },
     "highQuality": {
-      "title": "Voortdurende Verbetering",
-      "description": "We blijven ons platform verbeteren met nieuwe functies en waarderen jouw input. Jouw feedback speelt een cruciale rol in de verdere ontwikkeling van TruckTrader."
+      "title": "Altijd in ontwikkeling",
+      "description": "We blijven bouwen aan TruckTrader – met nieuwe functies en slimme verbeteringen. Jouw feedback? Die nemen we serieus."
     }
   },
   "howDoWeGetStarted": {
     "title": "Waarom kiezen voor TruckTrader?",
-    "subtitle": "Vergroot je naamsbekendheid met een gratis vermelding in onze bedrijvengids.",
+    "subtitle": "",
     "step1": {
-      "title": "Directe Advertentiezichtbaarheid",
-      "description": "Zodra je account is geactiveerd, worden je advertenties direct zichtbaar. Geen onnodige vertragingen, je bereikt meteen potentiële kopers."
+      "title": "Meteen zichtbaar",
+      "description": "Zodra je account actief is, staan je advertenties online. Geen wachttijden, gewoon direct bereik."
     },
     "step2": {
-      "title": "Snel & Betrouwbaar Netwerk",
-      "description": "Ons platform draait op meerdere datacenterlocaties, waardoor bezoekers altijd een snelle en soepele ervaring hebben, ongeacht waar ze zich bevinden."
+      "title": "Techniek die gewoon werkt",
+      "description": "Meerdere datacenterlocaties zorgen voor snelheid en stabiliteit. Resultaat: jouw advertenties zijn altijd snel te vinden, waar je bezoeker ook vandaan komt."
     },
     "step3": {
-      "title": "Voortdurende Ontwikkeling",
-      "description": "We blijven ons platform verbeteren en nieuwe functies toevoegen. Jouw feedback helpt ons de gebruikerservaring continu te optimaliseren."
+      "title": "We blijven bouwen",
+      "description": "TruckTrader is nooit ‘af’. We voegen regelmatig nieuwe functies toe en gebruiken jouw feedback om het platform steeds beter te maken."
     },
     "step4": {
-      "title": "Gratis Vermelding in de Bedrijvengids",
-      "description": "Vergroot je bereik met een gratis vermelding in onze bedrijvengids. Zo zorg je voor maximale exposure en maak je het potentiële klanten makkelijker om je te vinden."
+      "title": "Gemaakt voor de handel",
+      "description": "Of je nu één voertuig verkoopt of dagelijks doorstroom hebt – TruckTrader is ingericht op zakelijk gebruik. Praktisch, snel, betrouwbaar"
     }
   },
   "productDetailHeader": {
@@ -313,7 +313,7 @@
   },
   "contactHeader": {
     "title": "Neem contact met ons op",
-    "description": "Heeft u vragen over kopen, verkopen of adverteren bij ons? Ons team staat klaar om u te helpen met al uw vragen of om gedetailleerde ondersteuning te bieden."
+    "description": "Vragen? We helpen je graag! Of je nu iets wilt kopen, verkopen of gewoon even wilt sparren – ons team staat voor je klaar."
   },
   "contactForm": {
     "labels": {
@@ -343,7 +343,7 @@
       },
       "message": "Bericht is verplicht"
     },
-    "submitButton": "Indienen →",
+    "submitButton": "Versturen →",
     "officeHours": "Maandag tot vrijdag 09:00 – 17:00"
   },
   "advertise": {
@@ -365,51 +365,51 @@
     "labels": {
       "subscription": "Selecteer Abonnement",
       "company": "Bedrijf",
-      "kvkNumber": "KVK-number",
+      "kvkNumber": "KVK-nummer",
       "firstName": "Voornaam",
       "lastName": "Achternaam",
       "street": "Straat",
       "btwNumber": "BTW-nummer",
       "streetNumber": "Huisnummer",
       "country": "Land",
-      "city": "Stad",
+      "city": "Plaatsnaam",
       "phoneNumber": "Telefoonnummer",
       "email": "E-mail",
       "zipCode": "Postcode",
-      "bank": "Bank",
+      "bank": "IBAN",
       "remarks": "Opmerkingen"
     },
     "placeholders": {
       "subscription": "Selecteer abonnement",
       "company": "Bedrijf",
-      "kvkNumber": "KVK-number",
+      "kvkNumber": "KVK-nummer",
       "firstName": "Voer uw voornaam in",
       "lastName": "Voer uw achternaam in",
       "street": "Straat",
       "btwNumber": "Voer uw BTW-nummer",
       "streetNumber": "Huisnummer",
       "country": "Selecteer Land",
-      "city": "Stad",
+      "city": "Plaatsnaam",
       "phoneNumber": "Voer uw telefoonnummer in",
       "email": "Voer uw e-mail in",
       "zipCode": "Voer uw  Postcode",
-      "bank": "Voer uw Bank",
+      "bank": "Voer uw IBAN",
       "remarks": "Voer uw Opmerkingen"
     },
     "errors": {
       "subscription": "Abonnement is verplicht",
       "company": "Bedrijf is verplicht",
-      "kvkNumber": "KVK-number is verplicht",
+      "kvkNumber": "KVK-nummer is verplicht",
       "firstName": "Voornaam is verplicht",
       "lastName": "Achternaam is verplicht",
       "street": "Straat is verplicht",
       "streetNumber": "Huisnummer is verplicht",
       "country": "Land is verplicht",
-      "city": "Stad is verplicht",
+      "city": "Plaatsnaam is verplicht",
       "phoneNumber": "Telefoonnummer is verplicht",
       "email": "E-mail is verplicht",
       "zipCode": "Postcode is verplicht",
-      "bank": "Bank is verplicht",
+      "bank": "IBAN is verplicht",
       "btwNumber": "BTW-nummer is verplicht"
     },
     "buttons": {

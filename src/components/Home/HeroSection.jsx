@@ -56,6 +56,7 @@ export default function HeroSection() {
               fontSize: { xs: "24px", md: "42px" },
               lineHeight: "1",
               color: "#FFFFFF",
+              maxWidth: "650px",
             }}
           >
             {t("heroSection.heading")}
